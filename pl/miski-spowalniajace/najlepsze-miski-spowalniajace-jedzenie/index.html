@@ -107,6 +107,99 @@
     a:hover { text-decoration: underline; }
     .intro-box { background: #f0f7e9; border-left: 4px solid #2c4a1e; padding: 1rem 1.2rem; margin-bottom: 2rem; border-radius: 4px; }
   </style>
+
+<style>
+/* Email capture widgets */
+.email-widget {
+  background: linear-gradient(135deg, #e63946, #c1121f);
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  color: #fff;
+  font-family: inherit;
+  box-shadow: 0 4px 18px rgba(230,57,70,0.25);
+}
+.email-widget h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+.email-widget p {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  opacity: 0.92;
+  color: #fff;
+}
+.email-widget form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.email-widget input[type="email"] {
+  flex: 1 1 200px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 0;
+}
+.email-widget button {
+  padding: 10px 20px;
+  background: #fff;
+  color: #c1121f;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity .2s;
+}
+.email-widget button:hover { opacity: 0.88; }
+.email-widget .success-msg {
+  display: none;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Sticky bottom bar */
+#sticky-email-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #e63946, #c1121f);
+  color: #fff;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  z-index: 9999;
+  box-shadow: 0 -3px 16px rgba(0,0,0,0.18);
+  font-family: inherit;
+}
+#sticky-email-bar span { font-weight: 600; font-size: 0.95rem; flex: 1 1 200px; }
+#sticky-email-bar form { display: flex; gap: 8px; flex-wrap: wrap; }
+#sticky-email-bar input[type="email"] {
+  padding: 8px 12px; border-radius: 7px; border: none;
+  font-size: 0.9rem; min-width: 180px; outline: none;
+}
+#sticky-email-bar button {
+  padding: 8px 16px; background: #fff; color: #c1121f;
+  font-weight: 700; border: none; border-radius: 7px; cursor: pointer; white-space: nowrap;
+}
+#sticky-close {
+  background: none; border: none; color: #fff;
+  font-size: 1.3rem; cursor: pointer; line-height: 1; padding: 0 4px; opacity: 0.8;
+}
+#sticky-close:hover { opacity: 1; }
+</style>
 </head>
 <body>
 
@@ -116,6 +209,17 @@
 
   <div class="intro-box">
     <p>Czy wiesz, że psy jedzące zbyt szybko są nawet pięć razy bardziej narażone na śmiertelnie niebezpieczne skręcenie żołądka (GDV)? Jeśli twój pies opróżnia miskę w kilkanaście sekund i regularnie zarzuca jedzenie po posiłku — masz dobry powód, by działać. <strong>Najlepsze miski spowalniające jedzenie</strong> to jeden z najprostszych i najtańszych sposobów, żeby zmienić ten nawyk. W tym artykule znajdziesz konkretny ranking, tabelę porównawczą i odpowiedzi na pytania, które zadają sobie właściciele psów przed zakupem.</p>
+
+<div class="email-widget">
+  <h3>🐾 Bezpłatny poradnik: Co każdy właściciel psa powinien wiedzieć</h3>
+  <p>Dołącz do ponad 5 000 właścicieli psów — co tydzień praktyczne porady, rankingi produktów i nowości ze świata psów prosto na Twoją skrzynkę.</p>
+  <form>
+    <input type="email" placeholder="Twój adres e-mail" required>
+    <button type="submit">Chcę poradnik →</button>
+  </form>
+  <div class="success-msg"></div>
+</div>
+
   </div>
 
   <h2>Czym jest miska antywolfing i jak działa?</h2>
@@ -195,6 +299,17 @@
   <h2>Jak wybrać miskę spowalniającą odpowiednią do rozmiaru i rasy psa?</h2>
 
   <p>Wybór miski spowalniającej nie powinien być przypadkowy. Miska zbyt trudna może sfrustrować psa i sprawić, że przestanie chcieć jeść — miska zbyt prosta nie spełni swojej roli.</p>
+
+<div class="email-widget">
+  <h3>🐾 📧 Nie przegap kolejnych rankingów i poradników</h3>
+  <p>Zapisz się i otrzymuj powiadomienia o nowych artykułach, promocjach na produkty dla psów i ekskluzywnych wskazówkach.</p>
+  <form>
+    <input type="email" placeholder="Twój adres e-mail" required>
+    <button type="submit">Chcę poradnik →</button>
+  </form>
+  <div class="success-msg"></div>
+</div>
+
 
   <ul>
     <li><strong>Małe psy (do 10 kg):</strong> wybieraj miski z płytszymi przegrodami i pojemnością 400–700 ml. Wzory w kształcie kwiatka lub fal działają dobrze.</li>
@@ -278,6 +393,59 @@
   </section>
 
 </article>
+
+
+<div id="sticky-email-bar">
+  <span>🐶 Darmowe porady dla właścicieli psów — prosto na maila</span>
+  <form>
+    <input type="email" placeholder="Twój e-mail" required>
+    <button type="submit">Zapisz się</button>
+  </form>
+  <button id="sticky-close" aria-label="Zamknij">✕</button>
+</div>
+
+
+<script>
+(function() {
+  function onradarSub(formEl, feedbackEl) {
+    formEl.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var email = formEl.querySelector('input[type="email"]').value;
+      if (!email) return;
+      // TODO: podłącz do Mailchimp/ConvertKit/własnego endpointu
+      // fetch('/api/subscribe', {method:'POST', body: JSON.stringify({email}), headers:{'Content-Type':'application/json'}})
+      formEl.style.display = 'none';
+      feedbackEl.style.display = 'block';
+      feedbackEl.textContent = '✅ Dziękujemy! Sprawdź skrzynkę mailową.';
+    });
+  }
+  document.querySelectorAll('.email-widget').forEach(function(w) {
+    var form = w.querySelector('form');
+    var fb = w.querySelector('.success-msg');
+    if (form && fb) onradarSub(form, fb);
+  });
+  // Sticky bar close
+  var closeBtn = document.getElementById('sticky-close');
+  var bar = document.getElementById('sticky-email-bar');
+  if (closeBtn && bar) {
+    closeBtn.addEventListener('click', function() {
+      bar.style.display = 'none';
+      try { sessionStorage.setItem('onradar_bar_closed','1'); } catch(e){}
+    });
+    try {
+      if (sessionStorage.getItem('onradar_bar_closed')) bar.style.display = 'none';
+    } catch(e){}
+    // Sticky bar form
+    var sForm = bar.querySelector('form');
+    var sFb = document.createElement('span');
+    sFb.style.display = 'none';
+    if (sForm) {
+      sForm.parentNode.appendChild(sFb);
+      onradarSub(sForm, sFb);
+    }
+  }
+})();
+</script>
 
 </body>
 </html>
