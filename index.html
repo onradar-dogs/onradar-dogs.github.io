@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section style="background: linear-gradient(135deg, rgba(4, 107, 210, 0.1) 0%, rgba(201, 106, 58, 0.05) 100%); padding: 80px 0; margin-bottom: 60px; border-bottom: 1px solid #e2e8f0;">
+  <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+    <h1 style="text-align: center; color: #1e293b; font-size: 42px; margin-bottom: 20px;">🐕 OnRadar Dogs</h1>
+    <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 10px;">Complete guides to dog breeds and National Dog Days celebrations</p>
+    <p style="text-align: center; font-size: 16px; color: #64748b;">Explore breed characteristics, training, health, and care information for 120+ dog breeds</p>
+  </div>
+</section>
+
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
+  <h2 style="color: #1e293b; text-align: center; margin: 60px 0 40px;">Latest Breed Guides</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin: 40px 0;">
+    {% for post in site.posts limit: 12 %}
+    <article style="background: white; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.05); hover: box-shadow 0 8px 24px rgba(4,107,210,0.15);">
+      <div style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 20px; color: white; min-height: 100px; display: flex; align-items: flex-end;">
+        <div>
+          <p style="margin: 0; font-size: 13px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">Breed Guide</p>
+          <h3 style="margin: 5px 0 0; font-size: 24px; font-weight: 700;"><a href="{{ post.url }}" style="color: white; text-decoration: none;">{{ post.title }}</a></h3>
+        </div>
+      </div>
+
+      <div style="padding: 25px;">
+        <p style="color: #64748b; font-size: 14px; margin: 0 0 15px;">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p style="color: #475569; margin: 0 0 20px; line-height: 1.6;">{{ post.description | truncatewords: 30 }}</p>
+        <a href="{{ post.url }}" style="display: inline-block; color: #046bd2; font-weight: 600; padding: 10px 0; border-bottom: 2px solid #046bd2; transition: all 0.2s;">Read Full Guide</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  {% if site.posts.size == 0 %}
+  <div style="text-align: center; padding: 60px 20px; background: #f9fafb; border-radius: 8px; margin: 40px 0;">
+    <p style="color: #64748b; font-size: 16px;">🐕 First breed guides coming April 8-17, 2026</p>
+    <p style="color: #94a3b8; margin-top: 10px;">Subscribe to get notified when new guides are published</p>
+  </div>
+  {% endif %}
+</div>

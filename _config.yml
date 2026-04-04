@@ -1,0 +1,29 @@
+title: OnRadar Dogs
+description: Complete guides to dog breeds and National Dog Days
+url: https://onradar-dogs.github.io
+baseurl: ""
+permalink: /:title/
+
+# Theme
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
