@@ -2,9 +2,8 @@ name: Auto-Index to Google
 
 on:
   schedule:
-    # Every day at 8:15 AM UTC (adjust TZ as needed)
     - cron: '15 8 * * *'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   index:
@@ -38,18 +37,16 @@ jobs:
           from google.auth.transport.requests import Request
           from google.oauth2.service_account import Credentials
 
-          # Configuration
           SITE_DOMAIN = "https://onradar-dogs.github.io"
           SITEMAP_URL = f"{SITE_DOMAIN}/sitemap.xml"
           SERVICE_ACCOUNT_KEY_PATH = Path("credentials/google-indexing-key.json")
 
-          # Google Indexing API
           SCOPES = ["https://www.googleapis.com/auth/indexing"]
           INDEXING_API_URL = "https://indexing.googleapis.com/v3/urlNotifications:publish"
 
           def get_auth_token():
               if not SERVICE_ACCOUNT_KEY_PATH.exists():
-                  print(f"❌ Service Account key not found")
+                  print(f"Service Account key not found")
                   sys.exit(1)
               credentials = Credentials.from_service_account_file(
                   SERVICE_ACCOUNT_KEY_PATH, scopes=SCOPES
@@ -67,7 +64,7 @@ jobs:
                   urls = [loc.text for loc in root.findall(".//ns:loc", ns)]
                   return urls
               except Exception as e:
-                  print(f"❌ Error parsing sitemap: {e}")
+                  print(f"Error parsing sitemap: {e}")
                   return []
 
           def submit_url_to_index(url, token):
@@ -90,46 +87,42 @@ jobs:
               except Exception as e:
                   return False, str(e)
 
-          print(f"🔍 Starting auto-indexing for {SITE_DOMAIN}")
-          print(f"📅 {datetime.now().isoformat()}\n")
+          print(f"Starting auto-indexing for {SITE_DOMAIN}")
+          print(f"{datetime.now().isoformat()}\n")
 
-          # Get auth token
-          print("🔐 Getting authentication token...")
+          print("Getting authentication token...")
           try:
               token = get_auth_token()
-              print("✅ Auth token acquired\n")
+              print("Auth token acquired\n")
           except Exception as e:
-              print(f"❌ Auth failed: {e}")
+              print(f"Auth failed: {e}")
               sys.exit(1)
 
-          # Parse sitemap
-          print(f"📡 Fetching sitemap...")
+          print(f"Fetching sitemap...")
           urls = parse_sitemap(SITEMAP_URL)
 
           if not urls:
-              print("❌ No URLs found in sitemap")
+              print("No URLs found in sitemap")
               sys.exit(1)
 
-          print(f"✅ Found {len(urls)} URLs\n")
+          print(f"Found {len(urls)} URLs\n")
 
-          # Submit URLs
-          print("📤 Submitting URLs to Google...")
+          print("Submitting URLs to Google...")
           successful = 0
           failed = 0
 
           for url in urls:
               success, message = submit_url_to_index(url, token)
               if success:
-                  print(f"✅ {url}")
+                  print(f"OK: {url}")
                   successful += 1
               else:
-                  print(f"❌ {url} - {message}")
+                  print(f"FAIL: {url}")
                   failed += 1
 
-          # Summary
           print(f"\n{'='*60}")
-          print(f"📊 Summary: {successful} successful, {failed} failed")
-          print(f"📅 {datetime.now().isoformat()}")
+          print(f"Summary: {successful} successful, {failed} failed")
+          print(f"{datetime.now().isoformat()}")
 
           sys.exit(0 if failed == 0 else 1)
           EOF
