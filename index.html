@@ -1,41 +1,437 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnRadar Dogs — Dog Breed Guides, Training Tips & National Dog Days</title>
+  <meta name="description" content="Comprehensive dog breed guides, training tips, health information, and care advice. Celebrate National Dog Days for 120+ breeds with expert tips and product recommendations.">
+  <meta name="keywords" content="dog breeds, breed guides, dog training, dog tips, national dog days, dog care, dog health">
+  <meta name="author" content="OnRadar Dogs">
+  <meta property="og:title" content="OnRadar Dogs — Dog Breed Guides & Training Tips">
+  <meta property="og:description" content="Expert dog breed guides, training tips, health information, and product recommendations for all dog breeds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onradar-dogs.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OnRadar Dogs — Dog Breed Guides">
+  <meta name="twitter:description" content="Comprehensive dog breed guides and training tips for dog lovers.">
+  <link rel="canonical" href="https://onradar-dogs.github.io/">
+  <style>
+    /* Email Bar Sticky */
+    .email-bar {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-<section style="background: linear-gradient(135deg, rgba(4, 107, 210, 0.1) 0%, rgba(201, 106, 58, 0.05) 100%); padding: 80px 0; margin-bottom: 60px; border-bottom: 1px solid #e2e8f0;">
-  <div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
-    <h1 style="text-align: center; color: #1e293b; font-size: 42px; margin-bottom: 20px;">🐕 OnRadar Dogs</h1>
-    <p style="text-align: center; font-size: 18px; color: #475569; margin-bottom: 10px;">Complete guides to dog breeds and National Dog Days celebrations</p>
-    <p style="text-align: center; font-size: 16px; color: #64748b;">Explore breed characteristics, training, health, and care information for 120+ dog breeds</p>
+    .email-bar.top {
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .email-bar.bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      z-index: 99;
+    }
+
+    .email-bar-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-content {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .email-bar.bottom .email-bar-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .email-bar-text {
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar.bottom .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-bar-form input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .email-bar-form button {
+      background: white;
+      color: #046bd2;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .email-bar-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-bar-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .email-bar-close:hover {
+      opacity: 0.8;
+    }
+
+    .email-bar.hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .email-bar.top {
+        flex-direction: column;
+        padding: 10px 16px;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-text {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .email-bar-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .email-bar-form input {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .email-bar-form button {
+        width: 100%;
+      }
+    }
+
+    header {
+      margin-top: 0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.65; background: white; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    /* Top Bar */
+    .top-bar { background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%); background-size: 200% 100%; height: 4px; animation: shimmer 3s ease-in-out infinite; }
+    @keyframes shimmer { 0%, 100% { background-position: 0% center; } 50% { background-position: 100% center; } }
+
+    /* Header */
+    header { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 16px 0; position: sticky; top: 56px; z-index: 100; box-shadow: 0 2px 12px rgba(4, 107, 210, 0.15); }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; font-weight: 700; margin: 0; }
+    header nav { display: flex; gap: 30px; }
+    header a { color: white; text-decoration: none; font-weight: 500; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, rgba(4, 107, 210, 0.1) 0%, rgba(201, 106, 58, 0.05) 100%); padding: 80px 0; margin-bottom: 60px; border-bottom: 1px solid #e2e8f0; }
+    .hero h1 { font-size: 42px; font-weight: 600; color: #1e293b; margin-bottom: 20px; text-align: center; }
+    .hero p { font-size: 18px; color: #475569; text-align: center; margin-bottom: 10px; }
+    .hero .subtitle { font-size: 16px; color: #64748b; text-align: center; }
+
+    /* Blog Section */
+    .blog-section { margin: 60px 0; }
+    .blog-section h2 { font-size: 28px; font-weight: 600; color: #1e293b; text-align: center; margin-bottom: 40px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 40px; }
+
+    .blog-card { background: white; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; }
+    .blog-card:hover { box-shadow: 0 8px 24px rgba(4,107,210,0.15); }
+    .blog-card-header { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 20px; color: white; min-height: 100px; display: flex; align-items: flex-end; }
+    .blog-card-header p { margin: 0; font-size: 13px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; }
+    .blog-card-header h3 { margin: 5px 0 0; font-size: 24px; font-weight: 700; }
+    .blog-card-header a { color: white; text-decoration: none; }
+
+    .blog-card-body { padding: 25px; }
+    .blog-card-body .date { color: #64748b; font-size: 14px; margin: 0 0 15px; }
+    .blog-card-body p { color: #475569; margin: 0 0 20px; line-height: 1.6; }
+    .blog-card-body a { color: #046bd2; font-weight: 600; padding: 10px 0; border-bottom: 2px solid #046bd2; text-decoration: none; }
+
+    /* Product Categories */
+    .products-section { background: #f9fafb; padding: 60px 0; margin: 60px 0; border-radius: 8px; }
+    .products-section h2 { font-size: 28px; font-weight: 600; color: #1e293b; text-align: center; margin-bottom: 20px; }
+    .products-section p { text-align: center; color: #64748b; margin-bottom: 40px; }
+
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .product-cat { background: white; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; cursor: pointer; transition: all 0.2s; }
+    .product-cat:hover { border-color: #046bd2; box-shadow: 0 4px 12px rgba(4,107,210,0.1); }
+    .product-cat h3 { font-size: 18px; font-weight: 600; color: #1e293b; margin-bottom: 10px; }
+    .product-cat p { font-size: 14px; color: #64748b; }
+
+    /* Footer */
+    footer { background: #1e293b; color: white; padding: 40px 0; margin-top: 80px; }
+    footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    footer h3 { color: white; margin-bottom: 15px; }
+    footer a { color: #cbd5e1; display: block; margin: 10px 0; text-decoration: none; }
+    footer a:hover { color: white; }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px; text-align: center; color: #94a3b8; font-size: 14px; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      header nav { gap: 15px; }
+    }
+  </style>
+
+  <script>
+    // Close email bars with localStorage
+    function closeEmailBar(barId) {
+      var bar = document.getElementById(barId);
+      bar.classList.add('hidden');
+      localStorage.setItem(barId + '_closed', 'true');
+    }
+
+    // Check if bars were closed before
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('emailBarTop_closed') === 'true') {
+        document.getElementById('emailBarTop').classList.add('hidden');
+      }
+      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
+        document.getElementById('emailBarBottom').classList.add('hidden');
+      }
+    });
+
+    // Handle email submission
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      var email = event.target.querySelector('input[type="email"]').value;
+      alert('Thank you for subscribing! Check your email for dog breed guides.');
+      event.target.reset();
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <header>
+    <div class="container">
+      <h1>🐕 OnRadar Dogs</h1>
+      <nav>
+        <a href="/">Blog</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Email Bar -->
+  <div id="emailBarTop" class="email-bar top">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
   </div>
-</section>
 
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 20px;">
-  <h2 style="color: #1e293b; text-align: center; margin: 60px 0 40px;">Latest Breed Guides</h2>
+  <section class="hero">
+    <div class="container">
+      <h1>🐕 OnRadar Dogs</h1>
+      <p>Dog breed guides, training tips, health information & care advice for dog lovers</p>
+      <p class="subtitle">Celebrate National Dog Days for 120+ breeds • Tips & tricks • Product recommendations</p>
+    </div>
+  </section>
 
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin: 40px 0;">
-    {% for post in site.posts limit: 12 %}
-    <article style="background: white; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.05); hover: box-shadow 0 8px 24px rgba(4,107,210,0.15);">
-      <div style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 20px; color: white; min-height: 100px; display: flex; align-items: flex-end;">
-        <div>
-          <p style="margin: 0; font-size: 13px; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">Breed Guide</p>
-          <h3 style="margin: 5px 0 0; font-size: 24px; font-weight: 700;"><a href="{{ post.url }}" style="color: white; text-decoration: none;">{{ post.title }}</a></h3>
+  <div class="container">
+    <section class="blog-section">
+      <h2>Latest Blog Posts</h2>
+
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-card-header">
+            <div>
+              <p>Breed Guide</p>
+              <h3><a href="national-akita-day.html">National Akita Day: April 8</a></h3>
+            </div>
+          </div>
+          <div class="blog-card-body">
+            <p class="date">April 8, 2026</p>
+            <p>Complete guide to the Akita Inu breed. Learn about history, characteristics, training, health, and care requirements for this remarkable Japanese dog breed.</p>
+            <a href="national-akita-day.html">Read Full Guide →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background: linear-gradient(135deg, #c96a3a 0%, #d97a4a 100%);">
+            <div>
+              <p>Coming Soon</p>
+              <h3>National Komondor Day: April 17</h3>
+            </div>
+          </div>
+          <div class="blog-card-body">
+            <p class="date">April 17, 2026</p>
+            <p>Guide to the rare Hungarian Komondor breed with its distinctive corded coat. Learn about grooming, care, temperament, and unique characteristics.</p>
+            <a href="#" style="opacity: 0.5;">Coming April 17 →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-card-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div>
+              <p>Coming Soon</p>
+              <h3>More Breed Guides</h3>
+            </div>
+          </div>
+          <div class="blog-card-body">
+            <p class="date">Throughout 2026</p>
+            <p>Explore comprehensive guides for 120+ dog breeds. New breed guides published on National Dog Days celebrating each breed's unique heritage.</p>
+            <a href="#" style="opacity: 0.5;">Subscribe for Updates →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div>
+        <h2>Recommended Products by Category</h2>
+        <p>Curated dog products, toys, grooming supplies, and training tools for every breed</p>
+
+        <div class="products-grid">
+          <a href="products.html#toys" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>🎾 Toys & Play</h3>
+              <p>Durable toys, balls, fetch games for active dogs</p>
+            </div>
+          </a>
+
+          <a href="products.html#grooming" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>✂️ Grooming</h3>
+              <p>Brushes, combs, shampoos, nail care tools</p>
+            </div>
+          </a>
+
+          <a href="products.html#training" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>🎓 Training</h3>
+              <p>Leashes, collars, training treats & guides</p>
+            </div>
+          </a>
+
+          <a href="products.html#food" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>🍖 Nutrition</h3>
+              <p>Premium dog food, supplements, treats</p>
+            </div>
+          </a>
+
+          <a href="products.html#beds" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>🛏️ Beds & Comfort</h3>
+              <p>Dog beds, blankets, crates, carriers</p>
+            </div>
+          </a>
+
+          <a href="products.html#health" style="text-decoration: none;">
+            <div class="product-cat">
+              <h3>⚕️ Health & Wellness</h3>
+              <p>First aid kits, medications, health monitors</p>
+            </div>
+          </a>
         </div>
       </div>
+    </section>
+  </div>
 
-      <div style="padding: 25px;">
-        <p style="color: #64748b; font-size: 14px; margin: 0 0 15px;">{{ post.date | date: "%B %d, %Y" }}</p>
-        <p style="color: #475569; margin: 0 0 20px; line-height: 1.6;">{{ post.description | truncatewords: 30 }}</p>
-        <a href="{{ post.url }}" style="display: inline-block; color: #046bd2; font-weight: 600; padding: 10px 0; border-bottom: 2px solid #046bd2; transition: all 0.2s;">Read Full Guide</a>
+  <!-- Bottom Email Bar -->
+  <div id="emailBarBottom" class="email-bar bottom">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>🐕 Subscribe for New Breed Guides</strong> — Get updates on National Dog Days
       </div>
-    </article>
-    {% endfor %}
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
   </div>
 
-  {% if site.posts.size == 0 %}
-  <div style="text-align: center; padding: 60px 20px; background: #f9fafb; border-radius: 8px; margin: 40px 0;">
-    <p style="color: #64748b; font-size: 16px;">🐕 First breed guides coming April 8-17, 2026</p>
-    <p style="color: #94a3b8; margin-top: 10px;">Subscribe to get notified when new guides are published</p>
-  </div>
-  {% endif %}
-</div>
+  <footer>
+    <div class="container">
+      <div>
+        <h3>OnRadar Dogs</h3>
+        <p style="color: #cbd5e1;">For dog lovers, by dog lovers. Comprehensive breed guides, training tips, health information, and care advice for all dog breeds.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="/">Blog</a>
+        <a href="tips.html">Training Tips & Tricks</a>
+        <a href="products.html">Recommended Products</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OnRadar Dogs. Dog breed guides, tips, tricks & resources for dog lovers worldwide.</p>
+    </div>
+  </footer>
+</body>
+</html>

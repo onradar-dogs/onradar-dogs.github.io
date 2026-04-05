@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Dog Products & Gear Recommendations — OnRadar Dogs</title>
+  <meta name="description" content="Curated dog products, toys, grooming supplies, training tools, beds, food, and health products for all dog breeds and ages.">
+  <meta name="keywords" content="dog products, dog toys, grooming supplies, dog training tools, dog beds, dog food, dog health products, dog accessories">
+  <meta name="author" content="OnRadar Dogs">
+  <meta property="og:title" content="Best Dog Products & Recommendations">
+  <meta property="og:description" content="Curated selection of quality dog products, toys, grooming supplies, and training tools.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dog Products & Recommendations">
+  <link rel="canonical" href="https://onradar-dogs.github.io/products.html">
+  <style>
+    /* Email Bar Sticky */
+    .email-bar {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .email-bar.top {
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .email-bar.bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      z-index: 99;
+    }
+
+    .email-bar-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-content {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .email-bar.bottom .email-bar-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .email-bar-text {
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar.bottom .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-bar-form input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .email-bar-form button {
+      background: white;
+      color: #046bd2;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .email-bar-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-bar-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .email-bar-close:hover {
+      opacity: 0.8;
+    }
+
+    .email-bar.hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .email-bar.top {
+        flex-direction: column;
+        padding: 10px 16px;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-text {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .email-bar-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .email-bar-form input {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .email-bar-form button {
+        width: 100%;
+      }
+    }
+
+    header {
+      margin-top: 0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.65; background: white; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%); background-size: 200% 100%; height: 4px; animation: shimmer 3s infinite; }
+    @keyframes shimmer { 0%, 100% { background-position: 0%; } 50% { background-position: 100%; } }
+
+    header { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 16px 0; position: sticky; top: 56px; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; font-weight: 700; margin: 0; }
+    header nav { display: flex; gap: 30px; }
+    header a { color: white; text-decoration: none; font-weight: 500; }
+
+    .content { max-width: 1240px; margin: 60px auto; }
+    h1 { color: #1e293b; font-size: 40px; font-weight: 600; margin-bottom: 20px; }
+    .intro { color: #64748b; font-size: 18px; margin-bottom: 40px; text-align: center; }
+
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .product-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .product-card h2 { color: #1e293b; font-size: 24px; font-weight: 600; margin-bottom: 15px; }
+    .product-card p { color: #475569; margin-bottom: 20px; }
+    .product-card ul { margin-left: 20px; margin-bottom: 20px; color: #475569; }
+    .product-card li { margin-bottom: 8px; }
+
+    .note { background: #f9fafb; padding: 20px; border-left: 4px solid #046bd2; border-radius: 6px; margin: 40px 0; }
+
+    footer { background: #1e293b; color: white; padding: 40px 0; margin-top: 80px; }
+    footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    footer h3 { margin-bottom: 15px; }
+    footer a { color: #cbd5e1; display: block; margin: 10px 0; text-decoration: none; }
+  </style>
+
+  <script>
+    // Close email bars with localStorage
+    function closeEmailBar(barId) {
+      var bar = document.getElementById(barId);
+      bar.classList.add('hidden');
+      localStorage.setItem(barId + '_closed', 'true');
+    }
+
+    // Check if bars were closed before
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('emailBarTop_closed') === 'true') {
+        document.getElementById('emailBarTop').classList.add('hidden');
+      }
+      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
+        document.getElementById('emailBarBottom').classList.add('hidden');
+      }
+    });
+
+    // Handle email submission
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      var email = event.target.querySelector('input[type="email"]').value;
+      alert('Thank you for subscribing! Check your email for dog breed guides.');
+      event.target.reset();
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <header>
+    <div class="container">
+      <h1>🐕 OnRadar Dogs</h1>
+      <nav>
+        <a href="/">Blog</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Email Bar -->
+  <div id="emailBarTop" class="email-bar top">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
+  </div>
+
+  <div class="content container">
+    <h1>Recommended Dog Products</h1>
+    <p class="intro">Curated products selected for quality, safety, and value for dog lovers</p>
+
+    <div class="product-grid">
+      <div class="product-card" id="toys">
+        <h2>🎾 Toys & Play</h2>
+        <p>Durable toys and interactive games keep dogs mentally stimulated and active.</p>
+        <ul>
+          <li><strong>Fetch toys:</strong> Tennis balls, rubber balls, frisbees</li>
+          <li><strong>Chew toys:</strong> Long-lasting chews, bully sticks, rubber toys</li>
+          <li><strong>Puzzle toys:</strong> Brain teasers, treat-dispensing toys</li>
+          <li><strong>Interactive toys:</strong> Tug toys, squeaky toys, balls with bells</li>
+          <li><strong>Rope toys:</strong> For fetch and tug games</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Rotate toys to keep them interesting and prevent boredom.</p>
+      </div>
+
+      <div class="product-card" id="grooming">
+        <h2>✂️ Grooming Supplies</h2>
+        <p>Essential tools for maintaining your dog's health and appearance.</p>
+        <ul>
+          <li><strong>Brushes & combs:</strong> Slicker brushes, undercoat rakes, shedding tools</li>
+          <li><strong>Shampoos & conditioners:</strong> Dog-specific formulas for skin health</li>
+          <li><strong>Nail care:</strong> Nail clippers, grinders, nail files</li>
+          <li><strong>Ear cleaning:</strong> Ear cleaners, wipes, cotton pads</li>
+          <li><strong>Dental care:</strong> Toothbrushes, dog toothpaste, dental chews</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Invest in quality grooming tools—they last longer and work better.</p>
+      </div>
+
+      <div class="product-card" id="training">
+        <h2>🎓 Training Tools</h2>
+        <p>Equipment to support positive reinforcement training methods.</p>
+        <ul>
+          <li><strong>Leashes & collars:</strong> Standard leashes, long lines, harnesses</li>
+          <li><strong>Training treats:</strong> High-value, low-calorie training rewards</li>
+          <li><strong>Training clickers:</strong> For marker-based training</li>
+          <li><strong>Treat pouches:</strong> Easy access to rewards during sessions</li>
+          <li><strong>Training pads:</strong> For housebreaking young dogs</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Use small, soft training treats that dogs can eat quickly without losing focus.</p>
+      </div>
+
+      <div class="product-card" id="food">
+        <h2>🍖 Nutrition</h2>
+        <p>Quality nutrition is the foundation of a healthy dog.</p>
+        <ul>
+          <li><strong>Premium dog food:</strong> High-quality kibble for all life stages</li>
+          <li><strong>Wet food:</strong> For picky eaters or senior dogs with dental issues</li>
+          <li><strong>Raw & fresh diets:</strong> For owners seeking alternatives</li>
+          <li><strong>Supplements:</strong> Joint support, omega-3, probiotics</li>
+          <li><strong>Treats:</strong> Healthy, nutritious reward options</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Consult your vet about the best diet for your dog's age, size, and health status.</p>
+      </div>
+
+      <div class="product-card" id="beds">
+        <h2>🛏️ Beds & Comfort</h2>
+        <p>Comfortable resting spaces help dogs feel secure and supported.</p>
+        <ul>
+          <li><strong>Dog beds:</strong> Orthopedic beds for older dogs, regular beds</li>
+          <li><strong>Crates & carriers:</strong> For safety, training, and travel</li>
+          <li><strong>Blankets & mats:</strong> For layering and comfort</li>
+          <li><strong>Cooling beds:</strong> For hot weather relief</li>
+          <li><strong>Elevated beds:</strong> For airflow and joint support</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Choose washable covers for easy cleaning and maintenance.</p>
+      </div>
+
+      <div class="product-card" id="health">
+        <h2>⚕️ Health & Wellness</h2>
+        <p>Preventative care and emergency supplies for your dog's wellbeing.</p>
+        <ul>
+          <li><strong>First aid kits:</strong> For minor injuries and emergencies</li>
+          <li><strong>Medications:</strong> Prescribed by your veterinarian</li>
+          <li><strong>Health monitors:</strong> Thermometers, scales</li>
+          <li><strong>Anxiety aids:</strong> Anxiety wraps, calming supplements</li>
+          <li><strong>Wearables:</strong> Tracking collars, ID tags, GPS devices</li>
+        </ul>
+        <p><strong>Pro tip:</strong> Keep your vet's contact information and nearest emergency clinic details readily available.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <h3 style="margin-top: 0;">💡 About Product Recommendations</h3>
+      <p>OnRadar Dogs recommends quality products based on safety, durability, and value. We may earn commissions from affiliate partners when you make purchases through our recommendations, which helps support our mission of providing free breed guides and educational content.</p>
+      <p style="margin-bottom: 0;"><strong>Always:</strong> Choose products appropriate for your dog's size and age. Consult your veterinarian about health-related products and supplements.</p>
+    </div>
+
+    <p style="text-align: center; margin-top: 40px;"><a href="/" style="color: #046bd2; font-weight: 600; text-decoration: none;">← Back to Blog</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h3>OnRadar Dogs</h3>
+        <p style="color: #cbd5e1;">For dog lovers, by dog lovers. Breed guides, tips, and product recommendations.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="/">Blog</a>
+        <a href="tips.html">Tips</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Email Bar -->
+  <div id="emailBarBottom" class="email-bar bottom">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>🐕 Subscribe for Updates</strong> — Dog guides, tips & product recommendations
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
+  </div>
+</body>
+</html>

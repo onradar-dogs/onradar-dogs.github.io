@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About OnRadar Dogs — Dog Breed Guides for Dog Lovers</title>
+  <meta name="description" content="OnRadar Dogs provides comprehensive dog breed guides, training tips, health information, and product recommendations for dog lovers. National Dog Days celebration.">
+  <meta name="keywords" content="about dog breeds, dog lover resources, dog training guides, dog health information, pet care advice">
+  <meta name="author" content="OnRadar Dogs">
+  <meta property="og:title" content="About OnRadar Dogs">
+  <meta property="og:description" content="Comprehensive dog breed guides and training tips for dog lovers worldwide.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://onradar-dogs.github.io/about.html">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Email Bar Sticky */
+    .email-bar {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .email-bar.top {
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .email-bar.bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      z-index: 99;
+    }
+
+    .email-bar-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-content {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .email-bar.bottom .email-bar-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .email-bar-text {
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar.bottom .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-bar-form input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .email-bar-form button {
+      background: white;
+      color: #046bd2;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .email-bar-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-bar-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .email-bar-close:hover {
+      opacity: 0.8;
+    }
+
+    .email-bar.hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .email-bar.top {
+        flex-direction: column;
+        padding: 10px 16px;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-text {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .email-bar-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .email-bar-form input {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .email-bar-form button {
+        width: 100%;
+      }
+    }
+
+    header {
+      margin-top: 0;
+    }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+    .top-bar { background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%); background-size: 200% 100%; height: 4px; animation: shimmer 3s infinite; }
+    @keyframes shimmer { 0%, 100% { background-position: 0%; } 50% { background-position: 100%; } }
+
+    header { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 16px 0; position: sticky; top: 56px; z-index: 100; box-shadow: 0 2px 12px rgba(4, 107, 210, 0.15); }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; font-weight: 700; margin: 0; }
+    header nav { display: flex; gap: 30px; }
+    header a { color: white; text-decoration: none; font-weight: 500; }
+
+    .content { max-width: 900px; margin: 60px auto; }
+    h1 { color: #1e293b; font-size: 40px; font-weight: 600; margin-bottom: 20px; }
+    h2 { color: #1e293b; font-size: 28px; font-weight: 600; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
+    p { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+    strong { color: #1e293b; font-weight: 600; }
+
+    footer { background: #1e293b; color: white; padding: 40px 0; margin-top: 80px; }
+    footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    footer h3 { margin-bottom: 15px; }
+    footer a { color: #cbd5e1; display: block; margin: 10px 0; text-decoration: none; }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px; text-align: center; color: #94a3b8; font-size: 14px; }
+  </style>
+
+  <script>
+    // Close email bars with localStorage
+    function closeEmailBar(barId) {
+      var bar = document.getElementById(barId);
+      bar.classList.add('hidden');
+      localStorage.setItem(barId + '_closed', 'true');
+    }
+
+    // Check if bars were closed before
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('emailBarTop_closed') === 'true') {
+        document.getElementById('emailBarTop').classList.add('hidden');
+      }
+      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
+        document.getElementById('emailBarBottom').classList.add('hidden');
+      }
+    });
+
+    // Handle email submission
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      var email = event.target.querySelector('input[type="email"]').value;
+      alert('Thank you for subscribing! Check your email for dog breed guides.');
+      event.target.reset();
+      return false;
+    }
+  </script>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <header>
+    <div class="container">
+      <h1>🐕 OnRadar Dogs</h1>
+      <nav>
+        <a href="/">Blog</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Email Bar -->
+  <div id="emailBarTop" class="email-bar top">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
+  </div>
+
+  <div class="content container">
+    <h1>About OnRadar Dogs</h1>
+
+    <h2>For Dog Lovers, By Dog Lovers</h2>
+
+    <p><strong>OnRadar Dogs is a comprehensive resource dedicated to celebrating dog breeds and supporting dog lovers worldwide.</strong> We provide in-depth breed guides, training tips, health information, and expert advice to help you understand, care for, and enjoy your relationship with dogs.</p>
+
+    <p>Whether you're considering bringing a new dog into your family, looking to improve your training approach, or simply want to learn more about different breeds, OnRadar Dogs is here to provide accurate, practical, and accessible information.</p>
+
+    <h2>Our Mission</h2>
+
+    <p>To be the go-to resource for dog lovers seeking comprehensive breed information, practical training tips, health guidance, and product recommendations. We celebrate <strong>National Dog Days for 120+ breeds</strong> throughout the year, helping dog enthusiasts appreciate the unique characteristics and heritage of each breed.</p>
+
+    <h2>What We Offer</h2>
+
+    <p><strong>Breed Guides:</strong> Detailed guides for dog breeds covering history, origin, physical characteristics, personality, training requirements, health considerations, and suitability for families. Each guide celebrates a breed's unique National Day.</p>
+
+    <p><strong>Training Tips & Tricks:</strong> Practical advice on puppy training, obedience, behavior management, socialization, exercise routines, and grooming techniques specific to different breeds.</p>
+
+    <p><strong>Health Information:</strong> Breed-specific health concerns, preventative care strategies, nutrition guidance, and when to seek veterinary attention.</p>
+
+    <p><strong>Product Recommendations:</strong> Curated recommendations for toys, grooming supplies, training equipment, premium foods, beds, and health products for dogs of all breeds and sizes.</p>
+
+    <h2>Why National Dog Days Matter</h2>
+
+    <p>Each dog breed has unique characteristics, heritage, and care requirements. <strong>National Dog Days provide opportunities to celebrate these differences and increase awareness</strong> about breed-specific needs. By highlighting one breed each day, we help dog lovers appreciate the diversity of the dog world and make informed decisions about breed selection.</p>
+
+    <h2>Our Approach</h2>
+
+    <p>We believe in providing <strong>accurate, research-backed information</strong> based on breed standards, veterinary expertise, and real-world dog owner experiences. Our content is designed to be accessible to both first-time dog owners and experienced enthusiasts.</p>
+
+    <p>Every breed guide includes:</p>
+    <ul style="margin-left: 40px; color: #475569; line-height: 1.8;">
+      <li>Historical background and origin</li>
+      <li>Physical characteristics and appearance</li>
+      <li>Personality traits and temperament</li>
+      <li>Training and socialization needs</li>
+      <li>Exercise and activity requirements</li>
+      <li>Health concerns and preventative care</li>
+      <li>Grooming and maintenance</li>
+      <li>Family compatibility and living situations</li>
+      <li>Frequently asked questions</li>
+    </ul>
+
+    <h2>Connect With Us</h2>
+
+    <p>Subscribe to our newsletter to receive new breed guides on National Dog Days, training tips, health information, and expert advice delivered directly to your inbox. Join thousands of dog lovers who trust OnRadar Dogs for accurate, practical information.</p>
+
+    <p style="text-align: center; margin-top: 40px;"><a href="/" style="color: #046bd2; font-weight: 600; text-decoration: none;">← Back to Blog</a></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h3>OnRadar Dogs</h3>
+        <p style="color: #cbd5e1;">For dog lovers, by dog lovers. Comprehensive breed guides, training tips, health information, and care advice.</p>
+      </div>
+      <div>
+        <h3>Resources</h3>
+        <a href="/">Blog</a>
+        <a href="tips.html">Training Tips</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OnRadar Dogs. Dog breed guides & resources for dog lovers.</p>
+    </div>
+  </footer>
+
+  <!-- Bottom Email Bar -->
+  <div id="emailBarBottom" class="email-bar bottom">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>🐕 Subscribe for Updates</strong> — Dog guides, tips & product recommendations
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
+  </div>
+</body>
+</html>
