@@ -5,148 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="verification-code-here" />
   <title>National Dog Days Calendar 2026 | OnRadar Dogs</title>
+  <meta name="description" content="National Dog Days 2026 — Comprehensive breed guides celebrating dog breeds throughout the year. Breed profiles, training tips, and care information.">
+  <meta name="keywords" content="national dog days, dog breeds, breed guides, dog training, dog care, dog breeds calendar">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      background: #f9fafb; 
-      color: #1e293b; 
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #1e293b;
       line-height: 1.6;
     }
 
-    /* TOP NAVIGATION */
-    nav { 
-      background: #046bd2; 
-      color: white; 
-      padding: 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* EMAIL BAR */
+    .email-bar {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    nav .nav-container {
-      max-width: 1200px;
+    .email-bar-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .email-bar-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .email-bar-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-bar-form input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .email-bar-form button {
+      background: white;
+      color: #046bd2;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .email-bar-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-bar-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .email-bar-close:hover {
+      opacity: 0.8;
+    }
+
+    .email-bar.hidden {
+      display: none;
+    }
+
+    /* SHIMMER BAR */
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+
+    .shimmer-bar {
+      background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%);
+      background-size: 200% 100%;
+      height: 4px;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 4px;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(4, 107, 210, 0.15);
+    }
+
+    header .nav-container {
+      max-width: 1240px;
       margin: 0 auto;
+      padding: 0 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
     }
 
-    nav .logo { 
-      font-size: 1.5em; 
-      font-weight: bold; 
-      padding: 15px 0;
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
     }
 
-    nav ul { 
-      display: flex; 
-      list-style: none; 
-      gap: 0;
-    }
-
-    nav a { 
-      color: white; 
-      text-decoration: none; 
-      padding: 15px 20px; 
-      display: block;
-      transition: background 0.3s;
-    }
-
-    nav a:hover { 
-      background: #045cb4;
-    }
-
-    .main-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
+    header nav {
+      display: flex;
       gap: 30px;
     }
 
-    .content { flex: 1; }
-
-    /* HEADER */
-    header { 
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); 
-      color: white; 
-      padding: 60px 20px; 
-      text-align: center;
-      border-radius: 8px;
-      margin-bottom: 40px;
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    header h1 { 
-      font-size: 2.5em; 
-      margin-bottom: 10px;
+    header a:hover {
+      opacity: 0.8;
     }
 
-    header p { 
-      font-size: 1.1em; 
-      opacity: 0.95;
+    /* MAIN WRAPPER */
+    .post-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 40px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+      margin-top: 40px;
+      margin-bottom: 60px;
     }
 
-    /* CALENDAR TABLE */
-    .calendar-section {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
+    .post-content-main { min-width: 0; }
+    .post-sidebar { position: sticky; top: 120px; height: fit-content; }
 
+    /* SECTION TITLE */
     .section-title {
-      padding: 20px;
-      background: #f9fafb;
-      border-bottom: 2px solid #046bd2;
-      font-size: 1.3em;
+      font-size: 20px;
       font-weight: 600;
       color: #1e293b;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #046bd2;
     }
 
-    table { 
-      width: 100%; 
-      border-collapse: collapse;
-    }
-
-    thead { 
-      background: #046bd2; 
-      color: white;
-    }
-
-    th { 
-      padding: 15px; 
-      text-align: left; 
-      font-weight: 600;
-    }
-
-    td { 
-      padding: 15px; 
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    tbody tr:nth-child(even) { 
-      background: #f9fafb;
-    }
-
-    tbody tr:hover {
-      background: #f0f7ff;
-    }
-
-    a { 
-      color: #046bd2; 
-      text-decoration: none; 
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
+    /* BLOG SECTION */
     .blog-section {
       background: white;
       border-radius: 8px;
@@ -218,179 +249,162 @@
       text-decoration: underline;
     }
 
-    .status { 
-      display: inline-block; 
-      background: #d4edda; 
-      color: #155724; 
-      padding: 6px 12px; 
-      border-radius: 4px; 
-      font-size: 12px; 
-      font-weight: 600;
-    }
-
-    /* INFO BOXES */
-    .info-box { 
-      background: white;
-      padding: 30px; 
-      border-radius: 8px;
-      border-left: 4px solid #c96a3a;
-      margin-bottom: 40px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .info-box h2 { 
-      margin-bottom: 15px; 
-      color: #1e293b;
-      font-size: 1.3em;
-    }
-
-    .info-box ul { 
-      margin-left: 20px; 
-      line-height: 2;
-      color: #475569;
-    }
-
-    /* EMAIL WIDGET - INLINE */
-    .email-widget {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 30px;
-      border-radius: 8px;
-      margin: 40px 0;
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-    }
-
-    .email-widget h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
-
-    .email-widget p {
-      margin-bottom: 15px;
-      opacity: 0.95;
-      font-size: 0.95em;
-    }
-
-    .email-form {
-      display: flex;
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .email-form input {
-      flex: 1;
-      padding: 12px 15px;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    .email-form button {
-      background: white;
-      color: #667eea;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .email-form button:hover {
-      transform: translateY(-2px);
-    }
-
-    .email-disclaimer {
-      color: white;
-      font-size: 12px;
-      margin-top: 10px;
-      opacity: 0.8;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
+    /* SIDEBAR WIDGETS */
     .sidebar-widget {
       background: white;
-      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 70px;
+      padding: 20px;
+      margin-bottom: 28px;
+      border: 1px solid #e2e8f0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sidebar-widget::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #c96a3a;
     }
 
     .sidebar-widget h3 {
-      margin-bottom: 12px;
+      margin-top: 0;
+      padding-left: 12px;
       color: #1e293b;
-      font-size: 1em;
+      font-size: 16px;
+      font-weight: 600;
     }
 
-    .sidebar-widget input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #e2e8f0;
+    .sidebar-widget p {
+      font-size: 14px;
+      color: #64748b;
+      margin: 12px 0;
+      padding-left: 12px;
+    }
+
+    .sidebar-widget a {
+      display: block;
+      padding: 8px 0 8px 12px;
+      color: #046bd2;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+
+    .sidebar-widget a:hover {
+      color: #c96a3a;
+      border-bottom-color: #c96a3a;
+    }
+
+    .sidebar-widget a:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar-widget ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-widget li {
+      margin: 8px 0;
+    }
+
+    /* EMAIL WIDGET IN SIDEBAR */
+    .sidebar-email {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      padding: 28px;
+      margin: 32px 0;
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sidebar-email::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .sidebar-email h3 {
+      color: white;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .sidebar-email p {
+      color: rgba(255,255,255,0.9);
+      margin: 0 0 15px;
+      font-size: 14px;
+    }
+
+    .sidebar-email form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .sidebar-email input {
+      padding: 10px 12px;
+      border: none;
       border-radius: 4px;
-      margin-bottom: 10px;
       font-size: 13px;
     }
 
-    .sidebar-widget button {
-      width: 100%;
-      background: #046bd2;
-      color: white;
+    .sidebar-email button {
+      background: white;
+      color: #046bd2;
       padding: 10px;
       border: none;
       border-radius: 4px;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
       font-size: 13px;
     }
 
-    .sidebar-widget button:hover {
-      background: #045cb4;
-    }
-
-    .sidebar-note {
-      color: #64748b;
-      font-size: 11px;
-      margin-top: 8px;
-    }
-
     /* FOOTER */
-    footer { 
+    footer {
       background: #1e293b;
       color: white;
-      padding: 40px 20px;
-      margin-top: 60px;
+      padding: 40px 0;
+      margin-top: 80px;
     }
 
     footer .footer-content {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
+      padding: 0 24px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 40px;
       margin-bottom: 30px;
     }
 
-    footer h4 {
+    footer h3 {
+      color: white;
       margin-bottom: 15px;
-      color: #046bd2;
     }
 
-    footer ul {
-      list-style: none;
+    footer p {
+      color: #cbd5e1;
     }
 
     footer a {
       color: #cbd5e1;
-      text-decoration: none;
       display: block;
-      margin: 8px 0;
+      margin: 10px 0;
+      text-decoration: none;
     }
 
     footer a:hover {
@@ -398,64 +412,83 @@
     }
 
     footer .footer-bottom {
-      border-top: 1px solid #334155;
-      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 30px;
+      margin-top: 30px;
       text-align: center;
       color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+      .post-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .post-sidebar {
+        position: static;
+      }
     }
 
     @media (max-width: 768px) {
-      .main-content {
-        grid-template-columns: 1fr;
+      header nav {
+        gap: 15px;
+        font-size: 12px;
       }
 
-      nav ul {
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        padding: 10px 15px;
-      }
-
-      .email-form {
+      .email-bar-form {
         flex-direction: column;
+        width: 100%;
       }
 
-      header h1 {
-        font-size: 1.8em;
+      .email-bar-form input {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .email-bar-form button {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo">🐕 OnRadar Dogs</div>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/news-and-events.html">News & Events</a></li>
-        <li><a href="/products.html">Accessories</a></li>
-        <li><a href="/about.html">About Me</a></li>
-        <li><a href="/privacy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms and Conditions</a></li>
-      </ul>
+  <!-- Top Email Bar -->
+  <div id="emailBarTop" class="email-bar">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
-  </nav>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
+  </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="main-content">
-    <div class="content">
-      <!-- HEADER -->
-      <header>
-        <h1>🐕 National Dog Days 2026</h1>
-        <p>Comprehensive breed guides celebrating dog breeds throughout the year</p>
-      </header>
+  <!-- Shimmer Bar -->
+  <div class="shimmer-bar"></div>
 
-      <!-- BLOG POSTS -->
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <h1>🐕 OnRadar Dogs</h1>
+      <nav>
+        <a href="/">Blog</a>
+        <a href="/news-and-events.html">News & Events</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Wrapper -->
+  <div class="post-wrapper">
+    <article class="post-content-main">
+      <div class="section-title">📖 Latest Breed Guides</div>
+
       <div class="blog-section">
-        <div class="section-title">📖 Latest Breed Guides</div>
-
         <article class="post-card">
           <div class="post-meta">
             <span class="post-date">April 8, 2026</span>
@@ -476,89 +509,103 @@
           <a href="/national-komondor-day.html" class="read-more">Read Full Guide →</a>
         </article>
       </div>
+    </article>
 
-      <!-- EMAIL WIDGET - INLINE -->
-      <div class="email-widget">
-        <h3>📬 Get New Breed Guides</h3>
-        <p>Subscribe to receive our latest National Dog Days breed guides and exclusive tips.</p>
-        <form class="email-form" onsubmit="return false;">
-          <input type="email" placeholder="Your email address" required/>
-          <button type="submit">Subscribe</button>
-        </form>
-        <div class="email-disclaimer">We respect your privacy. No spam, ever.</div>
+    <!-- Sidebar -->
+    <aside class="post-sidebar">
+      <div class="sidebar-widget">
+        <h3>🎯 Quick Links</h3>
+        <a href="/">Blog</a>
+        <a href="/news-and-events.html">News & Events</a>
+        <a href="/about.html">About Us</a>
+        <a href="/products.html">Products</a>
       </div>
 
-
-    </div>
-
-    <!-- RIGHT SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-widget">
-        <h3>✉️ Email Updates</h3>
-        <form onsubmit="return false;">
+      <div class="sidebar-email">
+        <h3>📚 Dog Lovers Club</h3>
+        <p>New breed guides & training tips every week</p>
+        <form>
           <input type="email" placeholder="Your email" required/>
-          <button type="submit">Get Updates</button>
+          <button type="submit">Join</button>
         </form>
-        <div class="sidebar-note">Weekly breed guides and tips</div>
+        <small style="color: rgba(255,255,255,0.8); font-size: 12px;">No spam, ever</small>
       </div>
 
       <div class="sidebar-widget">
-        <h3>🐕 Latest Articles</h3>
-        <ul style="list-style: none;">
-          <li><a href="/national-akita-day.html" style="font-size: 13px;">Akita Day Guide</a></li>
-          <li><a href="/national-komondor-day.html" style="font-size: 13px;">Komondor Day Guide</a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-widget">
-        <h3>📍 Quick Links</h3>
-        <ul style="list-style: none;">
-          <li><a href="/about.html" style="font-size: 13px;">About Us</a></li>
-          <li><a href="/products.html" style="font-size: 13px;">Accessories</a></li>
-          <li><a href="/privacy.html" style="font-size: 13px;">Privacy</a></li>
-        </ul>
+        <h3>📖 More Breeds</h3>
+        <p>Explore guides for 120+ dog breeds. Coming soon: Bulldog, Beagle, Poodle, and more.</p>
       </div>
     </aside>
   </div>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div>
-        <h4>🐕 OnRadar Dogs</h4>
-        <p>Comprehensive breed guides celebrating dog breeds throughout the year. Quality information for dog lovers.</p>
+        <h3>🐕 OnRadar Dogs</h3>
+        <p>Comprehensive guides to dog breeds, training tips, health information, and care advice for dog lovers.</p>
       </div>
       <div>
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="/news-and-events.html">News & Events</a></li>
-          <li><a href="/accessories.html">Accessories</a></li>
-          <li><a href="/about.html">About Me</a></li>
-        </ul>
+        <h3>Resources</h3>
+        <a href="/">Blog</a>
+        <a href="/news-and-events.html">News & Events</a>
+        <a href="/products.html">Recommended Products</a>
       </div>
       <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/privacy.html">Privacy Policy</a></li>
-          <li><a href="/terms.html">Terms and Conditions</a></li>
-        </ul>
+        <h3>Legal</h3>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
       </div>
       <div>
-        <h4>Connect</h4>
+        <h3>Connect</h3>
         <p>Follow us for the latest dog breed guides and National Dog Days celebrations.</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 OnRadar Dogs. All rights reserved. | GSC Tracked & SEO Optimized</p>
+      <p>&copy; 2026 OnRadar Dogs. For dog lovers, by dog lovers.</p>
     </div>
   </footer>
 
-  <!-- GSC & ANALYTICS TRACKING -->
+  <!-- Bottom Email Bar -->
+  <div id="emailBarBottom" class="email-bar" style="position: fixed; bottom: 0; left: 0; right: 0; top: auto; z-index: 99; flex-direction: column; gap: 12px; padding: 15px 24px; display: none;">
+    <div class="email-bar-content" style="flex-direction: column; gap: 12px; width: 100%;">
+      <div class="email-bar-text">
+        <strong>🐕 Subscribe for New Breed Guides</strong> — Get updates on National Dog Days
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Join</button>
+      </form>
+    </div>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
+  </div>
+
   <script>
-    // Google Site Console verification meta tag is in <head>
-    // GSC tracking: All pages are auto-indexed via Google Indexing API
-    // Schema markup for SEO added to each article page
-    console.log("OnRadar Dogs - GSC tracked and optimized for search visibility");
+    // Close email bars with localStorage
+    function closeEmailBar(barId) {
+      var bar = document.getElementById(barId);
+      bar.style.display = 'none';
+      localStorage.setItem(barId + '_closed', 'true');
+    }
+
+    // Check if bars were closed before
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('emailBarTop_closed') === 'true') {
+        document.getElementById('emailBarTop').style.display = 'none';
+      }
+      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
+        document.getElementById('emailBarBottom').style.display = 'none';
+      }
+    });
+
+    // Handle email submission
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      var email = event.target.querySelector('input[type="email"]').value;
+      alert('Thank you for subscribing! Check your email for dog breed guides.');
+      event.target.reset();
+      return false;
+    }
   </script>
 </body>
 </html>
