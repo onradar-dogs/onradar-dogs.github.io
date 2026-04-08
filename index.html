@@ -1,66 +1,103 @@
----
-layout: default
-title: National Dog Days Calendar
-description: Calendar of National Dog Days celebrations in 2026, with publishing schedule for breed guides
-permalink: /national-days/
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Dog Days Calendar 2026 | OnRadar Dogs</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f9fafb; color: #1e293b; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    header { background: #046bd2; color: white; padding: 40px 20px; text-align: center; margin: -20px -20px 40px; }
+    header h1 { font-size: 2.5em; margin-bottom: 10px; }
+    header p { font-size: 1.1em; opacity: 0.95; }
 
-<h1>National Dog Days Calendar</h1>
+    .calendar-table { background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin: 40px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    thead { background: #046bd2; color: white; }
+    th { padding: 15px; text-align: left; border-bottom: 2px solid #045cb4; font-weight: 600; }
+    td { padding: 15px; border-bottom: 1px solid #e2e8f0; }
+    tbody tr:nth-child(even) { background: #f9fafb; }
+    a { color: #046bd2; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
 
-<p style="font-size: 18px; color: #475569; margin: 30px 0;">Celebrate the unique heritage and characteristics of dog breeds throughout the year. Each breed has a designated National Day, providing an opportunity to learn more about these remarkable animals.</p>
+    .status { display: inline-block; background: #d4edda; color: #155724; padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; }
 
-<div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; margin: 40px 0; overflow: hidden;">
-  <table style="width: 100%; border-collapse: collapse;">
-    <thead style="background: #046bd2; color: white;">
-      <tr>
-        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Date</th>
-        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Breed</th>
-        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">National Day</th>
-        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% assign sorted_posts = site.posts | sort: 'date' %}
-      {% for post in sorted_posts %}
-      <tr style="border-bottom: 1px solid #e2e8f0; background: {% cycle '#ffffff', '#f9fafb' %};">
-        <td style="padding: 15px;">{{ post.date | date: "%b %d, %Y" }}</td>
-        <td style="padding: 15px;"><a href="{{ post.url }}" style="color: #046bd2; text-decoration: none; font-weight: 600;">{{ post.title }}</a></td>
-        <td style="padding: 15px;">April 8 — Akita Day</td>
-        <td style="padding: 15px;">
-          <span style="display: inline-block; background: #d4edda; color: #155724; padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: 600;">Published</span>
-        </td>
-      </tr>
-      {% endfor %}
+    .schedule-box { background: white; padding: 30px; border-radius: 8px; border-left: 4px solid #c96a3a; margin: 40px 0; }
+    .schedule-box h2 { margin-bottom: 15px; color: #1e293b; }
+    .schedule-box ul { margin-left: 20px; line-height: 2; color: #475569; }
 
-      {% if site.posts.size == 0 %}
-      <tr style="border-bottom: 1px solid #e2e8f0;">
-        <td colspan="4" style="padding: 30px; text-align: center; color: #64748b;">National Day celebration guides coming April 2026</td>
-      </tr>
-      {% endif %}
-    </tbody>
-  </table>
-</div>
+    .subscribe-box { background: white; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; margin: 40px 0; }
+    .subscribe-box h2 { margin-bottom: 15px; }
+    .subscribe-form { display: flex; gap: 10px; margin: 20px 0; }
+    .subscribe-form input { flex: 1; padding: 12px 15px; border: 1px solid #e2e8f0; border-radius: 4px; }
+    .subscribe-form button { background: #046bd2; color: white; padding: 12px 25px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    .subscribe-form button:hover { background: #045cb4; }
 
-<div style="background: #f9fafb; padding: 30px; border-radius: 8px; margin: 40px 0; border-left: 4px solid #c96a3a;">
-  <h2 style="margin-top: 0; color: #1e293b;">Publishing Schedule</h2>
-  <p style="color: #475569; line-height: 1.8;">We're publishing comprehensive breed guides on National Dog Days throughout the year. Each guide includes:</p>
-  <ul style="color: #475569; line-height: 2;">
-    <li>🎉 History and significance of the breed's National Day</li>
-    <li>📖 Complete breed overview and characteristics</li>
-    <li>🏃 Exercise, training, and care requirements</li>
-    <li>❤️ Health information and breed-specific concerns</li>
-    <li>👨‍👩‍👧‍👦 Family suitability and living situation guidance</li>
-    <li>❓ Frequently asked questions with expert answers</li>
-  </ul>
-</div>
+    footer { text-align: center; color: #64748b; font-size: 0.9em; margin-top: 60px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐕 National Dog Days 2026</h1>
+    <p>Comprehensive breed guides celebrating dog breeds throughout the year</p>
+  </header>
 
-<div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; margin: 40px 0;">
-  <h2 style="margin-top: 0; color: #1e293b;">Subscribe for Updates</h2>
-  <p style="color: #475569; margin: 0;">Get notified when new breed guides are published on National Dog Days.</p>
+  <div class="container">
 
-  <form style="margin-top: 20px; display: flex; gap: 10px;">
-    <input type="email" placeholder="Your email address" style="flex: 1; padding: 12px 15px; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 14px;" required/>
-    <button type="submit" style="background: #046bd2; color: white; padding: 12px 25px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; white-space: nowrap;">Subscribe</button>
-  </form>
-  <p style="color: #94a3b8; font-size: 13px; margin: 10px 0 0;">We'll send you guides on National Dog Days. No spam, ever.</p>
-</div>
+    <div class="calendar-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Breed</th>
+            <th>National Day</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 8</td>
+            <td><a href="/national-akita-day.html">National Akita Day</a></td>
+            <td>Akita Inu</td>
+            <td><span class="status">Published</span></td>
+          </tr>
+          <tr>
+            <td>April 17</td>
+            <td><a href="/national-komondor-day.html">National Komondor Day</a></td>
+            <td>Komondor</td>
+            <td><span class="status">Published</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="schedule-box">
+      <h2>📅 Publishing Schedule</h2>
+      <p>We're publishing comprehensive breed guides on National Dog Days throughout the year. Each guide includes:</p>
+      <ul>
+        <li>🎉 History and significance of the breed's National Day</li>
+        <li>📖 Complete breed overview and characteristics</li>
+        <li>🏃 Exercise, training, and care requirements</li>
+        <li>❤️ Health information and breed-specific concerns</li>
+        <li>👨‍👩‍👧‍👦 Family suitability and living situation guidance</li>
+        <li>❓ Frequently asked questions with expert answers</li>
+      </ul>
+    </div>
+
+    <div class="subscribe-box">
+      <h2>📬 Subscribe for Updates</h2>
+      <p>Get notified when new breed guides are published on National Dog Days.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email address" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 OnRadar Dogs</p>
+  </footer>
+</body>
+</html>
