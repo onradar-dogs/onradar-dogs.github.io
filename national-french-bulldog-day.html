@@ -251,6 +251,37 @@
       50% { background-position: 100% center; }
     }
 
+
+    /* Accordion Styles */
+    details {
+      margin: 20px 0;
+      padding: 15px;
+      border-left: 4px solid #046bd2;
+      background: #f9fafb;
+      border-radius: 4px;
+    }
+    
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #1e293b;
+      user-select: none;
+      padding: 10px;
+      margin: -15px -15px 15px -15px;
+      background: #eff6ff;
+      border-radius: 3px 3px 0 0;
+    }
+    
+    summary:hover {
+      background: #dbeafe;
+    }
+    
+    details p {
+      margin: 10px 0;
+      color: #475569;
+      line-height: 1.6;
+    }
+
     @media (max-width: 1024px) {
       .post-wrapper { grid-template-columns: 1fr; gap: 30px; }
       .post-sidebar { position: static; }
@@ -292,10 +323,7 @@
       <h3 style="color: #64748b; font-size: 20px; font-weight: 400; margin: 0 0 30px;">A Complete Guide to the French Bulldog Breed</h3>
       <p style="color: #64748b; font-size: 14px; margin: 0 0 30px;">📅 Published April 13, 2026</p>
 
-```html
-<article>
-
-<h2>What is National French Bulldog Day</h2>
+<h2 style="font-size: 28px; color: #1a202c; margin-top: 40px; margin-bottom: 20px; font-weight: bold;">What is National French Bulldog Day?</h2>
 
 <p>National French Bulldog Day, celebrated annually on April 13, is a dedicated day to honor and appreciate one of the world's most beloved dog breeds. This special occasion brings together French Bulldog enthusiasts, owners, breeders, and animal lovers to celebrate the unique charm and personality of these distinctive dogs. The day serves as a perfect opportunity to raise awareness about the breed, share experiences, and educate others about proper French Bulldog care and characteristics.</p>
 
@@ -717,6 +745,10 @@
     
 
 <h3>Frequently Asked Questions</h3>
+
+<p style="font-size: 16px; color: #475569; margin-bottom: 20px;"><strong>Click below to expand answers:</strong></p>
+
+
 
 <script type="application/ld+json">
 {
