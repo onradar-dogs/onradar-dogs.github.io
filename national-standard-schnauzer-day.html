@@ -197,6 +197,131 @@
             border-radius: 4px;
         }
 
+        /* Sidebar Styles */
+        .post-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 28px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar-widget::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #c96a3a;
+        }
+
+        .sidebar-widget h3 {
+            margin-top: 0;
+            padding-left: 12px;
+            color: #1e293b;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .sidebar-widget p {
+            font-size: 14px;
+            color: #64748b;
+            margin: 12px 0;
+            padding-left: 12px;
+        }
+
+        .sidebar-widget a {
+            display: block;
+            padding: 8px 0 8px 12px;
+            color: #046bd2;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+
+        .sidebar-widget a:hover {
+            color: #c96a3a;
+            border-bottom-color: #c96a3a;
+        }
+
+        .sidebar-widget a:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-email {
+            background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+            padding: 28px;
+            margin: 32px 0;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar-email::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .sidebar-email h3 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .sidebar-email p {
+            color: rgba(255,255,255,0.9);
+            margin: 0 0 15px;
+            font-size: 14px;
+        }
+
+        .sidebar-email form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sidebar-email input {
+            padding: 10px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .sidebar-email button {
+            background: white;
+            color: #046bd2;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .sidebar-email small {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+        }
+
         /* Email Widgets */
         .email-widget {
             background: white;
@@ -250,90 +375,6 @@
             color: #1a1a1a;
         }
 
-        .email-widget-blue {
-            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-        }
-
-        .email-widget-orange {
-            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
-        }
-
-        .email-widget-purple {
-            background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
-        }
-
-        .email-widget-article h4 {
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .email-widget-article p {
-            color: #404040;
-            font-size: 14px;
-            margin-bottom: 0;
-            line-height: 1.5;
-        }
-
-        .email-widget-article input {
-            color: #1a1a1a;
-            font-size: 14px;
-            padding: 10px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
-        }
-
-        .email-widget-article input::placeholder {
-            color: #9ca3af;
-        }
-
-        .email-widget-article button {
-            color: #1a1a1a;
-            background-color: white;
-            border: 1px solid #d1d5db;
-            padding: 10px 16px;
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .email-widget-article button:hover {
-            background-color: #f3f4f6;
-        }
-
-        /* Latest Posts */
-        .latest-posts {
-            margin-top: 0;
-        }
-
-        .latest-posts h3 {
-            margin-top: 0;
-            color: #1a1a1a;
-            margin-bottom: 12px;
-        }
-
-        .post-item {
-            padding: 10px 0;
-            border-bottom: 1px solid #e5e7eb;
-            font-size: 14px;
-        }
-
-        .post-item:last-child {
-            border-bottom: none;
-        }
-
-        .post-item a {
-            color: #1a1a1a;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .post-item a:hover {
-            color: #3b82f6;
-            font-weight: 600;
-        }
 
         /* Tables */
         table {
@@ -962,37 +1003,33 @@
     </main>
 
     <!-- Sidebar -->
-    <aside class="sidebar">
-        <!-- Email Widget 1 -->
-        <div class="email-widget email-widget-blue">
-            <h3>Get Expert Schnauzer Tips</h3>
-            <p>Learn breeding standards, health care, and training techniques from breed experts.</p>
-            <input type="email" placeholder="Your email" required>
-            <button type="submit">Get Tips Free</button>
-        </div>
+    <aside class="post-sidebar">
+      <div class="sidebar-widget">
+        <h3>🎯 Quick Links</h3>
+        <a href="/">Blog</a>
+        <a href="/tips.html">Training Tips</a>
+        <a href="/about.html">About Us</a>
+        <a href="/products.html">Products</a>
+      </div>
 
-        <!-- Latest Posts Widget -->
-        <div class="email-widget email-widget-blue latest-posts">
-            <h3>Latest Posts</h3>
-            <div class="post-item">
-                <a href="/national-akita-day.html">National Akita Day</a>
-            </div>
-            <div class="post-item">
-                <a href="/national-french-bulldog-day.html">National French Bulldog Day</a>
-            </div>
-            <div class="post-item">
-                <a href="/national-komondor-day.html">National Komondor Day</a>
-            </div>
-            <div class="post-item">
-                <a href="/tips.html">Dog Training Tips</a>
-            </div>
-            <div class="post-item">
-                <a href="/breeds.html">Dog Breeds Guide</a>
-            </div>
-            <div class="post-item">
-                <a href="/news-and-events.html">News & Events</a>
-            </div>
-        </div>
+      <div class="sidebar-email">
+        <h3>📚 Schnauzer Club</h3>
+        <p>Expert breed guides & training tips every week</p>
+        <form>
+          <input type="email" placeholder="Your email" required/>
+          <button type="submit">Join</button>
+        </form>
+        <small>No spam, ever</small>
+      </div>
+
+      <div class="sidebar-widget">
+        <h3>📖 Explore More</h3>
+        <a href="/national-akita-day.html">National Akita Day</a>
+        <a href="/national-french-bulldog-day.html">National French Bulldog Day</a>
+        <a href="/national-komondor-day.html">National Komondor Day</a>
+        <a href="/breeds.html">120+ Dog Breeds</a>
+        <a href="/news-and-events.html">News & Events</a>
+      </div>
     </aside>
 </div>
 
