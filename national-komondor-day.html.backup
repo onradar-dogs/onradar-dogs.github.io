@@ -280,8 +280,8 @@
       <h1 style="font-size: 24px; font-weight: 700; margin: 0;">🐕 OnRadar Dogs</h1>
       <nav style="display: flex; gap: 30px;">
         <a href="/" style="color: white; text-decoration: none; font-weight: 500;">Blog</a>
-        <a href="/news-and-events.html" style="color: white; text-decoration: none; font-weight: 500;">News & Events</a>
-        <a href="/about.html" style="color: white; text-decoration: none; font-weight: 500;">About</a>
+        <a href="tips.html" style="color: white; text-decoration: none; font-weight: 500;">Tips</a>
+        <a href="about.html" style="color: white; text-decoration: none; font-weight: 500;">About</a>
       </nav>
     </div>
   </header>
