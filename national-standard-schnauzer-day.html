@@ -276,6 +276,33 @@
             line-height: 1.5;
         }
 
+        .email-widget-article input {
+            color: #1a1a1a;
+            font-size: 14px;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+        }
+
+        .email-widget-article input::placeholder {
+            color: #9ca3af;
+        }
+
+        .email-widget-article button {
+            color: #1a1a1a;
+            background-color: white;
+            border: 1px solid #d1d5db;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .email-widget-article button:hover {
+            background-color: #f3f4f6;
+        }
+
         /* Latest Posts */
         .latest-posts {
             background-color: white;
@@ -1091,36 +1118,43 @@
 }
 </script>
 
+<!-- Footer -->
+<footer style="background-color: #1f2937; color: #e5e7eb; padding: 40px 20px; margin-top: 60px; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
+        <p style="font-size: 14px; line-height: 1.6;">
+            &copy; 2026 OnRadar Dogs. Comprehensive guides to dog breeds, training tips, health information, and care advice for dog lovers.
+            All rights reserved.
+        </p>
+        <p style="font-size: 13px; color: #9ca3af; margin-top: 15px;">
+            <a href="/about.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">About</a>
+            <a href="/news-and-events.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">News & Events</a>
+            <a href="/products.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">Products</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Close email bars with localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('emailBarTop_closed') === 'true') {
+        var topBar = document.getElementById('emailBarTop');
+        if (topBar) topBar.style.display = 'none';
+      }
+      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
+        var bottomBar = document.getElementById('emailBarBottom');
+        if (bottomBar) bottomBar.style.display = 'none';
+      }
+    });
+
+    // Handle email submission
+    function handleEmailSubmit(event) {
+      event.preventDefault();
+      var email = event.target.querySelector('input[type="email"]').value;
+      alert('Thank you for subscribing! Check your email for dog breed guides.');
+      event.target.reset();
+      return false;
+    }
+  </script>
+
 </body>
 </html>
-```
-
----
-
-## ✅ COMPLIANCE CHECKLIST:
-
-1. **SEO Title** (57 chars): "National Standard Schnauzer Day September 25 - Celebration Guide" ✅
-2. **Meta Description** (157 chars): Included and persuasive ✅
-3. **H1**: One exact match, keyword included, different from title ✅
-4. **Intro**: Keyword first sentence, hook (fact/question), 2-3 sentences ✅
-5. **H2/H3**: 8+ H2 (What Is, Breed Characteristics, Health, Grooming, Training, Celebrating, Exercise, Nutrition, Finding Puppies, Costs, FAQ), 25+ H3 ✅
-6. **FAQ**: 15 Q&A pairs + JSON-LD Schema ✅
-7. **Article Schema**: datePublished, author, headline ✅
-8. **Internal Links**: 8 contextual links (/about.html, /tips.html, /products.html, /news-and-events.html) ✅
-9. **External Links**: 4 authoritative (AKC, PetMD, ASPCA, VCA) ✅
-10. **Tables**: 3 comprehensive comparison tables ✅
-11. **Interactive FAQ**: `<details>/<summary>` accordion ✅
-12. **Keyword Density**: 1-2% natural integration ✅
-13. **Slug**: "national-standard-schnauzer-day" ✅
-14. **Geo-targeting**: American English, AKC references, lbs/inches/F ✅
-15. **Hook Guard**: Intro doesn't repeat H1/title opening ✅
-16. **Featured Snippets**: H2 questions with 1-3 sentence answers ✅
-17. **No HTML Entities**: Raw HTML tags used ✅
-18. **Email Bars**: Top gradient blue + bottom subscription ✅
-19. **Shimmer Bar**: 4px animated gradient ✅
-20. **Sticky Header**: Navigation included ✅
-21. **Grid Layout**: Article + sidebar ✅
-22. **Word Count**: 7,850+ words (pillar article) ✅
-23. **Sidebar Widgets**: 4 email-widget-article divs + latest posts ✅
-24. **Inline CSS**: All styles in `<head><style>` ✅
-25. **Credibility**: AKC standards, vet references, breed clubs, health data ✅
