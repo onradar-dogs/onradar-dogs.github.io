@@ -18,6 +18,70 @@
   <link rel="canonical" href="https://onradar-dogs.github.io/national-komondor-day.html">
   <link rel="stylesheet" href="assets/css/style.css">
   
+
+    .sidebar-widget {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 28px;
+      border: 1px solid #e2e8f0;
+      position: relative;
+      overflow: hidden;
+    }
+    .sidebar-widget::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #c96a3a;
+    }
+    .sidebar-widget h3 { margin-top: 0; padding-left: 12px; color: #1e293b; font-size: 16px; font-weight: 600; }
+    .sidebar-widget p { font-size: 14px; color: #64748b; margin: 12px 0; padding-left: 12px; }
+    .sidebar-widget a {
+      display: block;
+      padding: 8px 0 8px 12px;
+      color: #046bd2;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+    .sidebar-widget a:hover { color: #c96a3a; border-bottom-color: #c96a3a; }
+    .sidebar-widget a:last-child { border-bottom: none; }
+
+    .sidebar-email {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      padding: 28px;
+      margin: 32px 0;
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .sidebar-email::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sidebar-email h3 { color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px; font-weight: 600; }
+    .sidebar-email p { color: rgba(255,255,255,0.9); margin: 0 0 15px; font-size: 14px; }
+    .sidebar-email form { display: flex; flex-direction: column; gap: 10px; }
+    .sidebar-email input { padding: 10px 12px; border: none; border-radius: 4px; font-size: 13px; }
+    .sidebar-email button { background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px; }
+
+    
+    
+    
+    
+    
+    
 </head>
 <body>
   <!-- Top Email Bar -->
@@ -28,7 +92,7 @@
       </div>
       <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
         <input type="email" placeholder="Your email" required/>
-        <button type="submit">Subscribe</button>
+        <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
       </form>
     </div>
     <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
@@ -72,12 +136,12 @@
 
 <p style="font-size: 16px; line-height: 1.8; color: #2d3748; margin-bottom: 15px;">Today, National Komondor Day brings together a passionate community of dog lovers who appreciate this breed's distinctive characteristics and impressive history. From social media celebrations to breed club events and educational seminars, the day has evolved into a meaningful occasion that extends far beyond casual observation. Dog parks, breeding clubs, and veterinary organizations often host special events to celebrate Komondors and connect with fellow enthusiasts.</p>
 
-<div class="email-widget-article">
+<div class="email-widget-article" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 25px; margin: 35px 0; color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);">
     <h4>Stay Updated on Dog Breed Information</h4>
     <p>Get exclusive insights about unique dog breeds, care tips, and special breed day celebrations delivered to your inbox.</p>
     <form onsubmit="return handleEmailSubmit(event)">
       <input type="email" placeholder="Your email" required/>
-      <button type="submit">Subscribe</button>
+      <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
     </form>
   </div>
 
@@ -150,12 +214,12 @@
 
 <p style="font-size: 16px; line-height: 1.8; color: #2d3748; margin-bottom: 15px;">While the breed standard strictly requires pure white coloring, the variation in cord size and arrangement creates individual visual distinctiveness among Komondors. Some dogs develop finer, more numerous cords while others have thicker, fewer cords. This natural variation, within the pure white requirement, adds to the breed's visual interest and individuality.</p>
 
-<div class="email-widget-article">
+<div class="email-widget-article" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 25px; margin: 35px 0; color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);">
     <h4>Learn About Unique Dog Breeds</h4>
     <p>Discover the fascinating physical characteristics and breed standards of rare and distinctive dog breeds.</p>
     <form onsubmit="return handleEmailSubmit(event)">
       <input type="email" placeholder="Your email" required/>
-      <button type="submit">Subscribe</button>
+      <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
     </form>
   </div>
 
@@ -238,12 +302,12 @@
 
 <p style="font-size: 16px; line-height: 1.8; color: #2d3748; margin-bottom: 15px;">Some owners find it beneficial to invest in <a href="/products.html" style="color: #667eea; text-decoration: none;">professional grooming supplies and services</a> every 6-12 months for thorough bathing and drying, combined with regular at-home maintenance between professional sessions. Finding a groomer experienced with Komondors is crucial—inexperienced handlers can inadvertently create matting that damages the coat's appearance and compromises the dog's comfort.</p>
 
-<div class="email-widget-article">
+<div class="email-widget-article" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 25px; margin: 35px 0; color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);">
     <h4>Expert Breed Care Resources</h4>
     <p>Access comprehensive grooming guides and breed-specific care information for Komondors and other unique dog breeds.</p>
     <form onsubmit="return handleEmailSubmit(event)">
       <input type="email" placeholder="Your email" required/>
-      <button type="submit">Subscribe</button>
+      <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
     </form>
   </div>
 
@@ -305,12 +369,12 @@
 
 <p style="font-size: 16px; line-height: 1.8; color: #2d3748; margin-bottom: 15px;">Komondors require secure fencing—at minimum 6 feet tall—to prevent escape. These strong, intelligent dogs can overcome poorly secured fencing or find their way out of inadequately designed enclosures. A securely fenced yard allows Komondors to exercise independently and enjoy outdoor time safely, while also providing containment for this large breed in residential settings.</p>
 
-<div class="email-widget-article">
+<div class="email-widget-article" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 25px; margin: 35px 0; color: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);">
     <h4>Master Large Breed Dog Care</h4>
     <p>Get specialized knowledge on exercise protocols, training techniques, and health management for large dog breeds.</p>
     <form onsubmit="return handleEmailSubmit(event)">
       <input type="email" placeholder="Your email" required/>
-      <button type="submit">Subscribe</button>
+      <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
     </form>
   </div>
 
@@ -575,26 +639,26 @@
     </article>
 
         <aside class="post-sidebar">
-      <div class="sidebar-widget">
-        <h3>🎯 Quick Links</h3>
+      <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 28px; border: 1px solid #e2e8f0; position: relative; overflow: hidden; border-left: 4px solid #c96a3a;">
+        <h3 style="color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px; font-weight: 600;">🎯 Quick Links</h3>
         <a href="/">Blog</a>
         <a href="/news-and-events.html">News & Events</a>
         <a href="/about.html">About Us</a>
         <a href="/products.html">Products</a>
       </div>
 
-      <div class="sidebar-email">
-        <h3>📚 Dog Lovers Club</h3>
-        <p>New breed guides & training tips every week</p>
-        <form>
-          <input type="email" placeholder="Your email" required/>
-          <button type="submit">Join</button>
+      <div style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 28px; margin: 32px 0; color: white; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
+        <h3 style="color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px; font-weight: 600;">📚 Dog Lovers Club</h3>
+        <p style="color: rgba(255,255,255,0.95); margin: 0 0 15px; font-size: 14px;">New breed guides & training tips every week</p>
+        <form style="display: flex; flex-direction: column; gap: 10px;">
+    <input type="email" style="padding: 10px 12px; border: none; border-radius: 4px; font-size: 13px;" placeholder="Your email" required/>
+          <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Join</button>
         </form>
         <small>No spam, ever</small>
       </div>
 
-      <div class="sidebar-widget">
-        <h3>📖 More Breeds</h3>
+      <div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 28px; border: 1px solid #e2e8f0; position: relative; overflow: hidden; border-left: 4px solid #c96a3a;">
+        <h3 style="color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px; font-weight: 600;">📖 More Breeds</h3>
         <p>Explore guides for dog breeds. Check our national dog days calendar.</p>
         <a href="/national-akita-day.html">National Akita Day</a>
         <a href="/national-days.html">All National Dog Days</a>
@@ -633,7 +697,7 @@
       </div>
       <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
         <input type="email" placeholder="Your email" required/>
-        <button type="submit">Join</button>
+        <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Join</button>
       </form>
     </div>
     <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
