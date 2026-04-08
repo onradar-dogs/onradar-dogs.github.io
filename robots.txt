@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onradar-dogs.github.io/sitemap.xml
+
+# Disallow crawling of legal pages (optional)
+# User-agent: *
+# Disallow: /privacy.html
+# Disallow: /terms.html

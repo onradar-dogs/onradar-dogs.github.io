@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="post-wrapper">
+  <article class="post-content-main">
+    <header class="post-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}
+      <div class="post-meta" style="margin: 15px 0 30px; color: #64748b; font-size: 14px;">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          📅 Published {{ page.date | date: "%B %d, %Y" }}
+        </time>
+      </div>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+
+  <aside class="post-sidebar">
+    <div class="sidebar-widget">
+      <h3>🎯 Key Information</h3>
+      <p>Complete breed guide with training, health, and care information</p>
+      <a href="/breeds/">← View All Breeds</a>
+      <a href="/national-days/">📅 National Days</a>
+    </div>
+
+    {% if site.posts.size > 1 %}
+    <div class="sidebar-widget">
+      <h3>📚 More Guides</h3>
+      {% for post in site.posts limit: 5 %}
+        {% unless post.url == page.url %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="email-widget" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); padding: 28px; margin: 32px 0; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.12);">
+      <h3 style="color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px;">Get More Guides</h3>
+      <p style="color: rgba(255,255,255,0.9); margin: 0 0 15px; font-size: 14px;">New breed guides on National Dog Days</p>
+      <form style="display: flex; flex-direction: column; gap: 10px;">
+        <input type="email" placeholder="Your email" style="padding: 10px 12px; border: none; border-radius: 4px; font-size: 13px;" required/>
+        <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
+      </form>
+      <p style="color: rgba(255,255,255,0.7); font-size: 11px; margin: 10px 0 0;">No spam, ever</p>
+    </div>
+
+    <div class="sidebar-widget">
+      <h3>ℹ️ About This Site</h3>
+      <p>OnRadar Dogs provides comprehensive breed guides and celebrates National Dog Days for 120+ breeds</p>
+      <a href="/">Home</a>
+    </div>
+  </aside>
+</div>
