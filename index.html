@@ -1,28 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="pending-verification" />
-<title>OnRadar Dogs — Best Dog Accessories by Breed</title>
-<style>
-body{font-family:Georgia,serif;max-width:860px;margin:0 auto;padding:40px 20px;color:#222}
-h1{font-size:2.2em;color:#1a1a2e}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin:32px 0}
-.card{border:1px solid #e0e0e0;border-radius:8px;padding:16px;text-decoration:none;color:#222}
-.card:hover{box-shadow:0 4px 12px rgba(0,0,0,.1)}
-nav{background:#1a1a2e;padding:14px 20px;margin:-40px -20px 40px}
-nav a{color:#fff;text-decoration:none;margin-right:20px;font-size:.9em}
-</style>
-</head>
-<body>
-<nav><a href="/">Home</a><a href="/dachshund/">Dachshund</a></nav>
-<h1>OnRadar Dogs</h1>
-<p>The best dog accessories, reviewed and ranked by breed. Find the perfect gear for your dog.</p>
-<h2>Browse by Breed</h2>
-<div class="grid">
-  <a class="card" href="/dachshund/"><h3>Dachshund</h3><p>50+ product categories reviewed for Dachshunds</p></a>
+---
+layout: default
+title: National Dog Days Calendar
+description: Calendar of National Dog Days celebrations in 2026, with publishing schedule for breed guides
+permalink: /national-days/
+---
+
+<h1>National Dog Days Calendar</h1>
+
+<p style="font-size: 18px; color: #475569; margin: 30px 0;">Celebrate the unique heritage and characteristics of dog breeds throughout the year. Each breed has a designated National Day, providing an opportunity to learn more about these remarkable animals.</p>
+
+<div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; margin: 40px 0; overflow: hidden;">
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead style="background: #046bd2; color: white;">
+      <tr>
+        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Date</th>
+        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Breed</th>
+        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">National Day</th>
+        <th style="padding: 15px; text-align: left; border-bottom: 2px solid #045cb4;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% assign sorted_posts = site.posts | sort: 'date' %}
+      {% for post in sorted_posts %}
+      <tr style="border-bottom: 1px solid #e2e8f0; background: {% cycle '#ffffff', '#f9fafb' %};">
+        <td style="padding: 15px;">{{ post.date | date: "%b %d, %Y" }}</td>
+        <td style="padding: 15px;"><a href="{{ post.url }}" style="color: #046bd2; text-decoration: none; font-weight: 600;">{{ post.title }}</a></td>
+        <td style="padding: 15px;">April 8 — Akita Day</td>
+        <td style="padding: 15px;">
+          <span style="display: inline-block; background: #d4edda; color: #155724; padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: 600;">Published</span>
+        </td>
+      </tr>
+      {% endfor %}
+
+      {% if site.posts.size == 0 %}
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td colspan="4" style="padding: 30px; text-align: center; color: #64748b;">National Day celebration guides coming April 2026</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
 </div>
-<footer style="margin-top:4em;font-size:.8em;color:#888;text-align:center">© 2026 OnRadar Dogs</footer>
-</body>
-</html>
+
+<div style="background: #f9fafb; padding: 30px; border-radius: 8px; margin: 40px 0; border-left: 4px solid #c96a3a;">
+  <h2 style="margin-top: 0; color: #1e293b;">Publishing Schedule</h2>
+  <p style="color: #475569; line-height: 1.8;">We're publishing comprehensive breed guides on National Dog Days throughout the year. Each guide includes:</p>
+  <ul style="color: #475569; line-height: 2;">
+    <li>🎉 History and significance of the breed's National Day</li>
+    <li>📖 Complete breed overview and characteristics</li>
+    <li>🏃 Exercise, training, and care requirements</li>
+    <li>❤️ Health information and breed-specific concerns</li>
+    <li>👨‍👩‍👧‍👦 Family suitability and living situation guidance</li>
+    <li>❓ Frequently asked questions with expert answers</li>
+  </ul>
+</div>
+
+<div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; margin: 40px 0;">
+  <h2 style="margin-top: 0; color: #1e293b;">Subscribe for Updates</h2>
+  <p style="color: #475569; margin: 0;">Get notified when new breed guides are published on National Dog Days.</p>
+
+  <form style="margin-top: 20px; display: flex; gap: 10px;">
+    <input type="email" placeholder="Your email address" style="flex: 1; padding: 12px 15px; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 14px;" required/>
+    <button type="submit" style="background: #046bd2; color: white; padding: 12px 25px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; white-space: nowrap;">Subscribe</button>
+  </form>
+  <p style="color: #94a3b8; font-size: 13px; margin: 10px 0 0;">We'll send you guides on National Dog Days. No spam, ever.</p>
+</div>
