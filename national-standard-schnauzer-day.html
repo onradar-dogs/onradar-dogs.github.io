@@ -1118,31 +1118,42 @@
 }
 </script>
 
-<!-- Footer -->
-<footer style="background-color: #1f2937; color: #e5e7eb; padding: 40px 20px; margin-top: 60px; text-align: center;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 20px;">
-        <p style="font-size: 14px; line-height: 1.6;">
-            &copy; 2026 OnRadar Dogs. Comprehensive guides to dog breeds, training tips, health information, and care advice for dog lovers.
-            All rights reserved.
-        </p>
-        <p style="font-size: 13px; color: #9ca3af; margin-top: 15px;">
-            <a href="/about.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">About</a>
-            <a href="/news-and-events.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">News & Events</a>
-            <a href="/products.html" style="color: #9ca3af; text-decoration: none; margin: 0 10px;">Products</a>
-        </p>
+  <!-- Bottom Email Bar -->
+  <div id="emailBarBottom" class="email-bar bottom">
+    <div class="email-bar-content">
+      <div class="email-bar-text">
+        <strong>🐕 Subscribe for New Breed Guides</strong> — Get updates on National Dog Days
+      </div>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
+        <input type="email" placeholder="Your email" required/>
+        <button type="submit">Join</button>
+      </form>
     </div>
-</footer>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
+  </div>
 
-<script>
+  <style>
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+  </style>
+
+  <script>
     // Close email bars with localStorage
+    function closeEmailBar(barId) {
+      var bar = document.getElementById(barId);
+      bar.classList.add('hidden');
+      localStorage.setItem(barId + '_closed', 'true');
+    }
+
+    // Check if bars were closed before
     document.addEventListener('DOMContentLoaded', function() {
       if (localStorage.getItem('emailBarTop_closed') === 'true') {
-        var topBar = document.getElementById('emailBarTop');
-        if (topBar) topBar.style.display = 'none';
+        document.getElementById('emailBarTop').classList.add('hidden');
       }
       if (localStorage.getItem('emailBarBottom_closed') === 'true') {
-        var bottomBar = document.getElementById('emailBarBottom');
-        if (bottomBar) bottomBar.style.display = 'none';
+        document.getElementById('emailBarBottom').classList.add('hidden');
       }
     });
 
@@ -1155,6 +1166,5 @@
       return false;
     }
   </script>
-
 </body>
 </html>
