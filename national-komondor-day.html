@@ -17,7 +17,163 @@
   <meta name="twitter:description" content="Complete guide to Komondor breed for National Komondor Day: history, grooming, health, and care information.">
   <link rel="canonical" href="https://onradar-dogs.github.io/national-komondor-day.html">
   <link rel="stylesheet" href="assets/css/style.css">
-  
+  <style>
+    /* Email Bar Sticky */
+    .email-bar {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .email-bar.top {
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .email-bar.bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: auto;
+      z-index: 99;
+    }
+
+    .email-bar-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-content {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .email-bar.bottom .email-bar-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .email-bar-text {
+      flex: 1;
+    }
+
+    .email-bar.top .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar.bottom .email-bar-text {
+      text-align: center;
+    }
+
+    .email-bar-form {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-bar-form input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      min-width: 200px;
+      font-size: 13px;
+    }
+
+    .email-bar-form button {
+      background: white;
+      color: #046bd2;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .email-bar-form button:hover {
+      opacity: 0.9;
+    }
+
+    .email-bar-close {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .email-bar-close:hover {
+      opacity: 0.8;
+    }
+
+    .email-bar.hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .email-bar.top {
+        flex-direction: column;
+        padding: 10px 16px;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-content {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .email-bar.top .email-bar-text {
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .email-bar-form {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .email-bar-form input {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .email-bar-form button {
+        width: 100%;
+      }
+    }
+
+    .post-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 40px;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .post-content-main { min-width: 0; }
+    .post-sidebar { position: sticky; top: 120px; height: fit-content; }
 
     .sidebar-widget {
       background: white;
@@ -76,12 +232,30 @@
     .sidebar-email input { padding: 10px 12px; border: none; border-radius: 4px; font-size: 13px; }
     .sidebar-email button { background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px; }
 
-    
-    
-    
-    
-    
-    
+    .email-widget-article {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      padding: 25px;
+      margin: 35px 0;
+      color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);
+    }
+    .email-widget-article h4 { color: white; margin-top: 0; margin-bottom: 10px; font-size: 16px; }
+    .email-widget-article p { color: rgba(255,255,255,0.95); margin: 0 0 15px; font-size: 14px; }
+    .email-widget-article form { display: flex; gap: 8px; }
+    .email-widget-article input { flex: 1; padding: 10px; border: none; border-radius: 4px; font-size: 13px; }
+    .email-widget-article button { background: white; color: #046bd2; padding: 10px 20px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
+
+    @media (max-width: 1024px) {
+      .post-wrapper { grid-template-columns: 1fr; gap: 30px; }
+      .post-sidebar { position: static; }
+    }
+  </style>
 </head>
 <body>
   <!-- Top Email Bar -->
@@ -105,9 +279,9 @@
     <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
       <h1 style="font-size: 24px; font-weight: 700; margin: 0;">🐕 OnRadar Dogs</h1>
       <nav style="display: flex; gap: 30px;">
-        Blog
-        News & Events
-        About
+        <a href="/" style="color: white; text-decoration: none; font-weight: 500;">Blog</a>
+        <a href="/news-and-events.html" style="color: white; text-decoration: none; font-weight: 500;">News & Events</a>
+        <a href="/about.html" style="color: white; text-decoration: none; font-weight: 500;">About</a>
       </nav>
     </div>
   </header>
