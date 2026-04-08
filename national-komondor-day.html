@@ -259,17 +259,17 @@
 </head>
 <body>
   <!-- Top Email Bar -->
-  <div id="emailBarTop" class="email-bar top">
-    <div class="email-bar-content">
-      <div class="email-bar-text">
-        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+  <div id="emailBarTop" class="email-bar top" style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 12px 24px; display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 100%;">
+    <div class="email-bar-content" style="display: flex; align-items: center; gap: 15px; flex: 1; justify-content: center; width: 100%;">
+      <div class="email-bar-text" style="flex: 1; text-align: center; color: white;">
+        <strong style="color: white;">📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
       </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit" style="background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px;">Subscribe</button>
+      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)" style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;">
+        <input type="email" placeholder="Your email" required style="padding: 8px 12px; border: none; border-radius: 4px; min-width: 200px; font-size: 13px;"/>
+        <button type="submit" style="background: white; color: #046bd2; border: none; padding: 8px 16px; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px; white-space: nowrap;">Subscribe</button>
       </form>
     </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
+    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer; padding: 0; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">&times;</button>
   </div>
 
   <!-- Top Bar -->
