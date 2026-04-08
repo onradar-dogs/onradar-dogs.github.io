@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="verification-code-here" />
+  <title>News & Events - National Dog Days 2026 | OnRadar Dogs</title>
+  <meta name="description" content="Latest news, events, and National Dog Days celebrations throughout 2026. Breed guides, breed spotlights, and dog-related events.">
+  <meta name="keywords" content="dog news, dog events, National Dog Days, dog breed celebrations, dog calendar">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9fafb;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #046bd2;
+      color: white;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #045cb4;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    .content-section {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      padding: 30px;
+    }
+
+    .section-title {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #046bd2;
+      padding-bottom: 10px;
+    }
+
+    .event-item {
+      border-left: 4px solid #046bd2;
+      padding: 20px;
+      margin-bottom: 20px;
+      background: #f9fafb;
+      border-radius: 4px;
+    }
+
+    .event-date {
+      font-weight: 600;
+      color: #046bd2;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+
+    .event-title {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+
+    .event-description {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .event-link {
+      color: #046bd2;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .event-link:hover {
+      text-decoration: underline;
+    }
+
+    .email-widget {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    }
+
+    .email-widget h3 {
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .email-widget p {
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .email-form input {
+      flex: 1;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .email-form button {
+      background: white;
+      color: #667eea;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .email-form button:hover {
+      transform: translateY(-2px);
+    }
+
+    .coming-soon {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 20px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    footer .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+      color: #046bd2;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    footer .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 20px;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        padding: 10px 15px;
+      }
+
+      .email-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">🐕 OnRadar Dogs</div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/news-and-events.html">News & Events</a></li>
+        <li><a href="/products.html">Accessories</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms and Conditions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-content">
+    <header>
+      <h1>🐕 Dog News & Events</h1>
+      <p>Latest updates, National Dog Days celebrations, and breed spotlights throughout 2026</p>
+    </header>
+
+    <div class="content-section">
+      <div class="section-title">📰 Latest Dog News</div>
+
+      <div class="event-item">
+        <div class="event-date">April 8, 2026</div>
+        <div class="event-title">National Akita Day</div>
+        <div class="event-description">
+          Celebrating the majestic Akita Inu breed! Discover comprehensive breed guides, care requirements, training tips, and what makes Akitas special dog companions.
+        </div>
+        <a href="/national-akita-day.html" class="event-link">Read the Akita Guide →</a>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date">April 17, 2026</div>
+        <div class="event-title">National Komondor Day</div>
+        <div class="event-description">
+          Explore the unique Komondor breed with its distinctive corded coat. Learn about grooming, exercise needs, temperament, and why this rare breed is gaining popularity among dog lovers.
+        </div>
+        <a href="/national-komondor-day.html" class="event-link">Read the Komondor Guide →</a>
+      </div>
+
+      <div class="coming-soon">
+        <strong>🎉 Coming Soon:</strong> More National Dog Days articles are being prepared. Subscribe below to get notified when new breed guides are published!
+      </div>
+    </div>
+
+    <div class="email-widget">
+      <h3>📬 Stay Updated on National Dog Days</h3>
+      <p>Get notified when we publish new breed guides and dog care articles. We respect your privacy and never spam.</p>
+      <form class="email-form" onsubmit="return false;">
+        <input type="email" placeholder="Your email address" required/>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="content-section">
+      <div class="section-title">📅 Upcoming Dog Events</div>
+      <div class="event-item">
+        <div class="event-date">Throughout April-December 2026</div>
+        <div class="event-title">National Dog Days Calendar</div>
+        <div class="event-description">
+          We're publishing comprehensive breed guides for National Dog Days throughout 2026. Each month features different dog breeds with detailed information about breed characteristics, care requirements, health considerations, and training guidance.
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div class="section-title">🐕 Featured Breed Guides</div>
+      <p style="margin-bottom: 20px; color: #475569;">Comprehensive breed guides that celebrate the diversity of dog breeds and help dog lovers understand breed-specific needs:</p>
+      <ul style="list-style: none; color: #475569;">
+        <li style="margin-bottom: 12px;">✓ <strong>Akita Inu</strong> — April 8 | Noble, independent, and protective</li>
+        <li style="margin-bottom: 12px;">✓ <strong>Komondor</strong> — April 17 | Unique corded coat, excellent guardians</li>
+        <li style="margin-bottom: 12px;">⏳ More breeds coming throughout 2026</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h4>🐕 OnRadar Dogs</h4>
+        <p>Comprehensive breed guides celebrating dog breeds throughout the year. Quality information for dog lovers.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/news-and-events.html">News & Events</a></li>
+          <li><a href="/products.html">Accessories</a></li>
+          <li><a href="/about.html">About Me</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <p>Follow us for the latest dog breed guides and National Dog Days celebrations.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 OnRadar Dogs. All rights reserved. | GSC Tracked & SEO Optimized</p>
+    </div>
+  </footer>
+
+  <script>
+    console.log("OnRadar Dogs - News & Events Page - GSC tracked and optimized");
+  </script>
+</body>
+</html>
