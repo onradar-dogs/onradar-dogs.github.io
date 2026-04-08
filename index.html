@@ -143,7 +143,78 @@
       font-weight: 600;
     }
 
-    a:hover { 
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-section {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .post-card {
+      padding: 30px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .post-card:last-child {
+      border-bottom: none;
+    }
+
+    .post-meta {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+
+    .post-date {
+      color: #046bd2;
+      font-weight: 600;
+    }
+
+    .post-category {
+      background: #f0f7ff;
+      color: #046bd2;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .post-title {
+      margin: 12px 0 15px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .post-title a {
+      color: #046bd2;
+      text-decoration: none;
+    }
+
+    .post-title a:hover {
+      text-decoration: underline;
+    }
+
+    .post-excerpt {
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .read-more {
+      color: #046bd2;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .read-more:hover {
       text-decoration: underline;
     }
 
@@ -381,33 +452,29 @@
         <p>Comprehensive breed guides celebrating dog breeds throughout the year</p>
       </header>
 
-      <!-- CALENDAR SECTION -->
-      <div class="calendar-section">
-        <div class="section-title">📅 Published Articles</div>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Breed</th>
-              <th>National Day</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>April 8</td>
-              <td><a href="/national-akita-day.html">National Akita Day</a></td>
-              <td>Akita Inu</td>
-              <td><span class="status">Published</span></td>
-            </tr>
-            <tr>
-              <td>April 17</td>
-              <td><a href="/national-komondor-day.html">National Komondor Day</a></td>
-              <td>Komondor</td>
-              <td><span class="status">Published</span></td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- BLOG POSTS -->
+      <div class="blog-section">
+        <div class="section-title">📖 Latest Breed Guides</div>
+
+        <article class="post-card">
+          <div class="post-meta">
+            <span class="post-date">April 8, 2026</span>
+            <span class="post-category">National Day</span>
+          </div>
+          <h3 class="post-title"><a href="/national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h3>
+          <p class="post-excerpt">National Akita Day is celebrated on April 8th each year, honoring one of Japan's most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p>
+          <a href="/national-akita-day.html" class="read-more">Read Full Guide →</a>
+        </article>
+
+        <article class="post-card">
+          <div class="post-meta">
+            <span class="post-date">April 17, 2026</span>
+            <span class="post-category">National Day</span>
+          </div>
+          <h3 class="post-title"><a href="/national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide & History</a></h3>
+          <p class="post-excerpt">The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p>
+          <a href="/national-komondor-day.html" class="read-more">Read Full Guide →</a>
+        </article>
       </div>
 
       <!-- EMAIL WIDGET - INLINE -->
@@ -421,19 +488,6 @@
         <div class="email-disclaimer">We respect your privacy. No spam, ever.</div>
       </div>
 
-      <!-- PUBLISHING SCHEDULE -->
-      <div class="info-box">
-        <h2>🗓️ Publishing Schedule</h2>
-        <p>We publish comprehensive breed guides on National Dog Days throughout the year. Each guide includes:</p>
-        <ul>
-          <li>🎉 History and significance of the breed's National Day</li>
-          <li>📖 Complete breed overview and characteristics</li>
-          <li>🏃 Exercise, training, and care requirements</li>
-          <li>❤️ Health information and breed-specific concerns</li>
-          <li>👨‍👩‍👧‍👦 Family suitability and living situation guidance</li>
-          <li>❓ Frequently asked questions with expert answers</li>
-        </ul>
-      </div>
 
     </div>
 
@@ -460,7 +514,7 @@
         <h3>📍 Quick Links</h3>
         <ul style="list-style: none;">
           <li><a href="/about.html" style="font-size: 13px;">About Us</a></li>
-          <li><a href="/accessories.html" style="font-size: 13px;">Accessories</a></li>
+          <li><a href="/products.html" style="font-size: 13px;">Accessories</a></li>
           <li><a href="/privacy.html" style="font-size: 13px;">Privacy</a></li>
         </ul>
       </div>
