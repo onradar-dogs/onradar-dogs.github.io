@@ -205,6 +205,10 @@ body.article-page {
   font-size: 0.95rem;
 }
 
+.topnav a:hover {
+  color: var(--accent-deep);
+}
+
 .site-hero,
 .page-panel {
   width: min(100%, 100%);
@@ -400,6 +404,35 @@ h3 {
 
 .content-column {
   min-width: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.9rem;
+  padding: 0.15rem 0.1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.breadcrumbs a {
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs span[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.breadcrumbs__sep {
+  color: rgba(24, 33, 38, 0.35);
 }
 
 .sidebar {
