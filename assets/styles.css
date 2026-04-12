@@ -45,15 +45,79 @@ body.article-page {
 .promo-bar__inner {
   width: min(1180px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 0.8rem 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 0.75rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.95fr) auto;
   align-items: center;
   gap: 1rem;
 }
 
 .promo-bar p {
   margin: 0;
+}
+
+.promo-bar__copy {
+  min-width: 0;
+}
+
+.promo-bar__eyebrow {
+  margin: 0 0 0.18rem;
+  color: rgba(255, 235, 214, 0.88);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+}
+
+.promo-bar__copy strong {
+  color: #fff3e4;
+}
+
+.promo-bar__signup {
+  min-width: 0;
+  padding: 0.5rem 0.55rem 0.45rem;
+  border-radius: 18px;
+  background: rgba(255, 248, 239, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 28px rgba(8, 20, 26, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.promo-bar__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.promo-bar__form input {
+  width: 100%;
+  padding: 0.72rem 0.92rem;
+  border-radius: 999px;
+  border: 1px solid rgba(18, 48, 59, 0.18);
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--ink);
+  -webkit-text-fill-color: var(--ink);
+  font: inherit;
+}
+
+.promo-bar__form input::placeholder {
+  color: #6c7a80;
+  -webkit-text-fill-color: #6c7a80;
+  opacity: 1;
+}
+
+.promo-bar__signup .button {
+  padding: 0.72rem 1rem;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #ef8a5e, var(--accent));
+  box-shadow: 0 10px 18px rgba(208, 93, 40, 0.28);
+}
+
+.promo-bar__microcopy {
+  margin-top: 0.35rem;
+  color: rgba(255, 244, 232, 0.88);
+  font-size: 0.76rem;
+  line-height: 1.3;
 }
 
 .promo-bar__close {
@@ -970,12 +1034,22 @@ h3 {
     flex-direction: column;
   }
 
+  .promo-bar__inner {
+    display: flex;
+  }
+
+  .promo-bar__signup,
+  .promo-bar__form {
+    width: 100%;
+  }
+
   .site-layout {
     grid-template-columns: 1fr;
   }
 
   .hero-signup__compact,
-  .hero-signup__form {
+  .hero-signup__form,
+  .promo-bar__form {
     grid-template-columns: 1fr;
   }
 
