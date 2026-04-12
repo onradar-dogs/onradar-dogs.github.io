@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-12T04:32:02+00:00",
+  "source_root": "/Users/piotrsopyla/My Drive/AUTOBLOG_SYSTEM_v2/SEO_PROMPT_LAB/sites/example_site",
+  "managed_paths": [
+    "index.html",
+    "assets/site.js",
+    "assets/styles.css",
+    "houdini-weenie-harness-review.html",
+    "national-standard-schnauzer-day.html",
+    "national-komondor-day.html",
+    "national-french-bulldog-day.html",
+    "national-akita-day.html"
+  ],
+  "site": "onradar-dogs.github.io"
+}

@@ -1,218 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</title>
-  <meta name="description" content="Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it 'the absolute BEST' and if it's worth buying.">
-  <meta name="keywords" content="Houdini Weenie Harness, Weenie Warmers, dachshund harness review, escape-proof harness, dachshund gear">
-  <meta name="author" content="OnRadar Dogs">
-  <meta property="og:title" content="Houdini Weenie Harness Review: Does It Really Prevent Escapes?">
-  <meta property="og:description" content="Honest review of Houdini Weenie Harness for dachshunds with community validation from r/Dachshund.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://onradar-dogs.github.io/houdini-weenie-harness-review.html">
-  <meta property="article:published_time" content="2026-04-10">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://onradar-dogs.github.io/houdini-weenie-harness-review.html">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Email Bar Sticky */
-    .email-bar {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      color: white;
-      padding: 12px 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      font-size: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .email-bar.top {
-      position: relative;
-      width: 100%;
-      flex-wrap: wrap;
-    }
-    .email-bar-content {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex: 1;
-    }
-    .email-bar.top .email-bar-content {
-      justify-content: center;
-      width: 100%;
-    }
-    .email-bar-text {
-      flex: 1;
-      text-align: center;
-    }
-    .email-bar-form {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .email-bar-form input {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      min-width: 200px;
-      font-size: 13px;
-    }
-    .email-bar-form button {
-      background: white;
-      color: #046bd2;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .email-bar-close {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 24px;
-      cursor: pointer;
-      padding: 0 10px;
-    }
-
-    /* Sidebar */
-    .post-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 40px;
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .post-content-main { padding: 30px; background: white; }
-    .post-sidebar { position: sticky; top: 80px; height: fit-content; }
-    .sidebar-widget { background: white; padding: 24px; margin-bottom: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-    .sidebar-widget h3 { margin: 0 0 20px; font-size: 16px; color: #1e293b; }
-    .sidebar-widget a { display: block; padding: 8px 0 8px 12px; color: #046bd2; text-decoration: none; font-size: 14px; border-bottom: 1px solid #e2e8f0; transition: all 0.2s; }
-    .sidebar-widget a:hover { color: #c96a3a; border-bottom-color: #c96a3a; }
-    .sidebar-widget a:last-child { border-bottom: none; }
-    .sidebar-email {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      padding: 28px;
-      margin-bottom: 24px;
-      color: white;
-      border-radius: 8px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      overflow: hidden;
-    }
-    .sidebar-email h3 { color: white; margin-top: 0; margin-bottom: 15px; font-size: 18px; font-weight: 600; }
-    .sidebar-email p { color: rgba(255,255,255,0.9); margin: 0 0 15px; font-size: 14px; }
-    .sidebar-email form { display: flex; flex-direction: column; gap: 10px; }
-    .sidebar-email input { padding: 10px 12px; border: none; border-radius: 4px; font-size: 13px; }
-    .sidebar-email button { background: white; color: #046bd2; padding: 10px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; font-size: 13px; }
-
-    .email-widget-article {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      padding: 25px;
-      margin: 35px 0;
-      color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(4, 107, 210, 0.15);
-    }
-    .email-widget-article h4 { color: white; margin-top: 0; margin-bottom: 10px; font-size: 16px; }
-    .email-widget-article p { color: rgba(255,255,255,0.95); margin: 0 0 15px; font-size: 14px; }
-    .email-widget-article form { display: flex; gap: 8px; }
-    .email-widget-article input { flex: 1; padding: 10px; border: none; border-radius: 4px; font-size: 13px; }
-    .email-widget-article button { background: white; color: #046bd2; padding: 10px 20px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-
-    @keyframes shimmer { 0%, 100% { background-position: 0% center; } 50% { background-position: 100% center; } }
-
-    /* Article styles */
-    h1 { color: #1e293b; font-size: 40px; font-weight: 600; margin: 0 0 15px; }
-    h2 { font-size: 28px; color: #1a202c; margin-top: 40px; margin-bottom: 20px; font-weight: bold; }
-    h3 { color: #555; margin-top: 1.5em; }
-    table { border-collapse: collapse; margin: 20px 0; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-    th { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; }
-    tr:nth-child(even) { background: #f5f5f5; }
-    ul, ol { margin: 15px 0; }
-    li { margin-bottom: 8px; }
-    blockquote { border-left: 4px solid #046bd2; padding-left: 15px; margin: 20px 0; color: #555; font-style: italic; }
-    details { margin: 20px 0; padding: 15px; border-left: 4px solid #046bd2; background: #f9fafb; border-radius: 4px; }
-    summary { cursor: pointer; font-weight: 600; color: #1e293b; user-select: none; padding: 10px; margin: -15px -15px 15px -15px; background: #eff6ff; border-radius: 3px 3px 0 0; }
-    summary:hover { background: #dbeafe; }
-    details p { margin: 10px 0; color: #475569; line-height: 1.6; }
-
-    @media (max-width: 1024px) {
-      .post-wrapper { grid-template-columns: 1fr; gap: 30px; }
-      .post-sidebar { position: static; }
-    }
-    body { font-family: Georgia, serif; line-height: 1.75; color: #2c2c2c; }
-  </style>
-</head>
-<body>
-
-  <!-- Email Bar Top -->
-  <div id="emailBarTop" class="email-bar top">
-    <div class="email-bar-content">
-      <div class="email-bar-text">
-        <strong>🐕 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Houdini Weenie Harness Review: Does It Really Prevent Escapes? | OnRadar Dogs</title>
+    <meta name="description" content="Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying." />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Will this harness work for my dachshund that escapes from everything?", "acceptedAnswer": {"@type": "Answer", "text": "According to r/Dachshund users, yes — this is specifically designed for escape-prone dachshunds. The dual-anchor barrel-chest design prevents the back-out maneuver. That said, nothing is 100% guaranteed; proper fit and consistent use matter."}}, {"@type": "Question", "name": "What's the sizing like? Will it fit my miniature dachshund?", "acceptedAnswer": {"@type": "Answer", "text": "Weenie Warmers offers multiple sizing options specifically for miniature vs. standard dachshunds. Make sure to measure chest circumference and length before ordering. Size down rather than up if between sizes."}}, {"@type": "Question", "name": "How does it compare to Blue-9 or Kurgo harnesses?", "acceptedAnswer": {"@type": "Answer", "text": "Those are therapeutic/premium brands. Houdini Weenie is more specifically escape-prevention focused and dachshund-focused. Price point is lower than Blue-9 but higher than generic options."}}, {"@type": "Question", "name": "Can I buy this on Amazon or Chewy?", "acceptedAnswer": {"@type": "Answer", "text": "Primarily available through Weenie Warmers' official website. Limited availability on Amazon. Chewy doesn't currently stock it. Check official site for current retailers."}}, {"@type": "Question", "name": "What if my dachshund still escapes?", "acceptedAnswer": {"@type": "Answer", "text": "Weenie Warmers should have a return or exchange policy. Contact them directly before purchase to understand fit guarantees. Proper fit is critical; most escapes are sizing issues, not design flaws."}}]}</script>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body class="article-page">
+    <div class="promo-bar" data-promo-bar>
+      <div class="promo-bar__inner">
+        <p><strong>New breed guides every week.</strong> Static preview now keeps every article inside the same blog structure.</p>
+        <button type="button" class="promo-bar__close" data-close-promo aria-label="Close signup banner">Close</button>
       </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit">Subscribe</button>
-      </form>
     </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
-  </div>
-
-  <!-- Top Bar Shimmer -->
-  <div style="background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%); background-size: 200% 100%; height: 4px; animation: shimmer 3s ease-in-out infinite;"></div>
-
-  <!-- Header -->
-  <header style="background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 16px 0; position: sticky; top: 4px; z-index: 100; box-shadow: 0 2px 12px rgba(4, 107, 210, 0.15);">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
-      <h1 style="font-size: 24px; font-weight: 700; margin: 0;">🐕 OnRadar Dogs</h1>
-      <nav style="display: flex; gap: 30px;">
-        <a href="/" style="color: white; text-decoration: none; font-weight: 500;">Blog</a>
-        <a href="/news-and-events.html" style="color: white; text-decoration: none; font-weight: 500;">News & Events</a>
-        <a href="/about.html" style="color: white; text-decoration: none; font-weight: 500;">About</a>
-        <a href="/sitemap.xml" style="color: white; text-decoration: none; font-weight: 500;">Sitemap</a>
-      </nav>
+    <div class="reading-progress" aria-hidden="true">
+      <span class="reading-progress__bar" data-reading-progress></span>
     </div>
-  </header>
-
-  <!-- Main Content -->
-  <div class="post-wrapper" style="margin-top: 40px; margin-bottom: 60px;">
-    <article class="post-content-main">
-
-<h1>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</h1>
-<h3 style="color: #64748b; font-size: 20px; font-weight: 400; margin: 0 0 30px;">A Product Review for Dachshund Owners</h3>
-<p style="color: #64748b; font-size: 14px; margin: 0 0 30px;">📅 Published April 10, 2026</p>
-
-<h2>What Is Houdini Weenie Harness? (And Why Dachshund Owners Are Talking About It)</h2>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html"><span class="brand-mark">OD</span><span class="brand-copy"><strong>OnRadar Dogs</strong><span>Dog care, breed notes, and practical reading</span></span></a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./index.html">Latest</a>
+          <a href="./index.html">Care Guides</a>
+          <a href="./index.html">Training</a>
+        </nav>
+      </div>
+    </div>
+    <header class="site-hero">
+      <div class="hero-inner">
+        <div class="hero-signup hero-signup--full">
+          <div id="hero-signup"></div>
+          <div class="hero-signup__compact">
+            <div class="hero-signup__copy">
+              <p class="eyebrow">OnRadar Dogs</p>
+              <h1>Get practical dog-owner notes without the fluff</h1>
+              <p class="lede">Short breed-specific checklists, care reminders, and training notes you can actually use.</p>
+            </div>
+            <div class="hero-signup__cta">
+              <form class="hero-signup__form" data-newsletter-form>
+                <input type="email" placeholder="Your email" aria-label="Email address" />
+                <button type="submit" class="button">Join the list</button>
+              </form>
+              <p class="hero-signup__microcopy">No fluff. Breed-specific. Short and useful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-layout">
+      <div class="content-column">
+        <section class="page-panel article-shell"><div class="article-toolbar"><div class="article-toolbar__meta"><p class="post-kicker">Product Review</p><h1>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</h1><p class="article-excerpt">Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><p class="post-meta">2026-04-10 • 6 min read</p></div><div class="article-toolbar__actions"><button type="button" class="button secondary utility-button" data-copy-url>Copy link</button><a class="button secondary utility-button" href="./index.html">Back to latest</a></div></div><div class="article-outline" data-toc-shell><div class="article-outline__toc"><div class="article-outline__header"><p class="section-label">In This Article</p><p class="toc-intro">Jump straight to the section you need.</p></div><ol class="toc-list" data-toc></ol></div></div><div class="article-rich" data-article-content><h2>What Is Houdini Weenie Harness? (And Why Dachshund Owners Are Talking About It)</h2>
 
 <p>
 <strong>Houdini Weenie Harness</strong> is a front-clip escape-proof harness designed by <strong>Weenie Warmers</strong>, a small brand focused exclusively on dachshund gear. The harness gained significant traction in the dachshund community after an influential thread on <a href="https://www.reddit.com/r/Dachshund/">r/Dachshund</a> where users called it <strong>"the absolute BEST Dachshund Harness"</strong> — specifically in the context of owners who had tried many alternatives first.
 </p>
 
 <p>
-Unlike mass-market harnesses that treat dachshunds as tiny generic dogs, Houdini Weenie Harness is engineered specifically for <a href="/breeds.html">dachshunds</a> that tend to escape standard harnesses. The core design challenge it solves: regular harnesses slip off or allow dachshunds to wiggle free because they don't account for the breed's barrel chest and ability to back out of anything not designed with their body shape in mind.
+Unlike mass-market harnesses that treat dachshunds as tiny generic dogs, Houdini Weenie Harness is engineered specifically for <a href="./index.html">dachshunds</a> that tend to escape standard harnesses. The core design challenge it solves: regular harnesses slip off or allow dachshunds to wiggle free because they don't account for the breed's barrel chest and ability to back out of anything not designed with their body shape in mind.
 </p>
 
 <h3>Why Product Reviews Matter for Escape-Prone Dachshunds</h3>
 
 <p>
-If you've ever owned a dachshund that's a "Houdini" — a dog that can escape from practically any harness — you know the stakes. Escaping during walks isn't just inconvenient; it's a safety issue. For <a href="/tips.html">training tips</a> and safety guidance, check our expert resources. This review evaluates whether Houdini Weenie Harness lives up to its community reputation.
+If you've ever owned a dachshund that's a "Houdini" — a dog that can escape from practically any harness — you know the stakes. Escaping during walks isn't just inconvenient; it's a safety issue. For <a href="./index.html">training tips</a> and safety guidance, check our expert resources. This review evaluates whether Houdini Weenie Harness lives up to its community reputation.
 </p>
 
-<div class="email-widget-article">
-<h4>📚 Dachshund Harness Escape Prevention Guide</h4>
-<p>Get our email tips: "How to Choose a Harness for Escape-Proof Dachshunds" + product recommendations.</p>
-<form onsubmit="return handleEmailSubmit(event)">
-<input type="email" placeholder="Your email..." required/>
-<button type="submit">Get Guide</button>
-</form>
-</div>
+<div class="email-widget-article" data-cta-card="body"><p class="email-widget-article__eyebrow">Dachshund Walk Setup</p><h4>Most escape-prone dachshunds slip out before owners fix the fit</h4><p>Grab the harness-fit checklist for chest sizing, clip checks, and the leash habits that stop one spook from turning into a runaway.</p><form data-newsletter-form><input type="email" placeholder="Your email" required/><button type="submit">Send the walk checklist</button></form></div>
 
 <h2>Key Design Features: How Houdini Weenie Harness Prevents Escapes</h2>
 
@@ -225,7 +82,7 @@ If you've ever owned a dachshund that's a "Houdini" — a dog that can escape fr
 <p>Rather than thin webbing, Houdini uses reinforced material with dual-anchor points. The backstrap runs along the spine and connects to the chest panel at multiple points, distributing force and preventing the "back-out" escape maneuver that standard harnesses allow.</p>
 
 <h3>Step-In Design (No Overhead Struggles)</h3>
-<p>The harness is a step-in style, so you don't need to pull it over your dachshund's head. For anxious or stubborn doxies, this makes getting the harness on much easier — which reduces stress for both dog and owner. See our <a href="/tips.html">behavior and training guides</a> for more on anxiety management during gear-up.</p>
+<p>The harness is a step-in style, so you don't need to pull it over your dachshund's head. For anxious or stubborn doxies, this makes getting the harness on much easier — which reduces stress for both dog and owner. See our <a href="./index.html">behavior and training guides</a> for more on anxiety management during gear-up.</p>
 
 <h2>Real-World Performance: What Reddit's r/Dachshund Community Reports</h2>
 
@@ -247,7 +104,7 @@ If you've ever owned a dachshund that's a "Houdini" — a dog that can escape fr
 
 <h2>Pros: What Houdini Weenie Harness Does Well</h2>
 <ul>
-<li><strong>Proven escape prevention:</strong> Designed specifically for barrel-chested <a href="/breeds.html">dachshunds</a> that other harnesses can't contain</li>
+<li><strong>Proven escape prevention:</strong> Designed specifically for barrel-chested <a href="./index.html">dachshunds</a> that other harnesses can't contain</li>
 <li><strong>Community-validated:</strong> r/Dachshund endorsements from owners who tried alternatives first</li>
 <li><strong>Dual-anchor chest system:</strong> The double-connection design prevents the back-out escape maneuver</li>
 <li><strong>Step-in convenience:</strong> No pulling over head; easier for anxious dogs</li>
@@ -335,13 +192,13 @@ If you've ever owned a dachshund that's a "Houdini" — a dog that can escape fr
 
 <p>This harness is specifically for:</p>
 <ul>
-<li><strong>Owners of escape-prone <a href="/breeds.html">dachshunds</a></strong> (the "Houdini" dogs that slip out of everything)</li>
+<li><strong>Owners of escape-prone <a href="./index.html">dachshunds</a></strong> (the "Houdini" dogs that slip out of everything)</li>
 <li><strong>Those who've tried 2+ harnesses already</strong> (community validates it after failed alternatives)</li>
 <li><strong>People prioritizing reliability</strong> over lowest cost</li>
 <li><strong>Dachshund owners in the r/Dachshund community</strong> (where this product has strong credibility)</li>
 </ul>
 
-<p>It's <strong>not the right choice</strong> if your dachshund doesn't have escape issues or if you're buying your first harness (check our <a href="/products.html">product guides</a> for beginner-friendly alternatives).</p>
+<p>It's <strong>not the right choice</strong> if your dachshund doesn't have escape issues or if you're buying your first harness (check our <a href="./index.html">product guides</a> for beginner-friendly alternatives).</p>
 
 <h2>Final Verdict: Is Houdini Weenie Harness Worth Buying?</h2>
 
@@ -382,127 +239,42 @@ If you've ever owned a dachshund that's a "Houdini" — a dog that can escape fr
 <details>
 <summary>What if my dachshund still escapes?</summary>
 <p>Weenie Warmers should have a return or exchange policy. Contact them directly before purchase to understand fit guarantees. Proper fit is critical; most escapes are sizing issues, not design flaws.</p>
-</details>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Will Houdini Weenie Harness work for my dachshund that escapes from everything?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "According to r/Dachshund users, this harness is specifically designed for escape-prone dachshunds. The dual-anchor barrel-chest design prevents back-out escapes that generic harnesses allow."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the sizing like for miniature dachshunds?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Weenie Warmers offers multiple sizing options for miniature vs. standard dachshunds. Measure chest circumference and length before ordering; size down if between sizes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does it compare to Blue-9 or Kurgo?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Houdini Weenie is more escape-prevention and dachshund-specific focused. Price is lower than Blue-9 but higher than generic options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I buy this on Amazon or Chewy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Primarily available through Weenie Warmers official website. Limited Amazon availability; Chewy does not currently stock it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if my dachshund still escapes this harness?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Contact Weenie Warmers about their return or exchange policy. Proper fit is critical; most escapes are sizing issues rather than design flaws."
-      }
-    }
-  ]
-}
-</script>
-
-    </article>
-
-    <!-- Sidebar -->
-    <aside class="post-sidebar">
-      <div class="sidebar-widget">
-        <h3>🎯 Quick Links</h3>
-        <a href="/">Blog</a>
-        <a href="/breeds.html">All Breeds</a>
-        <a href="/about.html">About Us</a>
-        <a href="/sitemap.xml">Sitemap</a>
+</details></div></section><section class="page-panel related-panel"><p class="section-label">Related Articles</p><div class="post-grid"><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Read article</a></article></div></section>
       </div>
-
-      <div class="sidebar-email">
-        <h3>📚 Dachshund Resources</h3>
-        <p>Expert breed guides & care tips delivered to your inbox</p>
-        <form onsubmit="return handleEmailSubmit(event)">
-          <input type="email" placeholder="Your email" required/>
-          <button type="submit">Join</button>
-        </form>
-        <small style="color: rgba(255,255,255,0.7);">No spam, ever</small>
-      </div>
-
-      <div class="sidebar-widget">
-        <h3>📖 Explore More</h3>
-        <a href="/national-french-bulldog-day.html">National French Bulldog Day: April 13</a>
-        <a href="/national-akita-day.html">National Akita Day: April 8</a>
-        <a href="/national-komondor-day.html">National Komondor Day: April 20</a>
-      </div>
-    </aside>
-
-  </div>
-
-  <!-- Footer -->
-  <footer style="background: #1e293b; color: white; padding: 40px 0; margin-top: 80px;">
-    <div class="footer-content" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-      <div>
-        <h3 style="margin-top: 0;">🐕 OnRadar Dogs</h3>
-        <p>Expert-verified dog breed guides and training resources trusted by owners and veterinarians worldwide.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="/" style="color: #64748b; text-decoration: none;">Blog</a></li>
-          <li><a href="/breeds.html" style="color: #64748b; text-decoration: none;">All Breeds</a></li>
-          <li><a href="/about.html" style="color: #64748b; text-decoration: none;">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li><a href="/sitemap.xml" style="color: #64748b; text-decoration: none;">Sitemap</a></li>
-          <li><a href="/" style="color: #64748b; text-decoration: none;">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <div style="border-top: 1px solid #334155; margin-top: 30px; padding-top: 30px; text-align: center; max-width: 1240px; margin-left: auto; margin-right: auto;">
-      <p style="color: #64748b; font-size: 14px;">© 2026 OnRadar Dogs. All rights reserved. | Expert breed guides trusted by pet owners and veterinarians.</p>
-    </div>
-  </footer>
-
-  <script>
-    function handleEmailSubmit(e) {
-      e.preventDefault();
-      alert('Thank you for subscribing! Check your email.');
-      return false;
-    }
-    function closeEmailBar(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-  </script>
-
-</body>
+      <aside class="sidebar">
+        <section class="sidebar-panel sidebar-panel--floating">
+          <p class="section-label">Weekly Dog Notes</p>
+          <div class="sidebar-note sidebar-note--signup">
+            <p><strong>Get one genuinely useful dog-owner email a week.</strong></p>
+            <p>Short breed notes, practical routines, and the care reminders people actually forget.</p>
+            <form class="mini-signup" id="newsletter-signup" data-newsletter-form>
+              <input type="email" placeholder="Your email" aria-label="Email address" />
+              <button type="submit" class="button">Join the notes</button>
+            </form>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Latest Articles</p>
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link" href="./national-standard-schnauzer-day.html"><span class="sidebar-kicker">National Day</span><strong>National Standard Schnauzer Day: September 25 — Complete Breed Guide</strong><span>2026-09-25 • 8 min read</span></a></li><li><a class="sidebar-link" href="./national-komondor-day.html"><span class="sidebar-kicker">National Day</span><strong>National Komondor Day: April 17 — Komondor Breed Guide &amp; History</strong><span>2026-04-17 • 7 min read</span></a></li><li><a class="sidebar-link" href="./national-french-bulldog-day.html"><span class="sidebar-kicker">National Day</span><strong>National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</strong><span>2026-04-13 • 9 min read</span></a></li><li><a class="sidebar-link active" href="./houdini-weenie-harness-review.html"><span class="sidebar-kicker">Product Review</span><strong>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</strong><span>2026-04-10 • 6 min read</span></a></li><li><a class="sidebar-link" href="./national-akita-day.html"><span class="sidebar-kicker">National Day</span><strong>National Akita Day: April 8 — Complete Akita Inu Breed Guide</strong><span>2026-04-08 • 8 min read</span></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Why This Layout Works</p>
+          <div class="sidebar-note">
+            <p>The site now behaves like a real blog: latest posts on top, article pages inside the same structure, and no detached pages floating outside the main shell.</p>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Recent Highlights</p>
+          <div class="sidebar-feed">
+            <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><a class="text-link" href="./houdini-weenie-harness-review.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Read article</a></article>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>OnRadar Dogs • Static blog prototype for GitHub Pages experiments</p>
+    </footer>
+  </body>
 </html>

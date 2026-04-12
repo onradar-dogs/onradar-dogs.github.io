@@ -1,650 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="verification-code-here" />
-  <title>National Dog Days Calendar 2026 | OnRadar Dogs</title>
-  <meta name="description" content="National Dog Days 2026 — Comprehensive breed guides celebrating dog breeds throughout the year. Breed profiles, training tips, and care information.">
-  <meta name="keywords" content="national dog days, dog breeds, breed guides, dog training, dog care, dog breeds calendar">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Georgia, serif;
-      background: #f9fafb;
-      color: #2c2c2c;
-      line-height: 1.75;
-    }
-
-    /* EMAIL BAR */
-    .email-bar {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      color: white;
-      padding: 12px 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      font-size: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .email-bar-content {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      justify-content: center;
-      width: 100%;
-      flex-wrap: wrap;
-    }
-
-    .email-bar-text {
-      flex: 1;
-      text-align: center;
-    }
-
-    .email-bar-form {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .email-bar-form input {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      min-width: 200px;
-      font-size: 13px;
-    }
-
-    .email-bar-form button {
-      background: white;
-      color: #046bd2;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .email-bar-form button:hover {
-      opacity: 0.9;
-    }
-
-    .email-bar-close {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .email-bar-close:hover {
-      opacity: 0.8;
-    }
-
-    .email-bar.hidden {
-      display: none;
-    }
-
-    /* SHIMMER BAR */
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% center; }
-      50% { background-position: 100% center; }
-    }
-
-    .shimmer-bar {
-      background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%);
-      background-size: 200% 100%;
-      height: 4px;
-      animation: shimmer 3s ease-in-out infinite;
-    }
-
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      color: white;
-      padding: 16px 0;
-      position: sticky;
-      top: 4px;
-      z-index: 100;
-      box-shadow: 0 2px 12px rgba(4, 107, 210, 0.15);
-    }
-
-    header .nav-container {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    header nav {
-      display: flex;
-      gap: 30px;
-    }
-
-    header a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    header a:hover {
-      opacity: 0.8;
-    }
-
-    /* MAIN WRAPPER */
-    .post-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 40px;
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-      margin-top: 40px;
-      margin-bottom: 60px;
-    }
-
-    .post-content-main { min-width: 0; }
-    .post-sidebar { position: sticky; top: 120px; height: fit-content; }
-
-    /* SECTION TITLE */
-    .section-title {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1e293b;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #046bd2;
-    }
-
-    /* BLOG SECTION */
-    .blog-section {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
-
-    .post-card {
-      padding: 30px;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .post-card:last-child {
-      border-bottom: none;
-    }
-
-    .post-meta {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 12px;
-      font-size: 13px;
-    }
-
-    .post-date {
-      color: #046bd2;
-      font-weight: 600;
-    }
-
-    .post-category {
-      background: #f0f7ff;
-      color: #046bd2;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
-    .post-title {
-      margin: 12px 0 15px;
-      font-size: 22px;
-      font-weight: 600;
-      color: #1e293b;
-    }
-
-    .post-title a {
-      color: #046bd2;
-      text-decoration: none;
-    }
-
-    .post-title a:hover {
-      text-decoration: underline;
-    }
-
-    .post-excerpt {
-      color: #475569;
-      line-height: 1.6;
-      margin-bottom: 15px;
-      font-size: 15px;
-    }
-
-    .read-more {
-      color: #046bd2;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .read-more:hover {
-      text-decoration: underline;
-    }
-
-    /* SIDEBAR WIDGETS */
-    .sidebar-widget {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      margin-bottom: 28px;
-      border: 1px solid #e2e8f0;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sidebar-widget::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #c96a3a;
-    }
-
-    .sidebar-widget h3 {
-      margin-top: 0;
-      padding-left: 12px;
-      color: #1e293b;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .sidebar-widget p {
-      font-size: 14px;
-      color: #64748b;
-      margin: 12px 0;
-      padding-left: 12px;
-    }
-
-    .sidebar-widget a {
-      display: block;
-      padding: 8px 0 8px 12px;
-      color: #046bd2;
-      text-decoration: none;
-      font-size: 14px;
-      border-bottom: 1px solid #e2e8f0;
-      transition: all 0.2s;
-    }
-
-    .sidebar-widget a:hover {
-      color: #c96a3a;
-      border-bottom-color: #c96a3a;
-    }
-
-    .sidebar-widget a:last-child {
-      border-bottom: none;
-    }
-
-    .sidebar-widget ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .sidebar-widget li {
-      margin: 8px 0;
-    }
-
-    /* EMAIL WIDGET IN SIDEBAR */
-    .sidebar-email {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      padding: 28px;
-      margin: 32px 0;
-      color: white;
-      border-radius: 8px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .sidebar-email::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.3);
-    }
-
-    .sidebar-email h3 {
-      color: white;
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .sidebar-email p {
-      color: rgba(255,255,255,0.9);
-      margin: 0 0 15px;
-      font-size: 14px;
-    }
-
-    .sidebar-email form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .sidebar-email input {
-      padding: 10px 12px;
-      border: none;
-      border-radius: 4px;
-      font-size: 13px;
-    }
-
-    .sidebar-email button {
-      background: white;
-      color: #046bd2;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 13px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #1e293b;
-      color: white;
-      padding: 40px 0;
-      margin-top: 80px;
-    }
-
-    footer .footer-content {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 30px;
-    }
-
-    footer h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    footer p {
-      color: #cbd5e1;
-    }
-
-    footer a {
-      color: #cbd5e1;
-      display: block;
-      margin: 10px 0;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: white;
-    }
-
-    footer .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 30px;
-      margin-top: 30px;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 14px;
-    }
-
-    @media (max-width: 1024px) {
-      .post-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .post-sidebar {
-        position: static;
-      }
-    }
-
-    @media (max-width: 768px) {
-      header nav {
-        gap: 15px;
-        font-size: 12px;
-      }
-
-      .email-bar-form {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .email-bar-form input {
-        width: 100%;
-        min-width: auto;
-      }
-
-      .email-bar-form button {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Top Email Bar -->
-  <div id="emailBarTop" class="email-bar">
-    <div class="email-bar-content">
-      <div class="email-bar-text">
-        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OnRadar Dogs | Home</title>
+    <meta name="description" content="Dog breed notes, practical care guides, and lightweight static publishing experiments." />
+    
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body class="home-page">
+    <div class="promo-bar" data-promo-bar>
+      <div class="promo-bar__inner">
+        <p><strong>New breed guides every week.</strong> Static preview now keeps every article inside the same blog structure.</p>
+        <button type="button" class="promo-bar__close" data-close-promo aria-label="Close signup banner">Close</button>
       </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit">Subscribe</button>
-      </form>
     </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
-  </div>
-
-  <!-- Shimmer Bar -->
-  <div class="shimmer-bar"></div>
-
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <h1>🐕 OnRadar Dogs</h1>
-      <nav>
-        <a href="/">Blog</a>
-        <a href="/news-and-events.html">News & Events</a>
-        <a href="/about.html">About</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </nav>
+    <div class="reading-progress" aria-hidden="true">
+      <span class="reading-progress__bar" data-reading-progress></span>
     </div>
-  </header>
-
-  <!-- Main Wrapper -->
-  <div class="post-wrapper">
-    <article class="post-content-main">
-      <div class="section-title">📖 Latest Breed Guides</div>
-
-      <div class="blog-section">
-        <article class="post-card">
-          <div class="post-meta">
-            <span class="post-date">April 8, 2026</span>
-            <span class="post-category">National Day</span>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html"><span class="brand-mark">OD</span><span class="brand-copy"><strong>OnRadar Dogs</strong><span>Dog care, breed notes, and practical reading</span></span></a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./index.html">Latest</a>
+          <a href="./index.html">Care Guides</a>
+          <a href="./index.html">Training</a>
+        </nav>
+      </div>
+    </div>
+    <header class="site-hero">
+      <div class="hero-inner">
+        <div class="hero-signup hero-signup--full">
+          <div id="hero-signup"></div>
+          <div class="hero-signup__compact">
+            <div class="hero-signup__copy">
+              <p class="eyebrow">OnRadar Dogs</p>
+              <h1>Get practical dog-owner notes without the fluff</h1>
+              <p class="lede">Short breed-specific checklists, care reminders, and training notes you can actually use.</p>
+            </div>
+            <div class="hero-signup__cta">
+              <form class="hero-signup__form" data-newsletter-form>
+                <input type="email" placeholder="Your email" aria-label="Email address" />
+                <button type="submit" class="button">Join the list</button>
+              </form>
+              <p class="hero-signup__microcopy">No fluff. Breed-specific. Short and useful.</p>
+            </div>
           </div>
-          <h3 class="post-title"><a href="/national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h3>
-          <p class="post-excerpt">National Akita Day is celebrated on April 8th each year, honoring one of Japan's most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p>
-          <a href="/national-akita-day.html" class="read-more">Read Full Guide →</a>
-        </article>
-
-        <article class="post-card">
-          <div class="post-meta">
-            <span class="post-date">April 13, 2026</span>
-            <span class="post-category">National Day</span>
+        </div>
+      </div>
+    </header>
+    <main class="site-layout">
+      <div class="content-column">
+        <section class="page-panel homepage-intro"><p class="section-label">Fresh Posts</p><h2>Latest guides and notes</h2><p class="intro-copy">This is the main feed. New articles are generated into the same structure and listed here automatically, newest first.</p><div class="post-grid"><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><p class="post-meta">8 min read</p><a class="text-link" href="./national-standard-schnauzer-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><p class="post-meta">7 min read</p><a class="text-link" href="./national-komondor-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><p class="post-meta">9 min read</p><a class="text-link" href="./national-french-bulldog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><p class="post-meta">6 min read</p><a class="text-link" href="./houdini-weenie-harness-review.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><p class="post-meta">8 min read</p><a class="text-link" href="./national-akita-day.html">Open article</a></article></div></section>
+      </div>
+      <aside class="sidebar">
+        <section class="sidebar-panel sidebar-panel--floating">
+          <p class="section-label">Weekly Dog Notes</p>
+          <div class="sidebar-note sidebar-note--signup">
+            <p><strong>Get one genuinely useful dog-owner email a week.</strong></p>
+            <p>Short breed notes, practical routines, and the care reminders people actually forget.</p>
+            <form class="mini-signup" id="newsletter-signup" data-newsletter-form>
+              <input type="email" placeholder="Your email" aria-label="Email address" />
+              <button type="submit" class="button">Join the notes</button>
+            </form>
           </div>
-          <h3 class="post-title"><a href="/national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide & History</a></h3>
-          <p class="post-excerpt">National French Bulldog Day on April 13 celebrates one of the world's most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the "Frenchie," has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p>
-          <a href="/national-french-bulldog-day.html" class="read-more">Read Full Guide →</a>
-        </article>
-
-        <article class="post-card">
-          <div class="post-meta">
-            <span class="post-date">April 17, 2026</span>
-            <span class="post-category">National Day</span>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Latest Articles</p>
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link" href="./national-standard-schnauzer-day.html"><span class="sidebar-kicker">National Day</span><strong>National Standard Schnauzer Day: September 25 — Complete Breed Guide</strong><span>2026-09-25 • 8 min read</span></a></li><li><a class="sidebar-link" href="./national-komondor-day.html"><span class="sidebar-kicker">National Day</span><strong>National Komondor Day: April 17 — Komondor Breed Guide &amp; History</strong><span>2026-04-17 • 7 min read</span></a></li><li><a class="sidebar-link" href="./national-french-bulldog-day.html"><span class="sidebar-kicker">National Day</span><strong>National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</strong><span>2026-04-13 • 9 min read</span></a></li><li><a class="sidebar-link" href="./houdini-weenie-harness-review.html"><span class="sidebar-kicker">Product Review</span><strong>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</strong><span>2026-04-10 • 6 min read</span></a></li><li><a class="sidebar-link" href="./national-akita-day.html"><span class="sidebar-kicker">National Day</span><strong>National Akita Day: April 8 — Complete Akita Inu Breed Guide</strong><span>2026-04-08 • 8 min read</span></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Why This Layout Works</p>
+          <div class="sidebar-note">
+            <p>The site now behaves like a real blog: latest posts on top, article pages inside the same structure, and no detached pages floating outside the main shell.</p>
           </div>
-          <h3 class="post-title"><a href="/national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide & History</a></h3>
-          <p class="post-excerpt">The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p>
-          <a href="/national-komondor-day.html" class="read-more">Read Full Guide →</a>
-        </article>
-
-        <article class="post-card">
-          <div class="post-meta">
-            <span class="post-date">September 25, 2026</span>
-            <span class="post-category">National Day</span>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Recent Highlights</p>
+          <div class="sidebar-feed">
+            <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><a class="text-link" href="./houdini-weenie-harness-review.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Read article</a></article>
           </div>
-          <h3 class="post-title"><a href="/national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h3>
-          <p class="post-excerpt">National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p>
-          <a href="/national-standard-schnauzer-day.html" class="read-more">Read Full Guide →</a>
-        </article>
-      </div>
-    </article>
-
-    <!-- Sidebar -->
-    <aside class="post-sidebar">
-      <div class="sidebar-widget">
-        <h3>🎯 Quick Links</h3>
-        <a href="/">Blog</a>
-        <a href="/news-and-events.html">News & Events</a>
-        <a href="/about.html">About Us</a>
-        <a href="/products.html">Products</a>
-      </div>
-
-      <div class="sidebar-email">
-        <h3>📚 Dog Lovers Club</h3>
-        <p>New breed guides & training tips every week</p>
-        <form>
-          <input type="email" placeholder="Your email" required/>
-          <button type="submit">Join</button>
-        </form>
-        <small style="color: rgba(255,255,255,0.8); font-size: 12px;">No spam, ever</small>
-      </div>
-
-      <div class="sidebar-widget">
-        <h3>📖 Latest Posts</h3>
-        <a href="/national-akita-day.html">National Akita Day</a>
-        <a href="/national-french-bulldog-day.html">National French Bulldog Day</a>
-        <a href="/national-komondor-day.html">National Komondor Day</a>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div>
-        <h3>🐕 OnRadar Dogs</h3>
-        <p>Comprehensive guides to dog breeds, training tips, health information, and care advice for dog lovers.</p>
-      </div>
-      <div>
-        <h3>Main Pages</h3>
-        <a href="/">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/breeds.html">Dog Breeds</a>
-        <a href="/tips.html">Care Tips</a>
-        <a href="/products.html">Products</a>
-        <a href="/news-and-events.html">News & Events</a>
-      </div>
-      <div>
-        <h3>National Dog Days</h3>
-        <a href="/national-akita-day.html">National Akita Day</a>
-        <a href="/national-french-bulldog-day.html">National French Bulldog Day</a>
-        <a href="/national-komondor-day.html">National Komondor Day</a>
-        <a href="/national-standard-schnauzer-day.html">National Schnauzer Day</a>
-        <a href="/national-days.html">All Celebrations</a>
-      </div>
-      <div>
-        <h3>Dachshund Guides</h3>
-        <a href="/dachshund/food/best-dachshund-food/">Best Food</a>
-        <a href="/dachshund/toys/best-dachshund-toys/">Toys & Puzzles</a>
-        <a href="/dachshund/training/best-dachshund-training/">Training</a>
-        <a href="/dachshund/grooming/best-dachshund-grooming/">Grooming</a>
-        <a href="/dachshund/health-care/">Health Care</a>
-      </div>
-      <div>
-        <h3>Information</h3>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
-        <a href="/sitemap.html">Sitemap</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 OnRadar Dogs. For dog lovers, by dog lovers. <a href="/sitemap.xml" style="color: inherit; text-decoration: underline;">View Full Sitemap</a></p>
-    </div>
-  </footer>
-
-  <!-- Bottom Email Bar -->
-  <div id="emailBarBottom" class="email-bar" style="position: fixed; bottom: 0; left: 0; right: 0; top: auto; z-index: 99; flex-direction: column; gap: 12px; padding: 15px 24px; display: none;">
-    <div class="email-bar-content" style="flex-direction: column; gap: 12px; width: 100%;">
-      <div class="email-bar-text">
-        <strong>🐕 Subscribe for New Breed Guides</strong> — Get updates on National Dog Days
-      </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit">Join</button>
-      </form>
-    </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
-  </div>
-
-  <script>
-    // Close email bars with localStorage
-    function closeEmailBar(barId) {
-      var bar = document.getElementById(barId);
-      bar.style.display = 'none';
-      localStorage.setItem(barId + '_closed', 'true');
-    }
-
-    // Check if bars were closed before
-    document.addEventListener('DOMContentLoaded', function() {
-      if (localStorage.getItem('emailBarTop_closed') === 'true') {
-        document.getElementById('emailBarTop').style.display = 'none';
-      }
-      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
-        document.getElementById('emailBarBottom').style.display = 'none';
-      }
-    });
-
-    // Handle email submission
-    function handleEmailSubmit(event) {
-      event.preventDefault();
-      var email = event.target.querySelector('input[type="email"]').value;
-      alert('Thank you for subscribing! Check your email for dog breed guides.');
-      event.target.reset();
-      return false;
-    }
-  </script>
-</body>
+        </section>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>OnRadar Dogs • Static blog prototype for GitHub Pages experiments</p>
+    </footer>
+  </body>
 </html>
