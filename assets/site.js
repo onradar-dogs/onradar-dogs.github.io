@@ -10,6 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("onradar-promo-dismissed", "true");
   });
 
+  const floatingSignup = document.querySelector("[data-floating-signup]");
+  const floatingDismissed = localStorage.getItem("onradar-floating-signup-dismissed");
+  if (floatingSignup && floatingDismissed === "true") {
+    floatingSignup.classList.add("hidden");
+  }
+
+  const updateFloatingSignup = () => {
+    if (!floatingSignup || floatingSignup.classList.contains("hidden")) {
+      return;
+    }
+    floatingSignup.classList.toggle("is-visible", window.scrollY > 320);
+  };
+
+  document.querySelector("[data-close-floating-signup]")?.addEventListener("click", () => {
+    floatingSignup?.classList.add("hidden");
+    localStorage.setItem("onradar-floating-signup-dismissed", "true");
+  });
+
+  updateFloatingSignup();
+  window.addEventListener("scroll", updateFloatingSignup, { passive: true });
+
   document.querySelectorAll("form").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
