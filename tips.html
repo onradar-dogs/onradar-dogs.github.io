@@ -1,377 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Training Tips, Tricks & Behavior Guide — OnRadar Dogs</title>
-  <meta name="description" content="Expert dog training tips, grooming advice, exercise routines, behavior management, nutrition, and wellness techniques for all dog breeds and ages.">
-  <meta name="keywords" content="dog training tips, dog tricks, grooming advice, dog behavior, exercise tips, dog health, puppy training, senior dog care">
-  <meta name="author" content="OnRadar Dogs">
-  <meta property="og:title" content="Dog Training Tips, Tricks & Behavior Guide">
-  <meta property="og:description" content="Expert training, grooming, exercise, and behavior management tips for dogs of all breeds.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dog Training Tips & Tricks">
-  <link rel="canonical" href="https://onradar-dogs.github.io/tips.html">
-  <style>
-    /* Email Bar Sticky */
-    .email-bar {
-      background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%);
-      color: white;
-      padding: 12px 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      font-size: 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .email-bar.top {
-      position: relative;
-      width: 100%;
-      flex-wrap: wrap;
-    }
-
-    .email-bar.bottom {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: auto;
-      z-index: 99;
-    }
-
-    .email-bar-content {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex: 1;
-    }
-
-    .email-bar.top .email-bar-content {
-      justify-content: center;
-      width: 100%;
-    }
-
-    .email-bar.bottom .email-bar-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      width: 100%;
-    }
-
-    .email-bar-text {
-      flex: 1;
-    }
-
-    .email-bar.top .email-bar-text {
-      text-align: center;
-    }
-
-    .email-bar.bottom .email-bar-text {
-      text-align: center;
-    }
-
-    .email-bar-form {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .email-bar-form input {
-      padding: 8px 12px;
-      border: none;
-      border-radius: 4px;
-      min-width: 200px;
-      font-size: 13px;
-    }
-
-    .email-bar-form button {
-      background: white;
-      color: #046bd2;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-
-    .email-bar-form button:hover {
-      opacity: 0.9;
-    }
-
-    .email-bar-close {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .email-bar-close:hover {
-      opacity: 0.8;
-    }
-
-    .email-bar.hidden {
-      display: none;
-    }
-
-    @media (max-width: 768px) {
-      .email-bar.top {
-        flex-direction: column;
-        padding: 10px 16px;
-        gap: 10px;
-      }
-
-      .email-bar.top .email-bar-content {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-      }
-
-      .email-bar.top .email-bar-text {
-        text-align: center;
-        font-size: 13px;
-      }
-
-      .email-bar-form {
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .email-bar-form input {
-        width: 100%;
-        min-width: auto;
-      }
-
-      .email-bar-form button {
-        width: 100%;
-      }
-    }
-
-    header {
-      margin-top: 0;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #475569; line-height: 1.65; background: white; }
-    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-    .top-bar { background: linear-gradient(90deg, #c96a3a 0%, #046bd2 50%, #c96a3a 100%); background-size: 200% 100%; height: 4px; animation: shimmer 3s infinite; }
-    @keyframes shimmer { 0%, 100% { background-position: 0%; } 50% { background-position: 100%; } }
-
-    header { background: linear-gradient(135deg, #046bd2 0%, #045cb4 100%); color: white; padding: 16px 0; position: sticky; top: 56px; }
-    header .container { display: flex; justify-content: space-between; align-items: center; }
-    header h1 { font-size: 24px; font-weight: 700; margin: 0; }
-    header nav { display: flex; gap: 30px; }
-    header a { color: white; text-decoration: none; font-weight: 500; }
-
-    .content { max-width: 900px; margin: 60px auto; }
-    h1 { color: #1e293b; font-size: 40px; font-weight: 600; margin-bottom: 20px; }
-    h2 { color: #1e293b; font-size: 28px; font-weight: 600; margin: 48px 0 20px; padding-bottom: 12px; border-bottom: 1px solid #e2e8f0; }
-    h3 { color: #1e293b; font-size: 20px; font-weight: 600; margin: 30px 0 15px; }
-    p { margin-bottom: 15px; }
-    strong { color: #1e293b; font-weight: 600; }
-    ul { margin-left: 40px; margin-bottom: 15px; }
-    li { margin-bottom: 10px; }
-    .tip-box { background: #f9fafb; padding: 20px; border-left: 4px solid #046bd2; border-radius: 6px; margin: 20px 0; }
-
-    footer { background: #1e293b; color: white; padding: 40px 0; margin-top: 80px; }
-    footer .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-    footer h3 { margin-bottom: 15px; }
-    footer a { color: #cbd5e1; display: block; margin: 10px 0; text-decoration: none; }
-  </style>
-
-  <script>
-    // Close email bars with localStorage
-    function closeEmailBar(barId) {
-      var bar = document.getElementById(barId);
-      bar.classList.add('hidden');
-      localStorage.setItem(barId + '_closed', 'true');
-    }
-
-    // Check if bars were closed before
-    document.addEventListener('DOMContentLoaded', function() {
-      if (localStorage.getItem('emailBarTop_closed') === 'true') {
-        document.getElementById('emailBarTop').classList.add('hidden');
-      }
-      if (localStorage.getItem('emailBarBottom_closed') === 'true') {
-        document.getElementById('emailBarBottom').classList.add('hidden');
-      }
-    });
-
-    // Handle email submission
-    function handleEmailSubmit(event) {
-      event.preventDefault();
-      var email = event.target.querySelector('input[type="email"]').value;
-      alert('Thank you for subscribing! Check your email for dog breed guides.');
-      event.target.reset();
-      return false;
-    }
-  </script>
-</head>
-<body>
-  <div class="top-bar"></div>
-
-  <header>
-    <div class="container">
-      <h1>🐕 OnRadar Dogs</h1>
-      <nav>
-        <a href="/">Blog</a>
-        <a href="tips.html">Tips</a>
-        <a href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Top Email Bar -->
-  <div id="emailBarTop" class="email-bar top">
-    <div class="email-bar-content">
-      <div class="email-bar-text">
-        <strong>📚 Get Dog Breed Guides</strong> — New guides delivered to your inbox
-      </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarTop')">&times;</button>
-  </div>
-
-  <div class="content container">
-    <h1>Dog Training Tips & Tricks</h1>
-    <p>Expert advice on training, grooming, exercise, and behavior management for dogs of all breeds.</p>
-
-    <h2>Training Fundamentals</h2>
-
-    <h3>Positive Reinforcement</h3>
-    <p><strong>Reward-based training is the most effective approach</strong> for teaching dogs new behaviors. Use treats, praise, and affection to encourage desired behaviors. Avoid harsh corrections, which can create fear and damage your relationship with your dog.</p>
-
-    <div class="tip-box">
-      <strong>💡 Pro Tip:</strong> Use high-value treats (small, soft, and tasty) for training sessions. Reserve extra-special treats for teaching new commands.
-    </div>
-
-    <h3>Consistency is Key</h3>
-    <p>All family members should use the same commands and rules. <strong>Inconsistency confuses dogs and slows learning</strong>. Establish clear expectations and stick to them.</p>
-
-    <h3>Keep Sessions Short</h3>
-    <p>Train for 5-15 minute sessions, multiple times daily if possible. Dogs have shorter attention spans than humans, and longer sessions become counterproductive. Multiple short sessions are more effective than one long session.</p>
-
-    <h2 id="grooming">Grooming & Coat Care</h2>
-
-    <h3>Brushing Routines</h3>
-    <ul>
-      <li><strong>Short-coated breeds:</strong> Brush 1-2 times weekly</li>
-      <li><strong>Long-coated breeds:</strong> Brush 3-5 times weekly</li>
-      <li><strong>Double-coated breeds:</strong> Brush 2-3 times weekly, daily during shedding season</li>
-      <li><strong>Curly/wavy coats:</strong> Professional grooming every 6-8 weeks plus regular brushing</li>
-    </ul>
-
-    <p>Regular brushing prevents mats, reduces shedding, and keeps your dog's coat healthy. It's also an excellent bonding opportunity.</p>
-
-    <h3>Bathing Best Practices</h3>
-    <p><strong>Most dogs need bathing only every 4-8 weeks</strong>, unless they're particularly dirty or have skin conditions. Over-bathing can dry out their skin and coat. Use lukewarm water and dog-specific shampoo.</p>
-
-    <div class="tip-box">
-      <strong>💡 Pro Tip:</strong> Brush your dog thoroughly before bathing to remove mats. Mats become harder to remove once wet.
-    </div>
-
-    <h2>Exercise & Activity</h2>
-
-    <h3>Daily Exercise Guidelines</h3>
-    <ul>
-      <li><strong>Puppies:</strong> Short sessions (5 minutes per month of age), multiple times daily</li>
-      <li><strong>Adult dogs:</strong> 30-60 minutes daily, depending on breed energy level</li>
-      <li><strong>Senior dogs:</strong> Shorter, gentler activities; multiple short walks preferred</li>
-    </ul>
-
-    <h3>Mental Stimulation</h3>
-    <p><strong>Mental exercise is as important as physical exercise</strong>. Provide puzzle toys, training sessions, scent games, and interactive play. A mentally stimulated dog is a well-behaved dog.</p>
-
-    <p>Suggestion: Hide treats around the house for your dog to find, rotate toys to keep them interesting, and practice training commands during play.</p>
-
-    <h2>Behavior Management</h2>
-
-    <h3>Addressing Excessive Barking</h3>
-    <p>Identify the trigger (boredom, anxiety, alert barking). <strong>Address the underlying cause rather than just punishing the behavior</strong>. Provide adequate exercise, mental stimulation, and training.</p>
-
-    <h3>Handling Separation Anxiety</h3>
-    <ul>
-      <li>Start with short absences and gradually increase duration</li>
-      <li>Create a safe, comfortable space for your dog</li>
-      <li>Use calming aids like anxiety wraps or calming music</li>
-      <li>Consult a professional trainer if severe</li>
-    </ul>
-
-    <h3>Managing Jumping</h3>
-    <p><strong>Ignore jumping behavior</strong> and reward calm behavior. Don't give attention (even negative attention) when your dog jumps. Only provide attention when they're sitting or standing calmly.</p>
-
-    <h2>Health & Wellness Tips</h2>
-
-    <h3>Dental Care</h3>
-    <p>Brush your dog's teeth daily if possible, at minimum 3-4 times weekly. Schedule professional cleanings as recommended by your vet. Dental disease is preventable with proper care.</p>
-
-    <h3>Nail Care</h3>
-    <p>Trim nails every 3-4 weeks or when you hear them clicking on floors. Long nails affect gait and can cause pain. Consider professional grooming for nail care.</p>
-
-    <h3>Ear Health</h3>
-    <p>Check ears weekly for odor, redness, or excess wax. <strong>Dogs with floppy ears need more frequent ear cleaning</strong>. Use vet-approved ear cleaners and follow proper technique.</p>
-
-    <div class="tip-box">
-      <strong>💡 Pro Tip:</strong> Many trainers and groomers are excellent resources for personalized advice. Don't hesitate to ask for recommendations during routine visits.
-    </div>
-
-    <h2>Nutrition Tips</h2>
-
-    <p><strong>Proper nutrition is the foundation of health</strong>. Feed high-quality dog food appropriate for your dog's age and size. Consult your vet about specific dietary needs, especially for large breeds or dogs with health concerns.</p>
-
-    <p>Avoid table scraps and human foods, many of which are toxic to dogs (chocolate, grapes, onions, xylitol). Use training treats that are small and low-calorie so you don't exceed daily caloric needs.</p>
-
-    <p style="text-align: center; margin-top: 40px;"><a href="/" style="color: #046bd2; font-weight: 600; text-decoration: none;">← Back to Blog</a></p>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div>
-        <h3>OnRadar Dogs</h3>
-        <p style="color: #cbd5e1;">For dog lovers, by dog lovers.</p>
-      </div>
-      <div>
-        <h3>Resources</h3>
-        <a href="/">Blog</a>
-        <a href="about.html">About</a>
-        <a href="tips.html">Tips</a>
-      </div>
-      <div>
-        <h3>Legal</h3>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dog Care and Training Tips | OnRadar Dogs</title>
+    <meta name="description" content="A practical hub for grooming, exercise, behavior, and daily routine links that articles can reference directly." />
+    
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body class="home-page">
+    <div class="promo-bar" data-promo-bar>
+      <div class="promo-bar__inner">
+        <p><strong>New breed guides every week.</strong> Static preview now keeps every article inside the same blog structure.</p>
+        <button type="button" class="promo-bar__close" data-close-promo aria-label="Close signup banner">Close</button>
       </div>
     </div>
-  </footer>
-
-  <!-- Bottom Email Bar -->
-  <div id="emailBarBottom" class="email-bar bottom">
-    <div class="email-bar-content">
-      <div class="email-bar-text">
-        <strong>🐕 Subscribe for Updates</strong> — Dog guides, tips & product recommendations
-      </div>
-      <form class="email-bar-form" onsubmit="return handleEmailSubmit(event)">
-        <input type="email" placeholder="Your email" required/>
-        <button type="submit">Subscribe</button>
-      </form>
+    <div class="reading-progress" aria-hidden="true">
+      <span class="reading-progress__bar" data-reading-progress></span>
     </div>
-    <button class="email-bar-close" onclick="closeEmailBar('emailBarBottom')">&times;</button>
-  </div>
-</body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html"><span class="brand-mark">OD</span><span class="brand-copy"><strong>OnRadar Dogs</strong><span>Dog care, breed notes, and practical reading</span></span></a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./index.html">Latest</a>
+          <a href="./breeds.html">Care Guides</a>
+          <a href="./tips.html">Training</a>
+        </nav>
+      </div>
+    </div>
+    <header class="site-hero">
+      <div class="hero-inner">
+        <div class="hero-signup hero-signup--full">
+          <div id="hero-signup"></div>
+          <div class="hero-signup__compact">
+            <div class="hero-signup__copy">
+              <p class="eyebrow">OnRadar Dogs</p>
+              <h1>Get practical dog-owner notes without the fluff</h1>
+              <p class="lede">Short breed-specific checklists, care reminders, and training notes you can actually use.</p>
+            </div>
+            <div class="hero-signup__cta">
+              <form class="hero-signup__form" data-newsletter-form>
+                <input type="email" placeholder="Your email" aria-label="Email address" />
+                <button type="submit" class="button">Join the list</button>
+              </form>
+              <p class="hero-signup__microcopy">No fluff. Breed-specific. Short and useful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-layout">
+      <div class="content-column">
+        <section class="page-panel article-shell"><div class="article-toolbar"><div class="article-toolbar__meta"><p class="post-kicker">Site Guide</p><h1>Dog Care and Training Tips</h1><p class="article-excerpt">A practical hub for grooming, exercise, behavior, and daily routine links that articles can reference directly.</p></div><div class="article-toolbar__actions"><a class="button secondary utility-button" href="./index.html">Back to latest</a></div></div><div class="article-rich"><p>Use this page as the practical care hub for grooming, exercise, behavior, and training references across the site.</p><p>These articles are the strongest current jump-off points when a breed guide mentions routines, behavior, exercise, or home management.</p><div class="post-grid"><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan's most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide & History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world's most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the "Frenchie," has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide & History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Open article</a></article></div></div></section>
+      </div>
+      <aside class="sidebar">
+        <section class="sidebar-panel sidebar-panel--floating">
+          <p class="section-label">Weekly Dog Notes</p>
+          <div class="sidebar-note sidebar-note--signup">
+            <p><strong>Get one genuinely useful dog-owner email a week.</strong></p>
+            <p>Short breed notes, practical routines, and the care reminders people actually forget.</p>
+            <form class="mini-signup" id="newsletter-signup" data-newsletter-form>
+              <input type="email" placeholder="Your email" aria-label="Email address" />
+              <button type="submit" class="button">Join the notes</button>
+            </form>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Latest Articles</p>
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link" href="./national-standard-schnauzer-day.html"><span class="sidebar-kicker">National Day</span><strong>National Standard Schnauzer Day: September 25 — Complete Breed Guide</strong><span>2026-09-25 • 8 min read</span></a></li><li><a class="sidebar-link" href="./national-komondor-day.html"><span class="sidebar-kicker">National Day</span><strong>National Komondor Day: April 17 — Komondor Breed Guide &amp; History</strong><span>2026-04-17 • 7 min read</span></a></li><li><a class="sidebar-link" href="./national-french-bulldog-day.html"><span class="sidebar-kicker">National Day</span><strong>National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</strong><span>2026-04-13 • 9 min read</span></a></li><li><a class="sidebar-link" href="./houdini-weenie-harness-review.html"><span class="sidebar-kicker">Product Review</span><strong>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</strong><span>2026-04-10 • 6 min read</span></a></li><li><a class="sidebar-link" href="./national-akita-day.html"><span class="sidebar-kicker">National Day</span><strong>National Akita Day: April 8 — Complete Akita Inu Breed Guide</strong><span>2026-04-08 • 8 min read</span></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Why This Layout Works</p>
+          <div class="sidebar-note">
+            <p>The site now behaves like a real blog: latest posts on top, article pages inside the same structure, and no detached pages floating outside the main shell.</p>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Recent Highlights</p>
+          <div class="sidebar-feed">
+            <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><a class="text-link" href="./houdini-weenie-harness-review.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Read article</a></article>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>OnRadar Dogs • Static blog prototype for GitHub Pages experiments</p>
+    </footer>
+  </body>
 </html>

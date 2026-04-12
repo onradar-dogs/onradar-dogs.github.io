@@ -1,42 +1,94 @@
----
-layout: default
-title: Dog Breeds Database
-description: Complete database of 120+ dog breeds with national days, characteristics, training guides, and health information
-permalink: /breeds/
----
-
-<h1>Dog Breeds Database</h1>
-
-<p style="font-size: 18px; color: #475569; margin: 30px 0;">Explore comprehensive guides to dog breeds, national celebrations, and breed-specific information. Our database covers 120+ dog breeds with detailed information about characteristics, training, health, care requirements, and more.</p>
-
-<div style="background: #f9fafb; padding: 30px; border-radius: 8px; margin: 40px 0; border-left: 4px solid #046bd2;">
-  <h2 style="margin-top: 0; color: #1e293b;">Available Breed Guides</h2>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0;">
-    {% for post in site.posts %}
-    <div style="background: white; padding: 20px; border-radius: 6px; border-left: 3px solid #c96a3a;">
-      <h3 style="margin: 0 0 10px; font-size: 18px;"><a href="{{ post.url }}" style="color: #046bd2; text-decoration: none;">{{ post.title }}</a></h3>
-      <p style="color: #64748b; font-size: 14px; margin: 0;">Published {{ post.date | date: "%B %d, %Y" }}</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dog Breed Guides | OnRadar Dogs</title>
+    <meta name="description" content="A quick breed-guide directory linking the main breed pages and the most useful supporting review." />
+    
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/site.js" defer></script>
+  </head>
+  <body class="home-page">
+    <div class="promo-bar" data-promo-bar>
+      <div class="promo-bar__inner">
+        <p><strong>New breed guides every week.</strong> Static preview now keeps every article inside the same blog structure.</p>
+        <button type="button" class="promo-bar__close" data-close-promo aria-label="Close signup banner">Close</button>
+      </div>
     </div>
-    {% endfor %}
-  </div>
-
-  {% if site.posts.size == 0 %}
-  <p style="color: #64748b; text-align: center; padding: 40px;">No breed guides published yet. Check back soon!</p>
-  {% endif %}
-</div>
-
-<div style="background: white; padding: 30px; border-radius: 8px; border: 1px solid #e2e8f0; margin: 40px 0;">
-  <h2 style="margin-top: 0; color: #1e293b;">What You'll Find in Our Breed Guides</h2>
-  <ul style="color: #475569; line-height: 2;">
-    <li><strong>National Day Information</strong> — When each breed is celebrated and the significance of the date</li>
-    <li><strong>History & Origins</strong> — The breed's background, development, and cultural significance</li>
-    <li><strong>Physical Characteristics</strong> — Size, appearance, coat type, and distinctive features</li>
-    <li><strong>Personality & Temperament</strong> — Breed traits, behavioral characteristics, and what to expect</li>
-    <li><strong>Training & Socialization</strong> — Expert guidance on training methods and early socialization</li>
-    <li><strong>Health Information</strong> — Common health issues, genetic concerns, and lifespan</li>
-    <li><strong>Care Requirements</strong> — Exercise needs, grooming, nutrition, and daily care</li>
-    <li><strong>Family Suitability</strong> — Whether the breed is right for families, living situations, and lifestyle compatibility</li>
-    <li><strong>Frequently Asked Questions</strong> — Detailed FAQs with expert answers</li>
-  </ul>
-</div>
+    <div class="reading-progress" aria-hidden="true">
+      <span class="reading-progress__bar" data-reading-progress></span>
+    </div>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="./index.html"><span class="brand-mark">OD</span><span class="brand-copy"><strong>OnRadar Dogs</strong><span>Dog care, breed notes, and practical reading</span></span></a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./index.html">Latest</a>
+          <a href="./breeds.html">Care Guides</a>
+          <a href="./tips.html">Training</a>
+        </nav>
+      </div>
+    </div>
+    <header class="site-hero">
+      <div class="hero-inner">
+        <div class="hero-signup hero-signup--full">
+          <div id="hero-signup"></div>
+          <div class="hero-signup__compact">
+            <div class="hero-signup__copy">
+              <p class="eyebrow">OnRadar Dogs</p>
+              <h1>Get practical dog-owner notes without the fluff</h1>
+              <p class="lede">Short breed-specific checklists, care reminders, and training notes you can actually use.</p>
+            </div>
+            <div class="hero-signup__cta">
+              <form class="hero-signup__form" data-newsletter-form>
+                <input type="email" placeholder="Your email" aria-label="Email address" />
+                <button type="submit" class="button">Join the list</button>
+              </form>
+              <p class="hero-signup__microcopy">No fluff. Breed-specific. Short and useful.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-layout">
+      <div class="content-column">
+        <section class="page-panel article-shell"><div class="article-toolbar"><div class="article-toolbar__meta"><p class="post-kicker">Site Guide</p><h1>Dog Breed Guides</h1><p class="article-excerpt">A quick breed-guide directory linking the main breed pages and the most useful supporting review.</p></div><div class="article-toolbar__actions"><a class="button secondary utility-button" href="./index.html">Back to latest</a></div></div><div class="article-rich"><p>This is the breed-guide directory for the current OnRadar Dogs bundle.</p><p>Use it when an article needs a real internal link for breed overviews, care comparisons, or deeper reading.</p><div class="post-grid"><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan's most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide & History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world's most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the "Frenchie," has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide & History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it 'the absolute BEST' and if it's worth buying.</p><a class="text-link" href="./houdini-weenie-harness-review.html">Open article</a></article></div></div></section>
+      </div>
+      <aside class="sidebar">
+        <section class="sidebar-panel sidebar-panel--floating">
+          <p class="section-label">Weekly Dog Notes</p>
+          <div class="sidebar-note sidebar-note--signup">
+            <p><strong>Get one genuinely useful dog-owner email a week.</strong></p>
+            <p>Short breed notes, practical routines, and the care reminders people actually forget.</p>
+            <form class="mini-signup" id="newsletter-signup" data-newsletter-form>
+              <input type="email" placeholder="Your email" aria-label="Email address" />
+              <button type="submit" class="button">Join the notes</button>
+            </form>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Latest Articles</p>
+          <ul class="sidebar-list">
+            <li><a class="sidebar-link" href="./national-standard-schnauzer-day.html"><span class="sidebar-kicker">National Day</span><strong>National Standard Schnauzer Day: September 25 — Complete Breed Guide</strong><span>2026-09-25 • 8 min read</span></a></li><li><a class="sidebar-link" href="./national-komondor-day.html"><span class="sidebar-kicker">National Day</span><strong>National Komondor Day: April 17 — Komondor Breed Guide &amp; History</strong><span>2026-04-17 • 7 min read</span></a></li><li><a class="sidebar-link" href="./national-french-bulldog-day.html"><span class="sidebar-kicker">National Day</span><strong>National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</strong><span>2026-04-13 • 9 min read</span></a></li><li><a class="sidebar-link" href="./houdini-weenie-harness-review.html"><span class="sidebar-kicker">Product Review</span><strong>Houdini Weenie Harness Review: Does It Really Prevent Escapes?</strong><span>2026-04-10 • 6 min read</span></a></li><li><a class="sidebar-link" href="./national-akita-day.html"><span class="sidebar-kicker">National Day</span><strong>National Akita Day: April 8 — Complete Akita Inu Breed Guide</strong><span>2026-04-08 • 8 min read</span></a></li>
+          </ul>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Why This Layout Works</p>
+          <div class="sidebar-note">
+            <p>The site now behaves like a real blog: latest posts on top, article pages inside the same structure, and no detached pages floating outside the main shell.</p>
+          </div>
+        </section>
+        <section class="sidebar-panel">
+          <p class="section-label">Recent Highlights</p>
+          <div class="sidebar-feed">
+            <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="./national-standard-schnauzer-day.html">National Standard Schnauzer Day: September 25 — Complete Breed Guide</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><a class="text-link" href="./national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="./national-komondor-day.html">National Komondor Day: April 17 — Komondor Breed Guide &amp; History</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><a class="text-link" href="./national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="./national-french-bulldog-day.html">National French Bulldog Day: April 13 — French Bulldog Breed Guide &amp; History</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><a class="text-link" href="./national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="./houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Does It Really Prevent Escapes?</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><a class="text-link" href="./houdini-weenie-harness-review.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="./national-akita-day.html">National Akita Day: April 8 — Complete Akita Inu Breed Guide</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><a class="text-link" href="./national-akita-day.html">Read article</a></article>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <footer class="site-footer">
+      <p>OnRadar Dogs • Static blog prototype for GitHub Pages experiments</p>
+    </footer>
+  </body>
+</html>

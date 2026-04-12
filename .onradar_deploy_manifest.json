@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-12T04:32:02+00:00",
+  "timestamp": "2026-04-12T05:05:43+00:00",
   "source_root": "/Users/piotrsopyla/My Drive/AUTOBLOG_SYSTEM_v2/SEO_PROMPT_LAB/sites/example_site",
   "managed_paths": [
     "index.html",
@@ -9,7 +9,12 @@
     "national-standard-schnauzer-day.html",
     "national-komondor-day.html",
     "national-french-bulldog-day.html",
-    "national-akita-day.html"
+    "national-akita-day.html",
+    "about.html",
+    "tips.html",
+    "products.html",
+    "news-and-events.html",
+    "breeds.html"
   ],
   "site": "onradar-dogs.github.io"
 }
