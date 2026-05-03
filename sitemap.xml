@@ -43,4 +43,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://onradar-dogs.github.io/national-maltese-dog-day.html</loc>
+    <lastmod>2026-05-03</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
