@@ -299,5 +299,68 @@ If you've ever owned a dachshund that's a "Houdini" — a dog that can escape fr
         <button type="button" class="floating-signup__close" data-close-floating-signup aria-label="Close floating signup">Close</button>
       </div>
     </div>
-  </body>
+  
+<script>
+(function() {
+  var _ga4 = "";
+  var _site = "onradar-dogs.github.io";
+  var _article = "houdini-weenie-harness-review";
+  var _startTime = Date.now();
+  var _scrollMarks = {25: false, 50: false, 75: false, 100: false};
+
+  function _send(name, params) {
+    var data = Object.assign({page: _article, site: _site}, params);
+    if (_ga4 && typeof gtag === "function") {
+      gtag("event", name, data);
+    }
+    try {
+      var log = JSON.parse(localStorage.getItem("_ptrack") || "[]");
+      log.push({t: new Date().toISOString(), e: name, d: data});
+      if (log.length > 200) log = log.slice(-200);
+      localStorage.setItem("_ptrack", JSON.stringify(log));
+    } catch(e) {}
+  }
+
+  // Scroll depth
+  function _onScroll() {
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    var pct = Math.round((scrolled / total) * 100);
+    [25, 50, 75, 100].forEach(function(mark) {
+      if (!_scrollMarks[mark] && pct >= mark) {
+        _scrollMarks[mark] = true;
+        _send("scroll_depth", {depth: mark});
+      }
+    });
+  }
+  window.addEventListener("scroll", _onScroll, {passive: true});
+
+  // Time on page
+  function _sendTime() {
+    var secs = Math.round((Date.now() - _startTime) / 1000);
+    _send("time_on_page", {seconds: secs});
+  }
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) _sendTime();
+  });
+  window.addEventListener("pagehide", _sendTime);
+
+  // Newsletter CTA
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest("button");
+    if (btn) {
+      var box = btn.closest(".sidebar-newsletter, [class*='newsletter']");
+      if (box) _send("newsletter_click", {label: btn.textContent.trim().slice(0, 40)});
+    }
+    var link = e.target.closest("a[href]");
+    if (link && !link.href.includes(window.location.hostname)) {
+      _send("outbound_click", {url: link.href.slice(0, 100)});
+    }
+  });
+
+  // Pageview
+  _send("article_view", {});
+})();
+</script>
+</body>
 </html>
