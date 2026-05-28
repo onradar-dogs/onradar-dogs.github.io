@@ -1283,3 +1283,7 @@ h3 {
     border-radius: 18px;
   }
 }
+
+
+/* SPA navigation loading state */
+body.od-loading { opacity: .7; pointer-events: none; transition: opacity .12s; }
