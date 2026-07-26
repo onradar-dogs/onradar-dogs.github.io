@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "National Shih Tzu Day: History, Care, and Celebration Guide"
-date: 2026-07-26 13:20:37 +0100
-description: "National Shih Tzu Day celebrates one of the world's most beloved toy dog breeds. Learn about Shih Tzu history, care requirements, health issues, and why these charming dogs deserve special recognition."
-image: /img/shih-tzu-day.jpg
+date: 2026-07-26
+permalink: /national-shih-tzu-day/
 excerpt: "Discover everything about National Shih Tzu Day — from the breed's ancient history to modern care requirements."
 ---
 
