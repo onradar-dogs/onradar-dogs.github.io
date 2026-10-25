@@ -176,6 +176,43 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 .article-rich summary{ font-weight: bold; padding: 10px; cursor: pointer; outline: none; }
 .article-rich details p{ padding: 10px; margin: 0; }
 </style>
+
+<style id="sidebar-follow-20261025">
+[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
+height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
+min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
+[data-follow-parent]{overflow:visible!important;align-items:start}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
+width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
+[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
+.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
+background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
+.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
+.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
+overflow-wrap:anywhere;line-height:1.45}
+@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
+max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
+.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
+</style>
+
+<!-- social-cards:start -->
+<meta property="og:title" content="Dachshund Colors and Markings: Celebrating Our Colorful Companions">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://onradar-dogs.github.io/dachshund-colors-and-markings.html">
+<meta property="og:description" content="Discover the vibrant world of Dachshund colors and markings. Join our community as we explore the history, facts, and unique beauty of these beloved dogs…">
+<meta property="og:image" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:secure_url" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="three different mixed-breed dogs sitting together in a sunny park (general dog blog)">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dachshund Colors and Markings: Celebrating Our Colorful Companions">
+<meta name="twitter:description" content="Discover the vibrant world of Dachshund colors and markings. Join our community as we explore the history, facts, and unique beauty of these beloved dogs…">
+<meta name="twitter:image" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
+<meta name="twitter:image:alt" content="three different mixed-breed dogs sitting together in a sunny park (general dog blog)">
+<!-- social-cards:end -->
 </head>
 <body class="article-page">
 <header class="sc-topbar">
@@ -196,7 +233,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </div>
 
 
-<main class="site-layout">
+<main class="site-layout" data-follow-parent="true">
 <div class="content-column">
 <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true" class="breadcrumbs__sep">/</span><a href="/">Blog</a><span aria-hidden="true" class="breadcrumbs__sep">/</span><span aria-current="page">Dachshund Colors and Markings</span></nav>
 <section class="page-panel article-shell">
@@ -303,7 +340,7 @@ a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="b
 </section>
 
 </div>
-<aside class="sidebar">
+<aside class="sidebar" data-follow-sidebar="existing">
 
 <section class="sidebar-panel">
 <p class="section-label">Latest Articles</p>
