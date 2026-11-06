@@ -1,196 +1,323 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OnRadar Dogs | Home</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnRadar Dogs — Breed Notes, Care Guides &amp; Gear</title>
+<meta name="description" content="Dog breed profiles, practical care guides, honest gear reviews and breed comparison tools for dog owners.">
 <link rel="canonical" href="https://onradar-dogs.github.io/">
-    <meta name="description" content="Dog breed notes, practical care guides, and lightweight static publishing experiments." />
-    
-    <link rel="stylesheet" href="./assets/styles.css" />
-    <script src="./assets/site.js" defer></script>
-  <style id="sc-font">body{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif}body h1,body h2,body h3{font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif}</style>
-<style id="site-chrome">
-:where(body){margin:0}.sc-reset,header.sc-topbar,footer.sc-footer{box-sizing:border-box}
-[class*="wrap"],[class*="inner"],[class*="layout"],[class*="container"]{box-sizing:border-box}
-.sc-topbar{
-  border-bottom: 1px solid rgba(24, 33, 38, 0.08);
-  background: rgba(255, 253, 249, 0.88);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 4px;
-  z-index: 10;
-}
-.sc-topbar-inner{
-  width: min(1180px, calc(100% - 2rem));
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 0;
-}
-.sc-brand{
-  display: inline-flex;
-  align-items: center;
-  gap: 0.9rem;
-  color: var(--ink);
-  text-decoration: none;
-}
-.sc-brand-mark{
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--navy), #1f5669);
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.sc-brand-copy{
-  display: grid;
-}
-.sc-brand-copy span{
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-.sc-topnav{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.sc-topnav a{
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-.sc-topnav a:hover{
-  color: var(--accent-deep);
-}
-.sc-site-footer{
-  width: min(1180px, calc(100% - 2rem));
-  margin: 0 auto 2rem;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-@media (max-width: 760px) {
-  .promo-bar__inner,
-  .sc-topbar-inner {
-    width: min(1180px, calc(100% - 1rem));
-    padding-left: 0;
-    padding-right: 0;
-    align-items: flex-start;
-    flex-direction: column;
-  }}
-.sc-topbar a,.sc-footer a{text-decoration:none}
-/* links blue: the most recognisable clickable colour (owner 2026-10-13); not the bar, footer, buttons or cards */
-a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]){color:#0066cc!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):visited{color:#0052a3!important}a:not(.sc-topbar *):not(.sc-footer *):not(header *):not(footer *):not([class*="button"]):not([class*="btn"]):not([class*="-card"]):not([class*="badge"]):not(.sidebar-link):not(.sc-topbar-brand):not([style*="background"]):hover{text-decoration:underline}
-@media(max-width:700px){header[class^="sc-"] [class*="inner"],header[class^="sc-"]{flex-wrap:wrap;height:auto}header[class^="sc-"] nav,header[class^="sc-"] [class*="nav"]{display:flex;flex-wrap:wrap;gap:6px 14px}header[class^="sc-"] [class*="inner"]{padding-top:8px;padding-bottom:8px}main,article,aside,[class*="wrap"]>*,[class*="layout"]>*,[class*="content"],[class*="column"]{min-width:0!important;max-width:100%}table{display:block!important;width:auto!important;max-width:100%!important;overflow-x:auto}img,iframe,video{max-width:100%;height:auto}h1,h2,h3,p,li{overflow-wrap:anywhere}[class*="wrap"],[class*="layout"],[class*="rich"],[class*="content"]{grid-template-columns:minmax(0,1fr)!important}article *,[class*="content"] *,[class*="rich"] *{box-sizing:border-box!important;max-width:100%!important;min-width:0!important}table{overflow-x:auto!important}}
+<meta name="robots" content="index, follow">
+<style id="od-ds">
+:root{--red:#c41e1e;--ink:#1a1a2e;--paper:#f5f1eb;--page:#ffffff;--muted:#6b6260;--line:#d9d2cb;--gold:#b8952e;--link:#0066cc;
+--display:"UnifrakturMaguntia","Palatino Linotype","Georgia Pro",Georgia,serif;--body:"Inter","Segoe UI","Helvetica Neue",Arial,sans-serif;--r:0px;--wrap:1200px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--ink);background:var(--paper)}
+a{color:var(--link)}a:visited{color:#0052a3}
+h1,h2,h3{font-family:var(--display);font-weight:400;color:var(--ink);line-height:1.1}
+img{max-width:100%;height:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:9;background:var(--page);padding:10px 14px;border:2px solid var(--red)}
+.label{margin:0 0 14px;font:700 11px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.label b{color:var(--ink)}
+.btn,.btn:visited{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 28px;border-radius:0;background:var(--red);color:var(--page);font:600 16px/1 var(--body);text-decoration:none;transition:background .15s}
+.btn:hover{background:#9e1515}
+.arrow,.arrow:visited{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.arrow:hover{color:var(--ink)}
+.arrow::after,.btn::after{content:"\2192";font-weight:400}
+/* header — tabloid masthead */
+.sc-topbar{background:var(--ink);border-bottom:4px solid var(--red);position:sticky;top:0;z-index:50}
+.sc-topbar-inner{max-width:var(--wrap);margin:0 auto;padding:0 28px;min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sc-topbar-brand,.sc-topbar-brand:visited{color:var(--paper)!important;text-decoration:none;font:400 28px/1 var(--display);letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px}
+.sc-topbar-brand small{font:400 11px/1 var(--body);text-transform:uppercase;letter-spacing:.1em;color:var(--gold);opacity:.75;display:block}
+.sc-topbar-nav{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.sc-topbar-nav a,.sc-topbar-nav a:visited{display:block;padding:10px 16px;color:rgba(255,255,255,.85);text-decoration:none;font-size:14px;font-weight:600;transition:background .15s}
+.sc-topbar-nav a:hover,.sc-topbar-nav a[aria-current]{background:rgba(255,255,255,.12);color:#fff}
+.sc-topbar-nav .cta a{background:var(--red);color:var(--page)}.sc-topbar-nav .cta a:hover{background:#9e1515}
+.od-menu{display:none}
+@media(max-width:860px){.sc-topbar-nav{display:none}.od-menu{display:block}
+.od-menu summary{list-style:none;cursor:pointer;width:46px;height:46px;border:0;display:grid;place-content:center;color:var(--paper);font:400 24px/1 var(--display);padding:0}
+.od-menu summary::-webkit-details-marker{display:none}
+.od-menu[open] summary{background:rgba(255,255,255,.15)}
+.od-panel{position:fixed;left:0;right:0;top:68px;bottom:0;overflow:auto;background:var(--paper);padding:24px 20px 48px;border-top:4px solid var(--red)}
+.od-panel>a,.od-panel>a:visited{display:flex;align-items:baseline;gap:14px;padding:18px 6px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font:400 22px/1.2 var(--display)}
+.od-panel>a:hover{background:var(--page)}
+.od-panel .minor{display:flex;flex-wrap:wrap;gap:6px 20px;padding:24px 6px 0;border-top:1px solid var(--line)}
+.od-panel .minor a{font-size:15px;color:var(--muted)}}
+/* footer — tabloid colophon */
+.sc-footer{background:var(--ink);color:var(--muted);font-size:14px;border-top:6px solid var(--red)}
+.sc-footer-inner{max-width:var(--wrap);margin:0 auto;padding:40px 28px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px}
+.sc-footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:6px 36px;align-content:start}
+.sc-footer a,.sc-footer a:visited{color:var(--gold)}.sc-footer a:hover{color:var(--page)}
+.sc-footer p{margin:8px 0 0;max-width:520px;opacity:.85;font-size:13px}
+.sc-footer .brand{font:400 22px/1 var(--display);color:var(--gold);text-decoration:none}
+/* home sections */
+.sec{max-width:var(--wrap);margin:0 auto;padding:64px 28px}
+.sec h2{font-size:clamp(28px,3.4vw,40px);margin:0 0 14px;letter-spacing:-.01em}
+.sec-lead{margin:0 0 32px;max-width:600px;color:var(--muted)}
+.band{background:var(--page)}
+/* hero — tabloid front page */
+.hero-home{max-width:var(--wrap);margin:0 auto;padding:48px 28px 44px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.7fr);gap:40px;align-items:center;border-bottom:4px solid var(--red)}
+.hero-home h1{margin:0 0 16px;font-size:clamp(34px,5vw,64px);line-height:1;letter-spacing:-.02em}
+.hero-home h1 em{color:var(--red);font-style:normal}
+.hero-home .intro{margin:0 0 24px;max-width:520px;font-size:19px;color:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center}
+.hero-figure{position:relative;margin:0;justify-self:center;width:min(360px,100%)}
+.hero-figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;border:0;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.hero-figure figcaption{position:absolute;right:0;bottom:-26px;font:italic 11px/1 var(--body);color:var(--muted);padding:4px 10px;background:var(--paper);border:1px solid var(--line)}
+/* paths — tabloid sections */
+.paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.path{background:var(--page);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .15s}
+.path:hover{border-color:var(--red)}
+.path h3{font-family:var(--body);font-size:16px;margin:4px 0 0;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.path p{margin:0;color:var(--muted)}
+.path ul{margin:6px 0 10px;padding:0;list-style:none;display:grid;gap:5px;font-size:15px}
+.path li a{text-decoration:none;color:var(--ink)}.path li a:hover{text-decoration:underline}
+.path .arrow{margin-top:auto;align-self:flex-start}
+/* numbers — tabloid stats */
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:32px 28px;background:var(--page);border-top:3px solid var(--red);border-bottom:3px solid var(--red)}
+.num{text-align:center}
+.num b{display:block;font:400 clamp(44px,4.5vw,60px)/1 var(--display);color:var(--ink)}
+.num b small{display:block;font-size:.35em;margin-top:6px;color:var(--muted);font-family:var(--body);text-transform:uppercase;letter-spacing:.06em}
+.num p{margin:10px 0 8px;font-size:14px;color:var(--muted)}
+.num a{font-size:13px}
+/* cards — tabloid newspaper columns */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.card{position:relative;background:var(--page);border:1px solid var(--line);padding:0;display:flex;flex-direction:column;gap:0;transition:border-color .15s}
+.card:hover{border-color:var(--red)}
+.card[hidden]{display:none}
+.card .kicker{margin:0;font:700 10px/1.4 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--red);padding:14px 18px 0}
+.card h2,.card h3{margin:0;font-size:20px;line-height:1.15;padding:4px 18px 0}
+.card h2 a,.card h3 a,.card h2 a:visited,.card h3 a:visited{color:var(--ink);text-decoration:none}
+.card h2 a::after,.card h3 a::after{content:"";position:absolute;inset:0}
+.card p{margin:0;font-size:15px;color:var(--muted);padding:6px 18px 14px}
+.card .card-date{font-size:12px;color:var(--muted);padding:0 18px 14px;margin:0}
+.card:first-child{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:0;border-bottom:4px solid var(--red)}
+.card:first-child .kicker{padding:20px 22px 0}
+.card:first-child h2{font-size:clamp(24px,2.8vw,34px);padding:4px 22px 0}
+.card:first-child p{padding:6px 22px 18px}
+/* process steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s;margin:0;padding:0;list-style:none;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:24px;height:1px;background:var(--line)}
+.steps li{counter-increment:s;position:relative;padding-top:56px}
+.steps li::before{content:counter(s);display:grid;place-content:center;width:36px;height:36px;border-radius:50%;background:var(--page);border:1px solid var(--line);color:var(--red);font:700 16px/1 var(--body);position:absolute;top:0;left:50%;transform:translateX(-50%)}
+.steps h3{margin:0 0 8px;font-size:20px;font-family:var(--body);font-weight:700}
+.steps p{margin:0;color:var(--muted);font-size:15px}
+.trust{margin:36px 0 0;padding:18px 22px;background:var(--page);border-left:4px solid var(--red);font-size:15px;color:var(--muted)}
+.trust strong{color:var(--ink)}
+/* closing */
+.closing{background:var(--ink);color:var(--paper)}
+.closing .sec{display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center;justify-content:space-between;padding-top:56px;padding-bottom:56px}
+.closing h2{color:var(--page);margin:0 0 10px}.closing p{margin:0;max-width:540px;opacity:.85}
+.checks{display:flex;flex-wrap:wrap;gap:8px 22px;margin:14px 0 0;padding:0;list-style:none;font-size:14px;font-weight:600}
+.checks li::before{content:"\2713";color:var(--gold);margin-right:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 24px;padding:0;list-style:none}
+.chips button{min-height:44px;padding:0 20px;border:1px solid var(--line);background:var(--paper);color:var(--muted);font:600 14px/1 var(--body);cursor:pointer;transition:background .15s,border-color .15s}
+.chips button:hover{border-color:var(--red);color:var(--ink)}
+.chips button[aria-pressed=true]{background:var(--red);border-color:var(--red);color:var(--page)}
+/* article pages */
+.masthead{border-bottom:1px solid var(--line);background:var(--paper)}
+.masthead-in{max-width:var(--wrap);margin:0 auto;padding:32px 28px 28px;display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:36px;align-items:center}
+.masthead h1{margin:0 0 14px;font-size:clamp(26px,3.2vw,38px);line-height:1.08;letter-spacing:-.01em;max-width:760px}
+.masthead .meta{margin:0;font-size:14px;color:var(--muted)}
+.masthead .hero-photo{margin:0}.masthead .hero-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.masthead .hero-photo figcaption{margin-top:4px;font-size:11px;color:var(--muted);text-align:center;font-style:italic}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;font-size:13px;color:var(--muted)}
+.crumbs a{color:var(--muted)}
+.breadcrumb{background:transparent;border:0}
+.breadcrumb-inner{max-width:var(--wrap);margin:0 auto;padding:12px 28px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px}
+.breadcrumb a{color:var(--muted)}
+.layout{max-width:var(--wrap);margin:0 auto;padding:40px 28px 64px;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;align-items:start}
+.article{min-width:0;max-width:720px}
+.article a{color:#0066cc}.article a:visited{color:#0052a3}.article a:hover{text-decoration:underline}
+.article h2{font-size:clamp(24px,2.3vw,30px);margin:40px 0 12px;scroll-margin-top:88px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.article h3{font-size:20px;margin:24px 0 8px}
+.article p{margin:0 0 16px}
+.article ul,.article ol{padding-left:24px}
+.article table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15px;overflow-x:auto;background:var(--page)}
+.article th{text-align:left;color:var(--ink);padding:10px 14px;background:var(--paper);border-bottom:2px solid var(--red);font-weight:600}
+.article td{padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.article details{border-bottom:1px solid var(--line);padding:14px 0;margin:0}
+.article summary{cursor:pointer;font:600 18px/1.4 var(--body);color:var(--ink)}
+.article iframe{max-width:100%;border:0}
+.article .ai-note{background:var(--page);border-left:4px solid var(--red);padding:12px 16px;font-size:14px;color:var(--muted)}
+.article .callout{border-left:4px solid var(--red);padding:12px 16px;margin:16px 0;background:var(--page)}
+.article .callout p{margin:0;color:var(--muted)}
+.article .widget{background:var(--page);border:1px solid var(--line);padding:20px;margin:20px 0}
+.article .tool,.article .calc{border:1px solid var(--line);padding:20px;margin:20px 0;background:var(--page)}
+.article legend{display:none}
+.sidebar{position:sticky;top:88px;display:grid;gap:18px;max-height:calc(100vh - 104px);overflow:auto;padding-left:20px;border-left:1px solid var(--line);font-size:14px}
+.sidebar h3,.sidebar h4{margin:0 0 10px;font:700 11px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.sidebar p{margin:0;color:var(--muted)}
+.sidebar ol,.sidebar ul{margin:0;padding:0;list-style:none}
+.sidebar .toc ol{counter-reset:t}
+.sidebar .toc li{counter-increment:t;display:grid;grid-template-columns:24px minmax(0,1fr);gap:4px}
+.sidebar .toc li::before{content:counter(t);color:var(--red);font:600 13px/1.8 var(--body)}
+.sidebar li a{display:block;padding:5px 0;line-height:1.45;color:var(--ink);text-decoration:none}
+.sidebar li a:hover{color:var(--red)}
+.sidebar .cta-box{border:1px solid var(--line);padding:14px;margin:0 0 14px;background:var(--page)}
+.sidebar .cta-box h4{color:var(--ink);text-transform:none;letter-spacing:0;font-size:16px;font-family:var(--display)}
+.sidebar .cta-box .btn{width:100%;justify-content:center;padding:10px 14px}
+.sidebar .sidebar-panel{border-bottom:1px solid var(--line);padding:14px;margin:0 0 14px}
+.sidebar .sidebar-panel h3{margin:0 0 8px;border-bottom:1px solid var(--red);padding-bottom:4px}
+.sidebar .sidebar-panel p{margin:0;font-size:14px;color:var(--muted)}
+/* static pages */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:36px 28px 64px}
+.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:40px;align-items:start}
+.panel{min-width:0;max-width:720px;background:var(--page);padding:28px}
+.panel h1{font-size:clamp(30px,3.5vw,44px);margin:0 0 16px;font-family:var(--display)}
+.panel h2{font-size:24px;margin:32px 0 10px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.panel ul{padding-left:20px}
+.panel li{margin-bottom:6px}
+.follow-sidebar-panel{padding-left:20px;border-left:1px solid var(--line);font-size:14px}
+.follow-sidebar-panel h2{margin:0 0 10px;font:700 11px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}.follow-sidebar-panel a{display:block;padding:5px 0;color:var(--ink)}
+[data-follow-sidebar]{position:sticky;top:88px}
+[data-follow-parent]{overflow:visible;align-items:start}
+/* legacy article hero */
+.hero{background:var(--paper);border-bottom:1px solid var(--line);margin:0;padding:0}
+.hero-inner{max-width:var(--wrap);margin:0 auto;padding:32px 28px 28px;display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:36px;align-items:center}
+.hero-inner>*{grid-column:1}
+.hero-inner .hero-photo{grid-column:2;grid-row:1/span 3;margin:0;align-self:center;max-width:200px}
+.hero-inner .hero-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 25%;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.hero-inner .hero-photo figcaption{font-size:11px;color:var(--muted);text-align:center;font-style:italic;margin-top:4px}
+.hero .eyebrow{margin:0 0 12px;font:700 11px/1.4 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.hero h1{margin:0 0 14px;font-size:clamp(26px,3.2vw,38px);line-height:1.08;letter-spacing:-.01em;max-width:760px;color:var(--ink);font-family:var(--display);font-weight:400}
+.hero p{color:var(--muted);margin:0;max-width:620px}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero-inner .hero-photo{display:none}.hero-inner{padding:22px 20px 24px}}
+/* breakpoints */
+@media(min-width:1025px) and (max-width:1439px){:root{--wrap:1080px}.hero-home h1{font-size:clamp(34px,4.2vw,56px)}body{font-size:16px}}
+@media(max-width:1024px){.paths,.nums{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.steps::before{display:none}.steps li{padding-top:0;padding-left:60px}.steps li::before{top:0;left:56px;transform:translateX(0)}.layout{gap:32px;grid-template-columns:minmax(0,1fr) 240px}.card:first-child{grid-template-columns:1fr}}
+@media(max-width:860px){.hero-home{grid-template-columns:1fr;padding-top:36px;gap:24px}.hero-figure{max-width:260px;grid-row:1}
+.masthead-in{grid-template-columns:1fr}.masthead .hero-photo{display:none}
+.layout,.follow-sidebar-layout{grid-template-columns:1fr}.sidebar,[data-follow-sidebar]{position:static;max-height:none;border-left:0;padding-left:0;margin-top:20px}
+.sec{padding:48px 20px}.closing .sec{flex-direction:column;text-align:center}}
+@media(max-width:600px){body{font-size:16px}.paths,.nums,.steps{grid-template-columns:1fr}.num{border-bottom:1px solid var(--line);padding-bottom:18px}.num:last-child{border-bottom:0}
+.card{padding:0}.sc-topbar-inner,.masthead-in,.layout,.wrap,.sec,.hero-home{padding-left:16px;padding-right:16px}.btn{width:100%;justify-content:center}.hero-home .intro{font-size:17px}}
+@media print{body{background:#fff;color:#000}.sc-topbar,.sc-footer,.sidebar,.follow-sidebar-panel,.skip,.closing,.btn,.arrow,.chips{display:none!important}
+.hero-home{display:block;padding:20px}.layout{display:block;padding:0}.article{max-width:none}.masthead-in{display:block;padding:14px}}
 </style>
-<style>.homepage-intro h1{font-size:1.5em;margin:.83em 0}</style>
-
-<!-- home-photo-20261025 -->
-<style id="home-photo-20261025">
-/* home-photo-20261025 */
-.home-editorial-photo{margin:1.25rem auto;max-width:1100px;min-width:0}
-.home-editorial-photo img{display:block;width:100%;max-width:100%;height:auto}
-.home-editorial-photo figcaption{font-size:.8rem;line-height:1.5;padding:.5rem .75rem;color:inherit}
-.sd-cover .sd-art.home-editorial-photo{display:block;margin:0;min-height:0;height:auto;opacity:1;background:none;
-border:0;box-shadow:none;transform:none;aspect-ratio:auto}
-.sd-cover .home-editorial-photo img{height:auto;min-height:0;object-fit:contain}
-.home-photo-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-align-items:center;gap:clamp(20px,4vw,60px);padding:clamp(20px,4vw,60px)}
-.home-photo-hero>.hero-inner,.home-photo-hero>.ps-in{margin:0;max-width:none;padding:0;min-width:0}
-.home-photo-hero>.home-editorial-photo{margin:0;width:100%}
-@media(max-width:760px){.home-photo-hero{grid-template-columns:minmax(0,1fr)}
-.sd-cover:has(>.home-editorial-photo){grid-template-columns:minmax(0,1fr)}}
-</style>
-
-<style id="sidebar-follow-20261025">
-[data-follow-sidebar]{display:grid!important;gap:16px;position:sticky!important;top:96px!important;align-self:start!important;
-height:fit-content!important;max-height:calc(100dvh - 112px)!important;overflow-y:auto!important;
-min-width:0;overscroll-behavior:contain;scrollbar-width:thin}
-[data-follow-parent]{overflow:visible!important;align-items:start}
-.follow-sidebar-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;
-width:min(1184px,calc(100% - 32px));margin:32px auto;align-items:start}
-[data-follow-content]{width:auto!important;max-width:100%!important;min-width:0;margin:0!important}
-.follow-sidebar-panel{padding:18px;border:1px solid var(--line,#d8d9d0);border-radius:12px;
-background:var(--soft,#f4f5ef);color:var(--ink,#27382d);margin:0 0 16px}
-.follow-sidebar-panel h2{font:700 .85rem/1.4 system-ui;margin:0 0 12px}
-.follow-sidebar-panel ul{list-style:none;margin:0;padding:0}
-.follow-sidebar-panel a{display:block;padding:8px 0;color:inherit;text-decoration:underline;
-overflow-wrap:anywhere;line-height:1.45}
-@media(max-width:900px){[data-follow-sidebar]{position:static!important;top:auto!important;
-max-height:none!important;height:auto!important;overflow:visible!important;width:100%!important;max-width:100%;float:none!important}
-.follow-sidebar-layout{grid-template-columns:minmax(0,1fr);gap:24px}}
-</style>
-
-<!-- social-cards:start -->
-<meta property="og:title" content="OnRadar Dogs | Home">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://onradar-dogs.github.io/">
-<meta property="og:description" content="Dog breed notes, practical care guides, and lightweight static publishing experiments.">
-<meta property="og:image" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
-<meta property="og:image:secure_url" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="800">
-<meta property="og:image:alt" content="three different mixed-breed dogs sitting together in a sunny park (general dog blog)">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OnRadar Dogs | Home">
-<meta name="twitter:description" content="Dog breed notes, practical care guides, and lightweight static publishing experiments.">
-<meta name="twitter:image" content="https://onradar-dogs.github.io/assets/social-share-20261025.jpg">
-<meta name="twitter:image:alt" content="three different mixed-breed dogs sitting together in a sunny park (general dog blog)">
-<!-- social-cards:end -->
 </head>
-  <body class="home-page">
+<body>
+<a class="skip" href="#content">Skip to content</a>
 <header class="sc-topbar">
-      <div class="sc-topbar-inner">
-        <a class="sc-brand" href="./index.html"><span class="sc-brand-mark">OD</span><span class="sc-brand-copy"><strong>OnRadar Dogs</strong><span>Dog care, breed notes, and practical reading</span></span></a>
-        <nav class="sc-topnav" aria-label="Primary">
-          <a href="./index.html">Home</a>
-          <a href="./index.html#latest-articles">Blog</a>
-          <a href="./about.html">About Us</a>
-          <a href="./contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <div class="sc-topbar-inner">
+    <a class="sc-topbar-brand" href="/">OnRadar <small>Dog breeds &hearts; gear</small></a>
+    <nav aria-label="Main"><ul class="sc-topbar-nav"><li><a href="/blog.html">All guides</a></li><li><a href="/blog.html#dachs">Dachshund</a></li><li><a href="/blog.html#national">National Days</a></li><li><a href="/blog.html#gear">Gear & Reviews</a></li><li class="cta"><a href="/breed-comparison.html">Compare Breeds</a></li></ul></nav>
+    <details class="od-menu"><summary>&#x2261;</summary><nav class="od-panel" aria-label="Mobile"><a href="/blog.html">All guides</a><a href="/blog.html#dachs">Dachshund</a><a href="/blog.html#national">National Days</a><a href="/blog.html#gear">Gear & Reviews</a><div class="minor"><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/editorial-policy.html">Editorial policy</a><a href="/sitemap.html">Sitemap</a></div></nav></details>
+  </div>
+</header>
 
-    
-    <div class="reading-progress" aria-hidden="true">
-      <span class="reading-progress__bar" data-reading-progress></span>
+<section class="hero-home">
+  <div>
+    <p class="label">Your dog breed reference</p>
+    <h1>OnRadar <em>Dogs</em></h1>
+    <p class="intro">Breed notes, care guides and honest gear reviews — plus a breed comparator to see how dogs stack up side by side.</p>
+    <div class="hero-actions">
+      <a class="btn" href="/blog.html">Browse all guides &rarr;</a>
+      <a class="arrow" href="/breed-comparison.html">Compare breeds &rarr;</a>
     </div>
-    
-    
-    <main class="site-layout" data-follow-parent="true">
-      <div class="content-column">
-        <section class="page-panel homepage-intro" id="latest-articles"><p class="section-label">Fresh Posts</p><h1>Latest guides and notes</h1><p class="intro-copy">This is the main feed. New articles are generated into the same structure and listed here automatically, newest first.</p><figure class="home-editorial-photo" data-home-photo="20261025"><img src="/assets/home-editorial-20261025.webp" alt="three different mixed-breed dogs sitting together in a sunny park (general dog blog)" width="1536" height="1024" fetchpriority="high" decoding="async" data-ai-generated="true"><figcaption>AI-generated illustration.</figcaption></figure>
-<div class="post-grid"><article class="post-card"><p class="post-kicker">Dachshund Life</p><p class="post-date">2026-11-01</p><h2><a href="/second-dachshund-age-gap-pairing.html">Getting a Second Dachshund: Age Gap, Sex &amp; Regrets</a></h2><p>What owners actually report about age gaps, boy-girl vs same-sex pairs and regret, set next to veterinary behavior research, with a one-minute pairing checker.</p><p class="post-meta">Getting a second dachshund? See owner-reported age gaps, same vs opposite sex pairing research, why some owners regret it, plus a quick pairing checker.</p><a class="text-link" href="/second-dachshund-age-gap-pairing.html">Open article</a></article>
-        <article class="post-card"><p class="post-kicker">Dachshund Gear</p><p class="post-date">2026-10-18</p><h2><a href="/dachshund-harness-coat-size-chart.html">Dachshund Harness and Coat Size Chart Compared (2026)</a></h2><p>Size labels mean different things at every brand. Compare real dachshund harness and coat charts side by side, learn where to measure a long back, and get a starting size from your own measurements.</p><p class="post-meta">Dachshund harness and coat size chart compared across brands: Mini, Tweenie and Standard measurements, where to measure a long back, plus a quick size finder.</p><a class="text-link" href="/dachshund-harness-coat-size-chart.html">Open article</a></article>
-        
-        <article class="post-card"><p class="post-kicker">Training</p><p class="post-date">2026-10-09</p><h2><a href="/best-training-for-stubborn-dachshunds.html">Best Training for Stubborn Dachshunds: A Kind Plan</a></h2><p>Clear cues, humane techniques, and room for your dog’s whole personality.</p><p class="post-meta">Best training for stubborn Dachshunds starts with rewards and clear cues. Build a kinder routine with practical techniques, a session planner, and helpful FAQs.</p><a class="text-link" href="/best-training-for-stubborn-dachshunds.html">Open article</a></article>
-        <article class="post-card"><p class="post-kicker">Dachshund Guide</p><p class="post-date">2026-10-07</p><h2><a href="/how-to-groom-a-dachshund.html">How to Groom a Dachshund: Coat-by-Coat Care Guide</a></h2><p>Wondering how to groom a Dachshund without pulling tangled hair or turning nail care into a wrestling match? Start with your dog&#x27;s coat type, then build a routine around...</p><p class="post-meta">Learn how to groom a Dachshund with coat-specific brushing, safe bathing, nail care, ear checks, and practical advice on when to ask a groomer or veterinarian.</p><a class="text-link" href="/how-to-groom-a-dachshund.html">Open article</a></article>
-        <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-07</p><h2><a href="/national-chihuahua-day.html">National Chihuahua Day 2026: May 14</a></h2><p>National Chihuahua Day on August 7 celebrates the world's smallest dog breed with the biggest personality. Discover the breed's ancient history, bold temperament, the best ways to celebrate, gift ideas for Chi owners, and essential care tips for this long-lived companion.</p><p class="post-meta">National Chihuahua Day is May 14 every year. Discover the breed&#x27;s ancient history, bold personality, the best celebration activities, gift ideas for Chi…</p><a class="text-link" href="/national-chihuahua-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-dachshund-day.html">National Dachshund Day 2026: June 21</a></h2><p>National Dachshund Day on August 5 honors the beloved Wiener Dog. Explore 300 years of breed history, ten celebration ideas, IVDD health guidance, gift picks for Dachshund owners, and fun facts about the world's most recognizable long-bodied breed.</p><p class="post-meta">National Dachshund Day 2026 is June 21. Here&#x27;s everything you need to celebrate — history, IVDD health tips, events, gift ideas, and fun facts about the…</p><a class="text-link" href="/national-dachshund-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="/national-standard-schnauzer-day.html">National Standard Schnauzer Day 2026: September 25</a></h2><p>National Standard Schnauzer Day on September 25 celebrates the intelligent Standard Schnauzer breed. The Standard Schnauzer is an alert, spirited, and highly intelligent working dog with a distinctive salt-and-pepper coat and impressive beard. This German-origin breed excels as a family companion, excelling in training, agility, and various dog sports...</p><p class="post-meta">National Standard Schnauzer Day is observed on September 25. AKC breed standards, health screening, grooming requirements, and how to celebrate the Standard…</p><a class="text-link" href="/national-standard-schnauzer-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="/national-komondor-day.html">National Komondor Day 2026: April 17</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a living mop. This ancient Hungarian livestock guardian breed has protected flocks for centuries and continues to impress modern dog enthusiasts with its loyalty, intelligence, and protective nature...</p><p class="post-meta">The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a…</p><a class="text-link" href="/national-komondor-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="/national-french-bulldog-day.html">National French Bulldog Day 2026: April 13</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as the &quot;Frenchie,&quot; has captured the hearts of millions with its distinctive appearance, playful personality, and unwavering devotion to its owners. From their iconic bat-like ears to their charming temperament, French Bulldogs represent loyalty and joy...</p><p class="post-meta">National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as…</p><a class="text-link" href="/national-french-bulldog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="/houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Escape-Proof Dachshund Harness by Weenie Warmers</a></h2><p>Honest review of Houdini Weenie Harness for dachshunds. Learn why r/Dachshund calls it &#x27;the absolute BEST&#x27; and if it&#x27;s worth buying.</p><p class="post-meta">Houdini Weenie Harness review by Weenie Warmers. Designed for escape-prone dachshunds with a dual-anchor barrel-chest fit. r/Dachshund verdict, pricing, and…</p><a class="text-link" href="/houdini-weenie-harness-review.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="/national-akita-day.html">National Akita Day 2026: April 8</a></h2><p>National Akita Day is celebrated on April 8th each year, honoring one of Japan&#x27;s most iconic dog breeds. This celebration recognizes the cultural significance of the Akita Inu in Japanese history, distinctive physical characteristics, and growing worldwide popularity. The Akita represents loyalty, dignity, and protective devotion—qualities that have captivated dog lovers for centuries...</p><p class="post-meta">National Akita Day falls on April 8 every year. History of the Japanese Akita Inu, breed characteristics, health, training, and how to celebrate National…</p><a class="text-link" href="/national-akita-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-11-02</p><h2><a href="/national-havanese-day.html">National Havanese Day 2026: November 2</a></h2><p>National Havanese Day on November 2 celebrates Cuba's beloved national dog — a silky, cheerful little companion with one of the longest lifespans in the dog world.</p><p class="post-meta">National Havanese Day on November 2 celebrates Cuba&#x27;s beloved national dog — a silky, cheerful little companion with one of the longest lifespans in the dog…</p><a class="text-link" href="/national-havanese-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-beagle-day.html">National Beagle Day 2026: April 22</a></h2><p>National Beagle Day on August 5 honors one of America's most popular scent hounds. Breed history, care tips, celebration ideas, and the best gifts for Beagle lovers.</p><p class="post-meta">Everything about national beagle day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-beagle-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-21</p><h2><a href="/national-bulldog-day.html">National Bulldog Day 2026: April 21</a></h2><p>National Bulldog Day 2026 falls on April 21. Discover the history, fun facts, care tips, gift ideas, and the best ways to celebrate this beloved breed holiday.</p><p class="post-meta">National Bulldog Day on April 21 celebrates one of the world&#x27;s most recognizable breeds. This guide covers history, health, care, and how to celebrate.</p><a class="text-link" href="/national-bulldog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-27</p><h2><a href="/national-maltese-dog-day.html">National Maltese Dog Day 2026: April 27</a></h2><p>National Maltese Dog Day celebrates one of the oldest toy breeds in history. Find the best date, practical celebration ideas, grooming tips, and a care comparison table.</p><p class="post-meta">If you are trying to pin down when is National Maltese Dog Day, the honest answer is more nuanced than a simple one-line date. There is not one widely…</p><a class="text-link" href="/national-maltese-dog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-german-shepherd-day.html">National German Shepherd Day 2026: May 10</a></h2><p>National German Shepherd Day on August 5 honors the world's most versatile working dog. Breed history, training tips, care guide, and fun ways to celebrate.</p><p class="post-meta">Everything about national german shepherd day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-german-shepherd-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-09</p><h2><a href="/national-cavalier-king-charles-spaniel-day.html">National Cavalier King Charles Spaniel Day 2026: May 27</a></h2><p>National Cavalier King Charles Spaniel Day celebrates one of Britain's most beloved toy breeds. Breed history, health tips, care guide, and celebration ideas.</p><p class="post-meta">Everything about national cavalier king charles spaniel day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-cavalier-king-charles-spaniel-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-21</p><h2><a href="/national-shetland-sheepdog-day.html">National Shetland Sheepdog Day 2026: June 1</a></h2><p>National Shetland Sheepdog Day on August 21 celebrates the loyal and intelligent Sheltie. Breed history, training tips, care guide, and fun activities for the day.</p><p class="post-meta">As the calendar pages turn, marking the passage of time and the approach of another year, dog enthusiasts across the United States eagerly anticipate…</p><a class="text-link" href="/national-shetland-sheepdog-day.html">Open article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-16</p><h2><a href="/national-great-dane-day.html">National Great Dane Day 2026: June 12</a></h2><p>National Great Dane Day on August 16 celebrates one of the world's largest dog breeds. Breed history, health tips, care guide, and the best ways to celebrate.</p><p class="post-meta">Everything about national great dane day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-great-dane-day.html">Open article</a></article></div></section>
-      </div>
-      <aside class="sidebar" data-follow-sidebar="existing">
-        
-        <section class="sidebar-panel">
-          <p class="section-label">Latest Articles</p>
-          <ul class="sidebar-list"><li><a class="sidebar-link" href="/second-dachshund-age-gap-pairing.html"><span class="sidebar-kicker">Dachshund Life</span><strong>Getting a Second Dachshund: Owner-Reported Age Gaps, Same vs Opposite Sex Pairings and Regrets</strong><span>2026-11-03 • 14 min read</span></a></li><li><a class="sidebar-link" href="/dachshund-harness-coat-size-chart.html"><span class="sidebar-kicker">Dachshund Gear</span><strong>Dachshund Harness and Coat Size Chart Compared: Mini vs Tweenie vs Standard Across Brands</strong><span>2026-10-18 • 11 min read</span></a></li><li><a class="sidebar-link" href="/best-training-for-stubborn-dachshunds.html"><span class="sidebar-kicker">Training</span><strong>Best Training for Stubborn Dachshunds: Your Tribe’s Guide</strong><span>2026-10-09 • 7 min read</span></a></li><li><a class="sidebar-link" href="/how-to-groom-a-dachshund.html"><span class="sidebar-kicker">Dachshund Guide</span><strong>How to Groom a Dachshund — The Complete Guide for Dachshund People</strong><span>2026-10-07 • 10 min read</span></a></li><li><a class="sidebar-link" href="/national-shih-tzu-day.html"><span class="sidebar-kicker">National Day</span><strong>National Shih Tzu Day: History, Care, and Celebration Guide</strong><span>2026-07-26 • 15 min read</span></a></li><li><a class="sidebar-link" href="/national-rottweiler-day.html"><span class="sidebar-kicker">National Day</span><strong>National Rottweiler Day 2026: June 28 and the Complete Rottweiler Breed Guide</strong><span>2026-05-21 • 15 min read</span></a></li><li><a class="sidebar-link" href="/national-corgi-day.html"><span class="sidebar-kicker">National Day</span><strong>International Corgi Day 2026: June 4 and the Complete Corgi Breed Guide</strong><span>2026-05-18 • 23 min read</span></a></li><li><a class="sidebar-link" href="/national-dachshund-day.html"><span class="sidebar-kicker">National Day</span><strong>National Dachshund Day 2026: June 21 — Complete Dachshund Breed Guide</strong><span>2026-05-15 • 9 min read</span></a></li></ul>
-        </section>
-        <section class="sidebar-panel">
-          <p class="section-label">Recent Highlights</p>
-          <div class="sidebar-feed">
-            <article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-07</p><h2><a href="/national-chihuahua-day.html">National Chihuahua Day 2026: May 14</a></h2><p>National Chihuahua Day is May 14 every year. Discover the breed&#x27;s ancient history, bold personality, the best celebration activities, gift ideas for Chi…</p><a class="text-link" href="/national-chihuahua-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-dachshund-day.html">National Dachshund Day 2026: June 21</a></h2><p>National Dachshund Day 2026 is June 21. Here&#x27;s everything you need to celebrate — history, IVDD health tips, events, gift ideas, and fun facts about the…</p><a class="text-link" href="/national-dachshund-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-09-25</p><h2><a href="/national-standard-schnauzer-day.html">National Standard Schnauzer Day 2026: September 25</a></h2><p>National Standard Schnauzer Day is observed on September 25. AKC breed standards, health screening, grooming requirements, and how to celebrate the Standard…</p><a class="text-link" href="/national-standard-schnauzer-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-17</p><h2><a href="/national-komondor-day.html">National Komondor Day 2026: April 17</a></h2><p>The Komondor is one of the most distinctive dog breeds in the world, instantly recognizable by its unique corded coat that looks like thick dreadlocks or a…</p><a class="text-link" href="/national-komondor-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-13</p><h2><a href="/national-french-bulldog-day.html">National French Bulldog Day 2026: April 13</a></h2><p>National French Bulldog Day on April 13 celebrates one of the world&#x27;s most beloved and recognizable dog breeds. The French Bulldog, affectionately known as…</p><a class="text-link" href="/national-french-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">Product Review</p><p class="post-date">2026-04-10</p><h2><a href="/houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Escape-Proof Dachshund Harness by Weenie Warmers</a></h2><p>Houdini Weenie Harness review by Weenie Warmers. Designed for escape-prone dachshunds with a dual-anchor barrel-chest fit. r/Dachshund verdict, pricing, and…</p><a class="text-link" href="/houdini-weenie-harness-review.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-08</p><h2><a href="/national-akita-day.html">National Akita Day 2026: April 8</a></h2><p>National Akita Day falls on April 8 every year. History of the Japanese Akita Inu, breed characteristics, health, training, and how to celebrate National…</p><a class="text-link" href="/national-akita-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-11-02</p><h2><a href="/national-havanese-day.html">National Havanese Day 2026: November 2</a></h2><p>National Havanese Day on November 2 celebrates Cuba&#x27;s beloved national dog — a silky, cheerful little companion with one of the longest lifespans in the dog…</p><a class="text-link" href="/national-havanese-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-beagle-day.html">National Beagle Day 2026: April 22</a></h2><p>Everything about national beagle day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-beagle-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-21</p><h2><a href="/national-bulldog-day.html">National Bulldog Day 2026: April 21</a></h2><p>National Bulldog Day on April 21 celebrates one of the world&#x27;s most recognizable breeds. This guide covers history, health, care, and how to celebrate.</p><a class="text-link" href="/national-bulldog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-04-27</p><h2><a href="/national-maltese-dog-day.html">National Maltese Dog Day 2026: April 27</a></h2><p>If you are trying to pin down when is National Maltese Dog Day, the honest answer is more nuanced than a simple one-line date. There is not one widely…</p><a class="text-link" href="/national-maltese-dog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-05</p><h2><a href="/national-german-shepherd-day.html">National German Shepherd Day 2026: May 10</a></h2><p>Everything about national german shepherd day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-german-shepherd-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-09</p><h2><a href="/national-cavalier-king-charles-spaniel-day.html">National Cavalier King Charles Spaniel Day 2026: May 27</a></h2><p>Everything about national cavalier king charles spaniel day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-cavalier-king-charles-spaniel-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-21</p><h2><a href="/national-shetland-sheepdog-day.html">National Shetland Sheepdog Day 2026: June 1</a></h2><p>As the calendar pages turn, marking the passage of time and the approach of another year, dog enthusiasts across the United States eagerly anticipate…</p><a class="text-link" href="/national-shetland-sheepdog-day.html">Read article</a></article><article class="post-card"><p class="post-kicker">National Day</p><p class="post-date">2026-08-16</p><h2><a href="/national-great-dane-day.html">National Great Dane Day 2026: June 12</a></h2><p>Everything about national great dane day. Breed history, care tips, and how to celebrate.</p><a class="text-link" href="/national-great-dane-day.html">Read article</a></article>
-          </div>
-        </section>
-      </aside>
-    </main>
-    
-    
-  <footer class="sc-site-footer">
-      <p>OnRadar Dogs</p>
-    </footer>
+  </div>
+  <figure class="hero-figure">
+    <img src="/assets/home-editorial-20261025.webp" alt="three different mixed-breed dogs sitting together in a sunny park (general dog blog)" width="1200" height="900" decoding="async">
+    <figcaption>AI-generated illustration.</figcaption>
+  </figure>
+</section>
+
+<section class="sec band">
+  <p class="label">01 / Sections</p>
+  <h2>Choose your topic</h2>
+  <p class="sec-lead">Three sections cover everything from dachshund care to national breed days and gear reviews. Each guide works with the companion breed comparator.</p>
+  <div class="paths">
+    <div class="path">
+      <h3>Dachshund</h3>
+      <p>Long-backed, brave and clever — guides on care, training, behaviour and everything the wiener dog owner needs.</p>
+      <ul>
+        <li><a href="/dachshund-dog-guide.html">The Ultimate Dachshund Dog Guide</a></li>
+      </ul>
+      <a class="arrow" href="/blog.html#dachs">All dachshund guides &rarr;</a>
+    </div>
+    <div class="path">
+      <h3>National Days</h3>
+      <p>Every breed's special day with history, care tips and celebration ideas.</p>
+      <ul>
+        <li><a href="/national-days.html">National days calendar</a></li>
+      </ul>
+      <a class="arrow" href="/blog.html#national">All national days &rarr;</a>
+    </div>
+    <div class="path">
+      <h3>Gear &amp; Reviews</h3>
+      <p>Harness fit, coat size charts, health tech and honest product comparisons.</p>
+      <ul>
+        <li><a href="/dachshund-harness-coat-size-chart.html">Dachshund Harness and Coat Size Chart Compared (2026)</a></li>
+        <li><a href="/houdini-weenie-harness-review.html">Houdini Weenie Harness Review: Escape-Proof Dachshund Harness by Weenie Warmers</a></li>
+        <li><a href="/dog-health-apps-comparison-2026.html">Moved</a></li>
+        <li><a href="/dog-health-monitoring-technology-2026.html">Moved</a></li>
+        <li><a href="/pet-insurance-expansion-and-coverage-2026.html">Moved</a></li>
+      </ul>
+      <a class="arrow" href="/blog.html#gear">All gear guides &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <p class="label">02 / Latest articles</p>
+  <h2>Recent guides</h2>
+  <p class="sec-lead">Newest articles first. Each guide includes a working tool or links to the breed comparator.</p>
+  <div class="cards">
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/best-dachshund-dog-food.html">Best Dachshund Dog Food: Nourishing Our Long-Bodied Companions</a></h2><p>Discover the best dachshund dog food for every stage of your long-bodied friend's life. Learn about nutrition, common issues, and top recommendations for a…</p></article>
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/best-training-for-stubborn-dachshunds.html">Best Training for Stubborn Dachshunds: A Kind Plan</a></h2><p>Best training for stubborn Dachshunds starts with rewards and clear cues. Build a kinder routine with practical techniques, a session planner, and helpful FAQs.</p></article>
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/breeds.html">Dachshund Breed Guides: Temperament, Coat, Health and Breeding | OnRadar Dogs</a></h2><p>Every OnRadar Dogs breed guide in one place: Dachshund temperament, coat colours and shedding, common health problems, IVDD, genetic screening and responsible breeding.</p></article>
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/dachshund-aggression-training.html">Dachshund Aggression Training | Community-Driven Guide</a></h2><p>🐾 DACHSHUND TRIBE · others like you · shared journey · force‑free</p></article>
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/dachshund-breeding-guidelines-and-ethics.html">Dachshund Breeding Guidelines and Ethics: A Complete Guide for the Community</a></h2><p>Explore ethical Dachshund breeding guidelines and ethics. Learn about health, history, and community-driven practices. Includes FAQ, activity ideas, and…</p></article>
+    <article class="card"><p class="kicker">OnRadar Dogs</p><h2><a href="/dachshund-colors-and-markings.html">Dachshund Colors and Markings: Celebrating Our Colorful Companions</a></h2><p>Discover the vibrant world of Dachshund colors and markings. Join our community as we explore the history, facts, and unique beauty of these beloved dogs…</p></article>
+  </div>
+  <div style="margin-top:20px;text-align:center"><a class="btn" href="/blog.html">View all guides &rarr;</a></div>
+</section>
+
+<section class="sec band">
+  <p class="label">03 / By the numbers</p>
+  <h2>OnRadar Dogs in figures</h2>
+  <div class="nums">
+    <div class="num"><b>300+<small>breed profiles</small></b><p>covered across national days and in-depth breed guides</p><a href="/dachshund-dog-guide.html">Source &rarr;</a></div>
+    <div class="num"><b>40+<small>articles</small></b><p>on dachshund care, gear reviews and breed celebrations</p><a href="/breeds.html">Source &rarr;</a></div>
+    <div class="num"><b>2-3<small>ras obok siebie</small></b><p>porownaj w kg/cal/krokach, temperamencie i kosztach utrzymania</p><a href="/breed-comparison.html">Source &rarr;</a></div>
+    <div class="num"><b>0<small>sign-ups</small></b><p>no email list, no account, never.</p><a href="/best-training-for-stubborn-dachshunds.html">Source &rarr;</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <p class="label">04 / How it works</p>
+  <h2>How we build each guide</h2>
+  <ol class="steps">
+    <li><h3>Pick a breed</h3><p>We find the real questions owners ask in forums, groups and comments across dozens of breeds.</p></li>
+    <li><h3>Check the facts</h3><p>Every figure and source is linked to the origin so you can verify it.</p></li>
+    <li><h3>Build a tool</h3><p>Each guide has a small working tool — a size finder, a colour calculator, a breed comparator you can try.</p></li>
+    <li><h3>Publish and review</h3><p>Written with AI help, read by a person before it goes live.</p></li>
+  </ol>
+  <div class="trust"><strong>Evidence-based approach.</strong> Every claim in our guides links to its source — an AKC breed profile, a grooming guide, a published study or a real owner thread. The breed comparator uses the same data.</div>
+</section>
+
+<section class="closing">
+  <div class="sec">
+    <div>
+      <h2>Ready to compare breeds?</h2>
+      <p>Browse all guides or try the breed comparator — see how 2-3 breeds stack up side by side on size, temperament, cost and more.</p>
+    </div>
+    <div>
+      <a class="btn" href="/breed-comparison.html">Compare breeds &rarr;</a>
+      <ul class="checks">
+        <li>Evidence-based approach</li>
+        <li>Working tools on every page</li>
+        <li>No email list, ever</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="sc-footer">
+  <div class="sc-footer-inner">
+    <div><a class="brand" href="/">OnRadar Dogs</a><p>Dog breed notes, care guides, gear reviews and lightweight breed comparison tools. Written with AI assistance, checked by a person before publication. Not a veterinary clinic.</p><p>&copy; 2026 OnRadar Dogs</p></div>
+    <nav class="sc-footer-nav" aria-label="Footer"><a href="/blog.html">All guides</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/editorial-policy.html">Editorial policy</a><a href="/disclosure.html">Disclosure</a><a href="/privacy.html">Privacy</a><a href="/sitemap.html">Sitemap</a></nav>
+  </div>
+</footer>
 </body>
 </html>
